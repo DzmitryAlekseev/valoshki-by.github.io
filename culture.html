@@ -67,17 +67,34 @@
 
     .info__element_cultura {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 300px 1fr 300px;
+        grid-template-rows: repeat(2,fit-content(100%));
+        margin: 20px;
+        height: fit-content;
        
     }
 
-    .info__element_img{
-       width: 100px;
-       height:100px;
+    .info__element_cultura h5{
+        grid-column: 1 / span 3;
+        text-align: center;
     }
 
-    .info__element_cultura p{
-       
+    .info-element_img{
+        width:100%;
+        grid-column: span 1;
+        grid-row: 2;
+        
+        height: 200px;
+    }
+
+    .info-element_img img{
+        object-fit: cover;
+    }
+
+    .info-element_text{
+       grid-column: span 2;
+       grid-row: 2;
+       height: fit-content;
     }
 
 
@@ -147,41 +164,46 @@
         <h3>Немного о культуре Беларуси</h3>
          <div class="info__elements">
             <div class="info__element_cultura info__element">
-               
+                <h5>Очень оригинальное название</h5>
                 <img class="info-element_img" src="https://mojasvitlycja.ua/upload/images/%D0%B4%D1%96%D0%B2%D1%87%D0%B8%D0%BD%D0%BA%D0%B0.jpg">
+                
                 <p class="info-element_text">Древнее название Бреста &#8212; Берестье. </p>
             </div>
             <div class="info__element_cultura info__element">
+                <h5>Очень оригинальное название</h5>
                 <p class="info-element_text">Древнее название Бреста &#8212; Берестье. </p>
                 <img class="info-element_img" src="https://mojasvitlycja.ua/upload/images/%D0%B4%D1%96%D0%B2%D1%87%D0%B8%D0%BD%D0%BA%D0%B0.jpg">  
             </div>
 
             <div class="info__element_cultura info__element">
-               
+                <h5>Очень оригинальное название</h5>
                 <img class="info-element_img" src="https://mojasvitlycja.ua/upload/images/%D0%B4%D1%96%D0%B2%D1%87%D0%B8%D0%BD%D0%BA%D0%B0.jpg">
                 <p class="info-element_text">Древнее название Бреста &#8212; Берестье. </p>
             </div>
             <div class="info__element_cultura info__element">
+                <h5>Очень оригинальное название</h5>
                 <p class="info-element_text">Древнее название Бреста &#8212; Берестье. </p>
                 <img class="info-element_img" src="https://mojasvitlycja.ua/upload/images/%D0%B4%D1%96%D0%B2%D1%87%D0%B8%D0%BD%D0%BA%D0%B0.jpg">  
             </div>
 
             <div class="info__element_cultura info__element">
-               
+                <h5>Очень оригинальное название</h5>
                 <img class="info-element_img" src="https://mojasvitlycja.ua/upload/images/%D0%B4%D1%96%D0%B2%D1%87%D0%B8%D0%BD%D0%BA%D0%B0.jpg">
                 <p class="info-element_text">Древнее название Бреста &#8212; Берестье. </p>
             </div>
             <div class="info__element_cultura info__element">
+                <h5>Очень оригинальное название</h5>
                 <p class="info-element_text">Древнее название Бреста &#8212; Берестье. </p>
                 <img class="info-element_img" src="https://mojasvitlycja.ua/upload/images/%D0%B4%D1%96%D0%B2%D1%87%D0%B8%D0%BD%D0%BA%D0%B0.jpg">  
             </div>
 
             <div class="info__element_cultura info__element">
-               
+                <h5>Очень оригинальное название</h5>
                 <img class="info-element_img" src="https://mojasvitlycja.ua/upload/images/%D0%B4%D1%96%D0%B2%D1%87%D0%B8%D0%BD%D0%BA%D0%B0.jpg">
                 <p class="info-element_text">Древнее название Бреста &#8212; Берестье. </p>
             </div>
             <div class="info__element_cultura info__element">
+                <h5>Очень оригинальное название</h5>
                 <p class="info-element_text">Древнее название Бреста &#8212; Берестье. </p>
                 <img class="info-element_img" src="https://mojasvitlycja.ua/upload/images/%D0%B4%D1%96%D0%B2%D1%87%D0%B8%D0%BD%D0%BA%D0%B0.jpg">  
             </div>
