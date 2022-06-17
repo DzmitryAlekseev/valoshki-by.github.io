@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Neucha&family=Old+Standard+TT&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <link href="/src/Minsk region.html">
+    <link href="src/Minsk region.html">
     <title>Valoshki.by</title>
 
 <style>
@@ -26,39 +26,39 @@ body {
 
 @keyframes slider {
      0%{
-        background: url("/img/slider/belarus/belarus1.jpg"); 
+        background: url("img/slider/belarus/belarus1.jpg"); 
         background-size:cover;
     }
     20% {
-        background: url("/img/slider/belarus/belarus1.jpg"); 
+        background: url("img/slider/belarus/belarus1.jpg"); 
         background-size:cover;
     }
     25% {
-        background: url("/img/slider/belarus/belarus2.jpg"); 
+        background: url("img/slider/belarus/belarus2.jpg"); 
         background-size:cover;
     }
     45% {
-        background: url("/img/slider/belarus/belarus2.jpg"); 
+        background: url("img/slider/belarus/belarus2.jpg"); 
         background-size:cover;
     }
     50% {
-        background: url("/img/slider/belarus/belarus3.jpg");
+        background: url("img/slider/belarus/belarus3.jpg");
         background-size:cover;
     }
     70% {
-        background: url("/img/slider/belarus/belarus3.jpg");
+        background: url("img/slider/belarus/belarus3.jpg");
         background-size:cover;
     }
     75% {
-        background: url("/img/slider/belarus/belarus4.jpg");
+        background: url("img/slider/belarus/belarus4.jpg");
         background-size:cover;
     }
     95% {
-        background: url("/img/slider/belarus/belarus4.jpg");
+        background: url("img/slider/belarus/belarus4.jpg");
         background-size:cover;
     }
     100%{
-        background: url("/img/slider/belarus/belarus1.jpg"); 
+        background: url("img/slider/belarus/belarus1.jpg"); 
         background-size:cover;
     } 
     
@@ -107,7 +107,7 @@ body {
     }
 
     .minskaia-voblasts:hover~.map {
-        background:(url("/img/slider/belarus/belarus1.jpg"))
+        background:(url("img/slider/belarus/belarus1.jpg"))
         
     }
 
@@ -135,14 +135,14 @@ body {
 
     <div class="header">
         <div class="header__logo">
-            <img src="/img/valoshka.svg" alt="vasilek">
+            <img src="img/valoshka.svg" alt="vasilek">
         </div>
     </div>
 
     <div class="slider"></div>
 
     <div class="menu">
-        <img src="/img/valimg.svg">
+        <img src="img/valimg.svg">
         <ul>
                 <li class="menu__submenu" ><a href="#">Регионы</a>
                     <ul>
@@ -175,7 +175,7 @@ body {
                 <li><a href="#">Культура</a></li>
                 <li><a href="#">О проекте</a></li>
         </ul>
-        <img src="/img/valimg.svg">
+        <img src="img/valimg.svg">
     </div>
 
     <div class="map">
@@ -208,7 +208,7 @@ body {
             <text class="label horad-minsk" x="265" y="231">Минск</text>
        
          </svg>
-         <img id="map__region" src="/img/slider/belarus/bel.jpg">
+         <img id="map__region" src="img/slider/belarus/bel.jpg">
     </div>
 
     <div class="universal_container">
@@ -217,7 +217,7 @@ body {
             <div class="box__news">
                 
                 <a href="https://bestbelarus.by/events/news/dukorskiy-mayentak-prezentuet-gastroset-blyud-novoy-belorusskoy-kukhni/" target="_blank">               
-                        <img src="/img/sula.png" alt="">
+                        <img src="img/sula.png" alt="">
                         <p>Читать далее</p>
 
                     </a>
@@ -229,7 +229,7 @@ body {
             <div class="box__news">
                                 
                 <a href="https://dudutki.by/events/43177/" target="_blank">
-                        <img src="/img/dudutki.jpg" alt="">
+                        <img src="img/dudutki.jpg" alt="">
                         <p >Читать далее</p>
                     </a>
                     
@@ -242,7 +242,7 @@ body {
             <div class="box__news">
                 
                 <a href="https://gorodvitebsk.by/afisha/action/15623" target="_blank">
-                            <img src="/img/event.jpg" alt="">
+                            <img src="img/event.jpg" alt="">
                             <p>Читать далее</p>
                         </a>
                   
@@ -265,9 +265,9 @@ body {
         <a class="tel" href="tel:+375445435311">+375 (44) 543-53-11</a>
         <p class="email"><a href="mailto:dmitry.alekseev.s@gmail.com">Задавайте вопросы по электронной почте</a></p>
        <div class="social-contacts">
-            <a href="#"><img src="/img/icons8-instagram.svg" alt=""></a>
-            <a href="#"><img src="/img/icons8-facebook.svg" alt=""></a>
-            <a href="#"><img src="/img/icons8-vk-в-круге.svg" alt=""></a>
+            <a href="#"><img src="img/icons8-instagram.svg" alt=""></a>
+            <a href="#"><img src="img/icons8-facebook.svg" alt=""></a>
+            <a href="#"><img src="img/icons8-vk-в-круге.svg" alt=""></a>
         </div>
         
     </footer>
@@ -277,29 +277,29 @@ body {
     console.log(document.getElementById("map__region").src)
 
        function changeMinsk(){
-        setTimeout(() => document.getElementById("map__region").src="/img/slider/belarus/minsk.jpg",0);
+        setTimeout(() => document.getElementById("map__region").src="img/slider/belarus/minsk.jpg",0);
         }
 
         function changeBrest(){
-        setTimeout(() => document.getElementById("map__region").src="/img/slider/belarus/brest.jpg",0);
+        setTimeout(() => document.getElementById("map__region").src="img/slider/belarus/brest.jpg",0);
         }
         function changeGrodno(){
-        setTimeout(() => document.getElementById("map__region").src="/img/slider/belarus/grodno.jpg",0);
+        setTimeout(() => document.getElementById("map__region").src="img/slider/belarus/grodno.jpg",0);
         }
         function changeVitebsk(){
-        setTimeout(() => document.getElementById("map__region").src="/img/slider/belarus/vitebsk.jpg",0);
+        setTimeout(() => document.getElementById("map__region").src="img/slider/belarus/vitebsk.jpg",0);
         }
 
         function changeHomel(){
-        setTimeout(() => document.getElementById("map__region").src="/img/slider/belarus/homel.jpg",0);
+        setTimeout(() => document.getElementById("map__region").src="img/slider/belarus/homel.jpg",0);
         }
 
         function changeMohilev(){
-        setTimeout(() => document.getElementById("map__region").src="/img/slider/belarus/mohilev.jpg",0);
+        setTimeout(() => document.getElementById("map__region").src="img/slider/belarus/mohilev.jpg",0);
         }
 
         function changeBel(){
-            setTimeout(() =>document.getElementById("map__region").src="/img/slider/belarus/bel.jpg",0);
+            setTimeout(() =>document.getElementById("map__region").src="img/slider/belarus/bel.jpg",0);
         }
             
     </script>
