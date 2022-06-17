@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valoshki.by</title>
+
+<style>
+   body {
+            display: grid;
+            grid-template-rows:150px 400px 50px repeat(7,fit-content);
+            grid-template-columns: repeat(5,1fr);
+            background-color:rgb(255, 255, 255);
+            margin: 0 0;
+            gap: 30px;
+    }
+
+    /*header используется на всех страницах*/
+
+    .header {
+            display:flex;
+            grid-column: 1 / span 5;
+            grid-template-columns: 1fr 2fr 1fr 2fr;
+            justify-content: space-around;
+            align-items: center;
+            background-color:white;
+            flex-direction: row;  
+            border-bottom:thick double #003bcd;
+    }
+
+    .header__logo img {
+        width:500px;
+        height:100px;
+    } 
+
+   /*slider используется на index.html*/
+
+   .slider {
+        grid-row: 2;
+        grid-column-start: 2;
+        grid-column-end: span 3;
+        border:1px solid black;
+        height: 300px; 
+        width: 80%;
+        background-image: url(https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0e/31/46/63/city-hall-in-mogilev.jpg?w=600&h=400&s=1);
+        background-size:100% 120%;
+        background-repeat:no-repeat;
+        background-position: 0 -50px;
+        animation: AnimSlider
+    }
+
+    @media AnimSlider {
+
+    }
+
+    
+    /*menu используется на всех страницах*/
+
+    .menu {
+        display:grid;
+       
+        grid-column-start: 1;
+        grid-column-end: span 5;
+        background-color: white;
+        height: 50px;
+        width: inherit;
+    }
+
+    .menu ul {
+       
+        display: flex;
+        justify-content: space-between;
+        height: inherit;
+        width: inherit;
+        margin: 0;
+        padding: 0;
+    }
+
+    .menu ul li {
+        
+        width: 25%;
+       
+        width: 20%;
+        list-style-type: none;
+        
+        
+    }
+
+
+
+    .menu ul li a {
+        display: inline-block;
+        height: inherit;
+        width: 100%;
+        text-decoration: none;
+        color:black;
+        line-height: 50px;
+        text-align: center;
+   
+    }
+
+    .menu ul li a:hover {
+        border-top: 1px solid rgb(188, 188, 188);
+       border-bottom: 1px solid rgb(188, 188, 188);
+            font-size: 20px;
+      
+       
+       /* box-shadow: inset 0.5px 0.5px 10px rgb(181, 181, 181); */
+       
+    }
+
+   
+
+    .menu__submenu ul{                        /*выпадающее меню Регионы,Путеводители,Маршруты*/
+        display: block;  
+        width: 100%;
+        height: fit-content;               
+        position:relative;
+                   
+        background-color:white;
+        /* border:1px solid black; */
+        box-shadow:0px -2px 5px gray;
+        margin: 0;
+        z-index: 2;
+        visibility: collapse;
+    }
+
+    .menu__submenu ul li{
+      
+        position: relative;
+        width: 100%;
+        margin: 0;
+    }
+    .menu__submenu ul li:hover {
+    border-top: 1px solid rgb(188, 188, 188);
+       border-bottom: 1px solid rgb(188, 188, 188);
+      
+       animation: AnimSubButton 0.3s;
+            animation-iteration-count:1;
+            animation-fill-mode: forwards;
+    }
+
+    @keyframes AnimSubButton {
+        to{
+            box-shadow:inset 0.5px 0.5px  7px gray;
+            font-size: 20px;
+        }
+    }
+
+    li.menu__submenu:hover ul {  
+     
+       visibility:visible;
+   }
+
+   
+
+   .menu__submenu ul li.menu__sub2menu ul{                        /*выпадающее меню районы*/
+        display: block;
+        width: 100%;
+        position: absolute;  
+        left:100%;
+        top:0;       
+        background-color:rgb(0, 30, 255);
+        border:1px solid black;
+        margin: 0;
+        z-index: 3;
+        visibility: collapse;
+    }
+
+    .menu__submenu ul li.menu__sub2menu ul li{
+        width: 100%;
+        margin: 0;
+    }
+
+    .menu__submenu ul li.menu__sub2menu:hover ul {  
+       
+      visibility: visible;
+   }
+
+   
+
+    .menu__sub2menu_focus  {
+    box-shadow:inset 0px 0px 4px 1px  white;
+    background-color:rgba(0, 0, 255,0.5);
+    text-shadow: 14px;
+    color:white;
+    }
+
+  
+
+   .slider_region {
+        grid-column-start: 1;
+        grid-column-end: span 2;
+       width: inherit;
+       height: 200px;
+       border:1px solid black;
+       margin:50px 0 ;
+   }
+
+   .interesting_locations {
+        grid-column-start: 1;
+        grid-column-end: span 5;
+       display: flex;
+       flex-direction: column; 
+       border:1px solid black;
+      height: fit-content;      
+   }
+
+   .location {
+       padding: 40px;
+        margin:0px 0 ;
+        margin:20px 10px;
+   }
+
+    .location a{
+        display:flex;
+        flex-direction: row;
+        text-decoration: none;
+        color:black;
+   }
+
+   .location a:hover {
+       /* border:1px solid blue; */
+       box-shadow:-1px -1px 5px 5px rgb(149, 149, 218);
+       
+   }
+
+   .image {
+       width: 30%;
+       margin: 0 10px 0 0;
+   }
+
+   .image img {
+       width:100%;
+       height:100%;
+     
+
+   }
+
+   .info{
+       width: 100%;
+       height: inherit;
+       display:flex;
+       flex-direction: column;
+       flex-wrap: wrap;
+   }
+
+   .info-of-region {
+        grid-column-start: 1;
+        grid-column-end: span 5;
+      height: fit-content;
+       border:1px solid black;
+     
+   }
+
+   .info-of-region ol{
+       display:flex;
+       flex-direction: column;
+       list-style-type: disc;
+       
+   }
+
+  
+
+    /*news используется на index.html*/
+
+    .news {
+        display: flex;
+        flex-direction: column;
+        grid-column-start: 1;
+        grid-column-end: span 5;
+        border:1px solid black;
+        width: 80%;
+        height: fit-content;
+        margin: 0 10% 50px;
+    }
+
+    .container__news {
+        display:flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100%;
+        
+    }
+
+    .box__news {
+       margin-bottom: 10px;
+    }
+
+    .box__news .image {
+       
+        width: 100%;
+       
+        
+    }
+
+    .box__news {
+        display: flex;
+        flex-direction: row;
+        width: 30%;
+        border:1px solid black;
+        
+    }
+
+    h3 {
+        margin-left: 5px;
+        color:blue;
+        height:fit-content;
+    }
+
+    h3:after {
+        position: absolute;
+        content:'';
+        border-bottom: 2px solid blue;
+        width:60% ;
+        height: 20px;
+    }
+
+    .map {
+        grid-column-start: 1;
+        grid-column-end: span 5;
+       
+        width: 80%;
+        height: 400px;
+        margin: 0 10% 50px;
+        background-image:url(https://golk.by/wp-content/uploads/2019/01/2009-Mogilevskaja_oblast.jpg);
+        background-repeat:no-repeat;
+        background-position: 50%;
+        background-size:50% 100%;
+    }
+
+    /*events используется на index.html*/
+
+    .events {
+        grid-column-start: 1;
+        grid-column-end: span 5;
+        border:1px solid black;
+        width: 80%;
+        height: 300px;
+        margin: 0 10% 50px;
+    }
+
+    footer {
+        grid-column-start: 1;
+        grid-column-end: span 5;
+        display:flex;
+        width: inherit;
+        height:50px;
+        border:1px solid black;
+        justify-content: space-around;
+        align-items:center;
+    }
+
+    .footer__text {
+        order:1;
+    }
+
+    .tel {
+        order:1;
+    }
+
+    .email {
+        order:1;
+    }
+
+    .social-contacts {
+       order: 1;
+        display: flex;
+        justify-content: flex-end;
+        align-items:center;
+    }
+
+    .social-contacts a {
+      
+        width: 30px;
+        height:30px;
+        border:1px solid black;
+        margin: 0 5px 0;
+       
+    }
+
+    /* .content {
+        width: inherit;
+        height:400px;
+        border:black;
+    } */
+
+   
+</style>
+
+</head>
+<body>
+
+    <div class="header">
+        <div class="header__logo">
+            <img src="/img/valoshka.svg" alt="vasilek">
+        </div>
+    </div>
+
+    <div class="slider"></div>
+
+    <div class="menu">
+        <ul>
+                <li class="menu__submenu menu__sub2menu_focus" ><a href="#">Регионы</a>
+                    <ul>
+                        <li class="menu__sub2menu "><a href=#"">Брестская область</a></li>
+                        <li  class="menu__sub2menu"><a href="#">Витебская область</a></li>
+                        <li><a href="#">Гомельская область</a></li>
+                        <li><a href="#">Гродненская область</a></li>
+                        <li><a href="#">Минская область</a></li>
+                        <li><a href="#">Могливская область</a></li>
+                        <li><a href="#">город Минск</a></li>
+                    </ul>
+                </li>
+                <li class="menu__submenu"><a href="#">Путеводители</a>
+                    <ul>
+                        <li><a href="#">Агроусадьбы</a></li>
+                        <li><a href="#">Гостиницы и хостелы</a></li>
+                        <li><a href="#">Кафе,рестораны и бары</a></li>
+                        <li><a href="#">Прокат авто</a></li>
+                    </ul>
+                </li>
+                <li class="menu__submenu"><a href="#">Маршруты</a>
+                    <ul>
+                        <li><a href="#">Веломаршруты</a></li>
+                        <li><a href="#">Водные маршруты</a></li>
+                        <li><a href="#">Промышленные маршруты</a></li>
+                        <li><a href="#">Экологические маршруты</a></li>
+                       
+                    </ul>
+                </li>
+                <li><a href="#">Культура</a></li>
+                <li><a href="#">О проекте</a></li>
+        </ul>
+    </div>
+
+    <div class="map"></div>
+
+
+    <div class="interesting_locations">
+        <h3>Интересные места для посещения</h3>
+        <div class="location">
+            <a href="http://museyjilichi.by/dvorec.html">
+                <div class="image">
+                    <img src="https://www.sb.by/upload/iblock/d3d/d3df96370af2e583a28d61220149da92.jpg" alt="">
+                </div>
+                <div class="info">
+                    <h4>Дворец Булгаков в Жиличах</h4>
+                    <p>Усадебный комплекс Булгаков занимает территорию в 100 гектаров земли, которая включает в себя: роскошный дворец в стиле позднего классицизма; пейзажный парк, украшенный скульптурами, бассейнами, павильонами и мостиками; хозяйственные постройки, винокурню, водяную мельницу и другие сооружения. </p>
+                    <div class="form__item">
+                        <div class="form__label"><lable class="lable0" for="textarea">Оставьте свой отзыв о месте:</lable></div>
+                        <div class="form__message"> 
+                            <textarea class="textarea" placeholder="Текст сообщения" id="textarea" name="textarea" cols="40" rows="3"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form__item">
+                        <lable class="form__lable"> 
+                        <input class="form__button" type="submit" name="cancel" value="Отправить"> </lable>
+                    </div> 
+                </div>
+            </a>
+        </div>
+        
+        <div class="location">
+            <a href="https://www.tripadvisor.ru/Attraction_Review-g1599032-d6784364-Reviews-Belarusian_Heritage_Village_19th_Century-Mogilev_Mogilev_Region.html">
+                <div class="image">                
+                    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/14/01/ce/e8/caption.jpg?w=1200&h=-1&s=1" alt="">
+                </div>
+                <div class="info">
+                    <h4>Белорусская этнографическая деревня 19 века</h4>
+                    <p>Этнографическая деревня – это комплекс, который знакомит посетителей с традициями белорусского народа, обрядами, ритуалами, белорусской народной культурой, ремесленными промыслами и с особенностями белорусской деревни XIX века. </p>
+                    <div class="form__item">
+                        <div class="form__label"><lable class="lable0" for="textarea">Оставьте свой отзыв о месте:</lable></div>
+                        <div class="form__message"> 
+                            <textarea class="textarea" placeholder="Текст сообщения" id="textarea" name="textarea" cols="40" rows="3"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form__item">
+                        <lable class="form__lable"> 
+                        <input class="form__button" type="submit" name="cancel" value="Отправить"> </lable>
+                    </div> 
+                </div>
+            </a>
+           
+        </div>
+        <div class="location">
+            <a href="https://34travel.me/gotobelarus/post/marshrut-kia-mogilevskaya-oblast">
+                <div class="image">
+                    <img src="https://34travel.me/media/upload/images/2020/AUGUST/kia-mogilev/bahushevichi2.jpg" alt="">
+                </div>
+                <div class="info">
+                    <h4>Усыпальница в деревне Богушевичи</h4>
+                    <p>Богушевичи – локация с богатой историей. Местечко известно еще с 1501 года, и владели им в разное время знатные роды Друцких-Горских, Завишей, Ваньковичей и Свенторжецких. Но именно при последних Богушевичи достигли максимального расцвета. Еще в XIX веке тут находилась усадьба Свенторжецких, которая, к сожалению, не сохранилась до нашего времени. Из-за участия в восстании 1863 года хозяев имения выслали, а саму усадьбу сожгли. Но одно прекрасное строение тут все же чудом сохранилось – это компактная усыпальница в неоготическом стиле. Использовать ее в качестве храма стали как раз после 1863 года, когда кроме усадьбы сгорел еще и местный костел.</p>
+                    <div class="form__item">
+                        <div class="form__label"><lable class="lable0" for="textarea">Оставьте свой отзыв о месте:</lable></div>
+                        <div class="form__message"> 
+                            <textarea class="textarea" placeholder="Текст сообщения" id="textarea" name="textarea" cols="40" rows="3"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form__item">
+                        <lable class="form__lable"> 
+                        <input class="form__button" type="submit" name="cancel" value="Отправить"> </lable>
+                    </div> 
+                </div>
+            </a>
+        </div>
+        <div class="location">
+            <a href="https://34travel.me/gotobelarus/post/marshrut-kia-mogilevskaya-oblast">
+                <div class="image">
+                    <img src="https://34travel.me/media/upload/images/2020/AUGUST/kia-mogilev/296A4368.jpg" alt="">
+                </div>
+                <div class="info">
+                    <h4>Усадьба Потоцкиx</h4>
+                    <p>Усадьба принадлежала князьям Потоцким, которые построили ее в качестве летней резиденции во второй половине XIX века.</p>
+                    <div class="form__item">
+                        <div class="form__label"><lable class="lable0" for="textarea">Оставьте свой отзыв о месте:</lable></div>
+                        <div class="form__message"> 
+                            <textarea class="textarea" placeholder="Текст сообщения" id="textarea" name="textarea" cols="40" rows="3"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form__item">
+                        <lable class="form__lable"> 
+                        <input class="form__button" type="submit" name="cancel" value="Отправить"> </lable>
+                    </div> 
+                </div>
+            </a>
+        </div>
+        <div class="location">
+            <a href="https://hawat.by/knyazhicy-kostyol-svyatogo-antoniya">
+                <div class="image">
+                    <img src="https://hawat.by/sites/default/files/2019-04/DSC_1685.jpg" alt="">
+                </div>
+                <div class="info">
+                    <h4>Княжицы. Костёл святого Антония</h4>
+                    <p>Доминиканский костёл XVIII века.</p>
+                    <div class="form__item">
+                        <div class="form__label"><lable class="lable0" for="textarea">Оставьте свой отзыв о месте:</lable></div>
+                        <div class="form__message"> 
+                            <textarea class="textarea" placeholder="Текст сообщения" id="textarea" name="textarea" cols="40" rows="3"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form__item">
+                        <lable class="form__lable"> 
+                        <input class="form__button" type="submit" name="cancel" value="Отправить"> </lable>
+                    </div> 
+                </div>
+            </a>
+        </div>
+       
+    </div>
+    <div class="info-of-region">
+        <h3>История региона</h3>
+        <figure>
+            <p>
+                <img src=" https://upload.wikimedia.org/wikipedia/commons/0/0b/Coat_of_arms_of_Mohilev_Oblast.svg" alt="" />
+            </p>
+            <figcaption>Герб Могилевской области</figcaption>
+        </figure>
+        <p>Летописная история Могилевского края насчитывает около 900 лет. Наиболее древние города - Могилев, Кричев, Мстиславль и др. - ведут свое летоисчисление с ХІІ-ХIII веков.
+
+            В IX-X вв. территория современного Могилева интенсивно осваивается славянами. В ХІІ в. существовали укрепление на горе Могила и поселение возле реки Дубровенка. В ХІІІ в. Могилев являлся центром феодальной усадьбы и мог выполнять функции крепости. Его название, согласно народному преданию, произошло от места погребения богатыря Машеки, названного «Могилой Льва». В IX—XII веках могилевские земли входили в состав Киевской Руси. Именно тогда на берегах Днепра, на торговом пути «из варяг в греки» стали возникать многочисленные поселения и города. С XII и до середины XVI века Могилевщина входила в состав Великого Княжества Литовского, а после объединения польско-литовского государства — в состав Речи Посполитой.
+            
+            В XV-XVI вв. Могилев становится большим торговым и ремесленным центром Беларуси. Его купечество было многочисленным, имело свои организации, торговало с Прибалтикой, Польшей, Россией, Чехией и другими странами. Могилевские ремесленники объединились в конце XVI в. в 12, а в первой половине XVII в. в 17 цехов, которые включали мастеров более 70-ти ремесленных специальностей.
+            
+            В 1577 году в городе проживало около 10 тыс. жителей, а в начале XVII в. — 17 тысяч. Не случайно в 1561 г. Могилев получил право на войтовство, а в 1577 г. — на Магдебургское право и герб.
+            
+            Главным административным центром среди городов современной Могилевской области в те времена стал Мстиславль, который в XVI-XVIII веках был центром воеводства. В середине XVII в. на территории нынешней области насчитывалось 40 городов и местечек. Активно развивались как промышленность, так и сельское хозяйство (скобяные и гончарные промыслы, производство ржи и др.)
+            
+            Среди выдающихся уроженцев Могилевщины этого периода - Петр Мстиславец (один из русских и белорусских первопечатников издал «Евангелие учительное»), Спиридон Соболь (могилевский книгопечатник, уникальное издание Соболя — «Букварь языка славеньска»), Степан Иванов (мастер полихромных майоликовых форм), Петр Евсеевич из Голынца (яркий представитель белорусской иконописной школы, знаменитая икона — «Рождество Богоматери»).
+            
+            В состав Российской империи могилевские земли были включены во время первого раздела Речи Посполитой, когда в 1772 году по указу Екатерины II была образована Могилевская губерния с центром в Могилеве. Тогда Кричев был подарен Екатериной II своему фавориту князю Потемкину, Шклов — генералу Зоричу, Пропойск (современный Славгород) — князю Голицыну.
+            
+            Частые войны того времени разоряли Приднепровский край. Не обошла стороной Могилевщину и война 1812 года. Здесь, в 12 километрах от областного центра у д. Салтановка, произошла знаковая битва. Прикрывавший отступление русских войск, 7-й корпус генерала Раевского во встречном сражении геройски сдержал превосходящие по численности французские войска маршала Даву, что позволило 2-й Западной армии генерала Багратиона форсировать Днепр южнее Быхова и соединиться в Смоленске с 1-й Западной армией генерала Барклая де Толли.
+            
+            Особенно быстрыми темпами Могилевская губерния начала развиваться во второй половине XIX века после отмены крепостного права и реформ 1860-х годов в России, ставших мощнейшим импульсом для развития экономики региона. До конца XIX века и сельское хозяйство, и промышленность Приднепровского края сделали значительный шаг вперед.
+            
+            Среди выдающихся личностей этого периода - Александр Станиславович Дембовецкий (1840-1914 гг.) — российский государственный деятель, губернатор Могилевской губернии в 1872-1893 гг.; Витольд Каэтанович Бялыницкий-Бируля (1872-1957 гг.) — выдающийся белорусский и советский живописец-пейзажист; Никола́й Константи́нович Судзило́вский (1850-1930 гг.) — российский учёный-этнограф, географ, химик и биолог белорусского происхождения; деятель революционного движения в России, Швейцарии, Англии, Франции, Болгарии, США, Японии, Китая. Сенатор Территории Гавайи (1900 г.), президент сената Территории Гавайи (1901-1902 гг.) и др.
+            
+            Поступательное движение Приднепровского края вперед прерывает Первая мировая война, а также последовавшие за ней революционные потрясения и гражданская война. С августа 1915 года по ноябрь 1917 года в г. Могилеве размещалась Ставка Верховного Главнокомандующего русской армией.
+            
+            В 1919-1924 годах Могилев являлся центром уезда Гомельской губернии России, позже РСФСР. В 1924 году, в результате первого укрупнения, Могилевский, Быховский, Климовичский, Чаусский, Чериковский, Горецкий и Мстиславский уезды были присоединены к БССР. Согласно новому административному разделу на территории Могилевщины созданы Могилевский, Калининский (центр Климовичи) и Бобруйский округа.
+            
+            В 1920-е годы построены и введены в строй железные дороги Слуцк-Осиповичи-Могилев-Кричев-Рославль и Орша-Кричев-Унеча.
+            
+            Постепенно начинается восстановление и развитие промышленности. В 1930-е годы вступили в строй фабрика искусственного волокна им. В. Куйбышева, труболитейный и авторемонтный заводы в Могилеве, фанерно-деревообрабатывающий комбинат, швейная фабрика и гидролизный завод в Бобруйске, силикатный завод в Климовичах, цементный – в Кричеве, кирпичный – в Чаусах, ацетоновый – в Быхове.
+            
+            В 1925 году постановлением СНК БССР к Горецкому сельскохозяйственному институту присоединили Белорусский институт сельского и лесного хозяйства. На их базе была создана Белорусская государственная академия сельского хозяйства имени Октябрьской революции.
+            
+            Решением I сессии Верховного Совета СССР 15 января 1938 года была образована Могилевская область. Ее площадь составляет 29 тыс. кв. км. Подразделяется на 21 сельский и 4 городских района. Крупнейшие города - Могилев, Бобруйск, Кричев, Осиповичи, Горки.
+            
+              </p>
+    </div>
+
+    <div class="news">
+        <h3>Новости Могилевского региона</h3>
+        <div class="container__news">
+            <div class="box__news">
+                <a href="https://vitvesti.by/politics/aleksandr-subbotin-i-anatolii-linevich-oznakomilis-s-remontom-selskokhoziaistvennoi-tekhniki-na-oao-vitebskii-motororemontnyi-zavod.html">
+                    <div class="image">
+                        <img src="https://vitvesti.by/images/y2022/05-25/shrem-05.jpg" alt="">
+                    </div>
+                        <h2>Александр Субботин ознакомился с ремонтом сельскохозяйственной техники в ОАО «Витебский мотороремонтный завод»</h2>
+                </a>        
+            </div>
+                    
+              
+          
+
+            <div class="box__news">
+                <a href="https://www.vitbichi.by/news/obshchestvo/zdorove/post54319.html">
+                    <div class="image">
+                        <img src="https://www.vitbichi.by/photo/05-2022/26-05-2022-1.jpg" alt="">
+                    </div>
+                        <h2>Здоровье как принцип жизни. В Витебской МРЭК провели акцию под хэштэгом #Мы за ЗОЖ!</h2>
+                </a>  
+            </div>
+                    
+              
+            
+
+            <div class="box__news">
+                <a href="https://gorodvitebsk.by/news/29-05-2022/o_statisticheskom_deklarirovanii_">
+                    <div class="image">
+                        <img src="https://gorodvitebsk.by/data/data/news_24536/--2.jpg" alt="">
+                    </div>
+                        <h2>О статистическом декларировании товаров. Витебская таможня</h2>
+                </a>
+            </div> 
+
+                
+            </div>
+        </div>   
+    </div>
+
+   
+    
+        
+
+    <div class="events">
+        <h3>События</h3>
+        
+    </div>
+
+    <!-- <div class="content">
+        <img src="#" alt="This is picture">
+    </div> -->
+
+
+    </div>
+    <footer>
+        <div class="footer__text">
+            <p>Путешествуй вместе с нами!</p>
+        </div>
+        <a class="tel" href="tel:+375445435311">+375 (44) 543-53-11</a>
+        <p class="email"><a href="mailto:dmitry.alekseev.s@gmail.com">Задавайте вопросы по электронной почте</a></p>
+        <div class="social-contacts">
+            <a href="#">INST</a>
+            <a href="#">FACE</a>
+            <a href="#">VK</a>
+        </div>
+        
+    </footer>
+</body>
+</html>
