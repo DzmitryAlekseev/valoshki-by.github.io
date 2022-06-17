@@ -11,45 +11,13 @@
   
    body {
         display: grid;
-        grid-template-rows:100px 0.3fr 50px 400px repeat(7,fit-content);
+        grid-template-rows:100px 0.3fr 50px 400px repeat(4,fit-content) 50px;
         margin: 0 0;
         gap: 30px;
         font-family: 'Old Standard TT', serif;     
     }
 
-
-    .map {
-        width: 100%;
-        height:500px;
-        margin: 0 ;
-        /* background-image:url(https://www.belarus.by/relimages/000561_405468.jpg); */
-        background-repeat:no-repeat;
-        background-position: 50%;
-        background-size:50% 100%;
-        object-fit: contain;
-        display: flex;
-        justify-content: center;
-       
-    } */
-
-    .map svg{
-        width:80%;
-        /* height: 500px; */
-        object-fit: contain;
-    }
-
-     .map polygon {
-        fill: #0098cd;
-        stroke: #003bcd;
-        stroke-width: 5;
-    }
-
-    .map polygon:hover{
-        fill: #619df8;
-        
-    }
-
-    .slider{
+   .slider{
     animation: slider 60s linear infinite;
     
 } 
@@ -112,7 +80,7 @@
     </div>
 
     <div class="menu">
-        <img src="/img/val/img.svg">
+        <img src="/img/valimg.svg">
         <ul>
                 <li class="menu__submenu" ><a href="#">Регионы</a>
                     <ul>
@@ -145,7 +113,7 @@
                 <li><a href="#">Культура</a></li>
                 <li><a href="#">О проекте</a></li>
         </ul>
-        </ src="/img/val/img.svg">
+    <img src="/img/valimg.svg">
     </div>
 
     
@@ -157,10 +125,10 @@
 
     <img class="map__region" src="/img/slider/minsk/map.jpg">
     <div class="photogallery">
-        <div class="photogallery__element" ><img src="/img/slider/minsk/minsk1.jpg"></div>
-        <div class="photogallery__element" ><img src="/img/slider/minsk/minsk2.jpg"></div>
-        <div class="photogallery__element" ><img src="/img/slider/minsk/minsk3.jpg"></div>
-        <div class="photogallery__element" ><img src="/img/slider/minsk/minsk4.jpg"></div>
+        <div class="photogallery__element" ><img src="/img/slider/minsk/gal1.jpg"></div>
+        <div class="photogallery__element" ><img src="/img/slider/minsk/gal2.jpg"></div>
+        <div class="photogallery__element" ><img src="/img/slider/minsk/gal3.jpg"></div>
+        <div class="photogallery__element" ><img src="/img/slider/minsk/gal4.jpg"></div>
         
         
     </div>
@@ -175,7 +143,7 @@
             <div class="location">
                 <a href="http://chagall.vitebsk.museum.by/" target="_blank" >
                     <div class="location__image">
-                        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/11/9a/b2/75/caption.jpg?w=1200&h=-1&s=1" alt="">
+                        <img src="/img/slider/minsk/news1.jpg" alt="">
                     </div>
                     <div class="location__info">
                         <h4>Учреждение культуры «Музей Марка Шагала в Витебске»</h4>
@@ -188,7 +156,7 @@
             <div class="location">
                 <a href="https://braslavpark.by/">
                     <div class="location__image">                
-                        <img src="https://trakt.by/upload/iblock/e7a/e7aa2cf18d2a0894195305ce5782d7dc.jpg" alt="">
+                        <img src="/img/slider/minsk/news2.jpg" alt="">
                     </div>
                         <div class="location__info">
                         <h4>Национальный парк Браславские озёра</h4>
@@ -200,7 +168,7 @@
             <div class="location">
                 <a href="https://culttourism.ru/belarus/vitebskaya/orsha/etnograficheskiy_muzey_melnitsa_mlyn.html">
                     <div class="location__image">
-                        <img src="https://culttourism.ru/data/photos/6/c/6cd5d82e68456d5f8093a8e888b87b47.jpg" alt="">
+                        <img src="/img/slider/minsk/news3.jpg" alt="">
                     
                     </div>
                     <div class="location__info">
@@ -304,13 +272,14 @@
             </div>
         </div>
     </div>
+</div>
 
     <div class="universal_container ">
-        <h3>Новости Брестсткого региона</h3>
+        <h3>Новости Минского региона</h3>
         <div class="container__news">
             <div class="box__news ">
                 <a href="https://vitvesti.by/politics/aleksandr-subbotin-i-anatolii-linevich-oznakomilis-s-remontom-selskokhoziaistvennoi-tekhniki-na-oao-vitebskii-motororemontnyi-zavod.html">
-                    <img src="https://vitvesti.by/images/y2022/05-25/shrem-05.jpg" alt="">
+                    <img src="/img/slider/minsk/news1.jpg" alt="">
                     <p>Александр Субботин ознакомился с ремонтом сельскохозяйственной техники в ОАО «Витебский мотороремонтный завод»</p>
                 </a>       
             </div>
@@ -318,8 +287,8 @@
             <div class="box__news ">
                 <a href="https://www.vitbichi.by/news/obshchestvo/zdorove/post54319.html">
                     
-                        <img src="https://www.vitbichi.by/photo/05-2022/26-05-2022-1.jpg" alt="">
-                    <p>
+                    <div><img src="/img/slider/minsk/news2.jpg" alt=""></div>
+                    <p >
                         Здоровье как принцип жизни. В Витебской МРЭК провели акцию под хэштэгом #Мы за ЗОЖ!</p>
             
                 </a>
@@ -327,7 +296,7 @@
                     
             <div class="box__news ">
                 <a href="https://gorodvitebsk.by/news/29-05-2022/o_statisticheskom_deklarirovanii_">
-                    <img src="https://gorodvitebsk.by/data/data/news_24536/--2.jpg" alt="">
+                    <div><img src="/img/slider/minsk/news3.jpg" alt=""></div>
                     
                         <p>
                         О статистическом декларировании товаров. Витебская таможня</p>

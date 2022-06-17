@@ -180,37 +180,46 @@ li.menu__submenu:hover ul {
     justify-content: space-evenly;
     align-items: center;
     width: 100%;
-    height: fit-content;
+    height: 100%;
+   
 }
 
-.map img:first-of-type{
+.map__region{
         width:35%;
         object-fit: contain;
+        height: 400px;
     }
 
     .photogallery {
         display: grid;
-        grid-template-rows: repeat(2,50%);
-        grid-template-columns: repeat(2,50%);
+        grid-template-rows: repeat(2,1fr);
+        grid-template-columns: repeat(2,1fr);
         object-fit:cover;
         grid-gap: 15px;
         width: 35%;
+        height: 100%;
+        grid-auto-flow: row dense;
+        height: fit-content;
     }
     
 
-    .photogallery div img {
-        width:100%;
-        height:100%;
-        object-fit: cover;
-    }
+
 
     .photogallery__element {
         display: flex;
         justify-content: stretch;
         align-self: stretch;
         margin:2px;
+        object-fit: contain;
+        height: fit-content;
     }
 
+    .photogallery__element img{
+        width: 100%;
+        height: 180px;
+    }
+
+  
 
 
 
@@ -241,9 +250,12 @@ li.menu__submenu:hover ul {
 /*news используется на index.html*/
 
 .container__news {
-   display: flex;
+   display: grid;
+   grid-template-columns: repeat(3, 30%);
+   grid-auto-flow: column;
+   grid-gap: 15px;
    flex-direction: row; 
-   justify-content: space-evenly;
+   justify-content: center;
    height: fit-content;
    padding: 20px 0 20px 0;
    
@@ -258,20 +270,26 @@ li.menu__submenu:hover ul {
 
 .box__news a {
     display: grid;
-    grid-template-rows: 1fr 20px;
+    grid-template-rows: 250px fit-content;
     grid-template-columns: 1fr;
+    text-decoration: none;
+    font-size: 14px;
     width: fit-content;
-    height: 300px; 
+    height: inherit; 
     border: thick double #e6e6e6;
    
 }
 
-.box__news img{
+.box__news a img{
     width: 100%;
-    grid-row: 1 / span 2;
+    grid-row: 1 ;
     grid-column: 1;
-    object-fit: contain;
-    height: 100%;
+    object-fit: cover;
+    height: 250px;
+}
+
+.box__news a img{
+    object-fit: cover;
 }
 
 .box__news p{
@@ -280,6 +298,7 @@ li.menu__submenu:hover ul {
     font-family: 'Neucha', cursive;
     font-size: bold;
     margin: 0;
+    margin-top: 10px;
     text-align: center;
     width: 100%;
     background-color: white;
@@ -290,26 +309,6 @@ li.menu__submenu:hover ul {
     
 }
 
-
-
-/* .image {
-   width: inherit;
-   margin: 0 10px 0 0;
-} */
-
-
-
-
-/*events используется на index.html*/
-
-/* .events {
-     grid-column-start: 1;
-    grid-column-end: span 5; 
-    border:1px solid black;
-    width: 80%;
-    height: 300px;
-    margin: 0 10% 50px;
-} */
 
 
 /*interesting_locations используется на regions */
@@ -382,6 +381,11 @@ li.menu__submenu:hover ul {
     flex-direction: column;
     justify-content: center;
     align-items:center;
+    margin-bottom: 10px;
+}
+
+.info figure figcaption{
+    padding-top: 10px;
 }
 
 .info__elements{
@@ -407,10 +411,13 @@ li.menu__submenu:hover ul {
     justify-content: space-evenly;
     height: fit-content;
     grid-template-rows: 25px fit-content;
-    
+    width: calc(100% - 40px);
+    margin: 0 20px;
+    grid-column-gap: 10px;
 }
 
 .info__histiory-foto h4{
+    
     grid-column: 1 / span 3;
 }
 
@@ -418,7 +425,8 @@ li.menu__submenu:hover ul {
     display: grid;
     grid-template-rows: 1fr fit-content;
     grid-template-columns: 100%;
-    width: 90%;
+
+    width: 100%;
     height: fit-content;
     margin: 0;
 }
@@ -434,32 +442,8 @@ li.menu__submenu:hover ul {
     font-size: 12px;
     height: fit-content;
     text-align: center;
-}
 
-/* 
-.info-of-region p {
-    text-indent: 2%;
 }
-
-.info-of-region__histiory-foto {
-    display: flex;
-    flex-direction: row;
-    width: inherit;
-}
-
-.info-of-region__histiory-foto figure {
-    width: 30%;
-    
-}
-
-.info-of-region__histiory-foto figure img {
-    width:100%;
-    height:100%;
-}
-
-h5 {
-    text-indent: 2%;
-} */
 
 
 
