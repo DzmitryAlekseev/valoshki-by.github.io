@@ -283,10 +283,10 @@ li.menu__submenu:hover ul {
 }
 
 .box__news a img{
-    width: fit-content;
+    width: 100%;
     grid-row: 1 ;
     grid-column: 1;
-    object-fit: cover;
+    object-fit: contain;
     height: 250px;
 }
 
