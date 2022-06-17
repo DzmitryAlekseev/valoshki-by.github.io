@@ -1,0 +1,514 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Neucha&family=Old+Standard+TT&display=swap');
+
+
+/*header используется на всех страницах*/
+
+.header {
+        display:flex;
+        grid-row: 1;
+        /* grid-column: 1 / span 5; */
+        /* grid-template-columns: 1fr 2fr 1fr 2fr; */
+        justify-content: space-around;
+        align-items: center;
+        background-color:white;
+        flex-direction: row;  
+        border-bottom:thick double #003bcd;
+}
+
+.header__logo img {
+    width:500px;
+    height:100px;
+    object-fit: contain;
+} 
+
+/*slider используется на index.html*/
+
+.slider {
+    
+    width:100%;
+    height:500px;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    background-size:cover;
+    
+    
+}
+
+.slider img {
+    
+    border:1px solid black;
+    width:100%;
+    object-fit: cover;
+
+}
+
+.slider__region {
+
+    align-self: end;
+    background-color:rgba(255, 255, 255, 0.65);
+    border-radius: 5px;
+    color: #001c64;
+    font-size: 60px;
+    font-weight: 100;
+    font-family: 'Neucha', cursive;
+    text-align: center;
+    width:50%;
+}
+
+
+/*menu используется на всех страницах*/
+
+.menu {    
+    display: grid;
+    grid-row: 3;
+    background-color: white;
+    height: 50px;
+    width: inherit;
+    font-family: 'Neucha', cursive;
+    font-size: 24px;
+    border-bottom:thick double #003bcd;
+    border-top:thick double #003bcd;
+    grid-template-columns: 10% 1fr 10%;
+    
+}
+
+.menu img{
+    height: 40px;
+    width: 90%;
+    margin: 0 5%;
+    align-self: center;
+    
+}
+
+.menu ul {
+    display:flex;
+    justify-content: space-around;
+    height: inherit;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.menu ul li {       
+    width: 20%; 
+    list-style-type: none; 
+    
+}
+
+.menu ul li a {
+    display: inline-block;
+    height: inherit;
+    width: 100%;
+    text-decoration: none;
+    color:black;
+    line-height: 50px;
+    text-align: center;
+    font-size: 20px;  
+}
+
+.menu ul li a:hover {
+    background-color:#aa88006a;
+    font-size: 22px;
+    color:white;   
+    box-shadow:0px -2px 5px rgb(216, 216, 216);    
+}
+   
+.menu__submenu ul{                        /*выпадающее меню Регионы,Путеводители,Маршруты*/
+    display: block;  
+    width: 100%;
+    height: fit-content;               
+    position:relative;         
+    background-color:white;
+    box-shadow:0px -2px 5px gray;
+    margin: 0;
+    z-index: 2;
+    visibility: collapse;
+}
+
+.menu__submenu ul li{
+    position: relative;
+    width: 100%;
+    margin: 0;
+}
+
+.menu__submenu ul li:hover {
+    border-top: 1px solid rgb(188, 188, 188);
+    border-bottom: 1px solid rgb(188, 188, 188);
+    animation: AnimSubButton 0.3s;
+    animation-iteration-count:1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes AnimSubButton {
+    to{
+        box-shadow:inset 0.5px 0.5px  7px gray;
+        font-size: 20px;
+    }
+}
+
+li.menu__submenu:hover ul {  
+   visibility:visible;
+}
+
+.menu__submenu ul li.menu__sub2menu ul{                        /*выпадающее меню районы*/
+    display: block;
+    width: 100%;
+    position: absolute;  
+    left:100%;
+    top:0;       
+    background-color:rgb(0, 30, 255);
+    border:1px solid black;
+    margin: 0;
+    z-index: 3;
+    visibility: collapse;
+}
+
+.menu__submenu ul li.menu__sub2menu ul li{
+    width: 100%;
+    margin: 0;
+}
+
+.menu__submenu ul li.menu__sub2menu:hover ul {     
+  visibility: visible;
+}
+
+
+.map {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: fit-content;
+}
+
+.map img:first-of-type{
+        width:35%;
+        object-fit: contain;
+    }
+
+    .photogallery {
+        display: grid;
+        grid-template-rows: repeat(2,50%);
+        grid-template-columns: repeat(2,50%);
+        object-fit:cover;
+        grid-gap: 15px;
+        width: 35%;
+    }
+    
+
+    .photogallery div img {
+        width:100%;
+        height:100%;
+        object-fit: cover;
+    }
+
+    .photogallery__element {
+        display: flex;
+        justify-content: stretch;
+        align-self: stretch;
+        margin:2px;
+    }
+
+
+
+
+/*universal_container используется для блоков с новостями и событиями*/
+
+.universal_container {
+    width: 90%;
+    height: fit-content;
+    margin: 0 5%;
+    border: 1px solid #0098cd;
+    display: grid;
+    grid-template-rows: 50px 1fr;
+      
+}
+
+.universal_container h3 {
+    background-color:#0098cd;
+    font-family: 'Neucha', cursive;
+    font-size: 20px;
+    text-indent: 25px;
+    color:white;
+    height:50px;
+    line-height: 50px;
+    margin: 0 0 5px 0;
+}
+
+
+/*news используется на index.html*/
+
+.container__news {
+   display: flex;
+   flex-direction: row; 
+   justify-content: space-evenly;
+   height: fit-content;
+   padding: 20px 0 20px 0;
+   
+}
+
+.box__news {
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+}
+
+
+.box__news a {
+    display: grid;
+    grid-template-rows: 1fr 20px;
+    grid-template-columns: 1fr;
+    width: fit-content;
+    height: 300px; 
+    border: thick double #e6e6e6;
+   
+}
+
+.box__news img{
+    width: 100%;
+    grid-row: 1 / span 2;
+    grid-column: 1;
+    object-fit: contain;
+    height: 100%;
+}
+
+.box__news p{
+    grid-column: 1;
+    grid-row: 2;
+    font-family: 'Neucha', cursive;
+    font-size: bold;
+    margin: 0;
+    text-align: center;
+    width: 100%;
+    background-color: white;
+    opacity: 0.85;
+    color:black;
+    text-decoration: none;
+    height: fit-content; 
+    
+}
+
+
+
+/* .image {
+   width: inherit;
+   margin: 0 10px 0 0;
+} */
+
+
+
+
+/*events используется на index.html*/
+
+/* .events {
+     grid-column-start: 1;
+    grid-column-end: span 5; 
+    border:1px solid black;
+    width: 80%;
+    height: 300px;
+    margin: 0 10% 50px;
+} */
+
+
+/*interesting_locations используется на regions */
+
+.locations {
+    display:flex;
+    flex-direction: column;
+
+}
+
+.location {
+    padding: 10px;
+     margin:0px 0 ;
+     margin:10px 10px;
+     
+     height:fit-content;
+}
+
+ .location a{
+     display:grid;
+     grid-template-columns: 300px 1fr;
+     text-decoration: none;
+     color:black;
+     width: 100%;
+     height: fit-content;
+     grid-gap: 10px;
+     min-height: 200px;
+}
+
+
+.location a:hover {
+    /* border:1px solid blue; */
+    box-shadow:-1px -1px 5px 5px #0098cd;
+    
+}
+
+.location__image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.location__image img {
+    
+    width: 90%;
+    height: 90%;
+    object-fit: cover;
+    
+}
+
+.location__info {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    justify-content: space-evenly;
+}
+
+/*.info-of-region */
+
+.info {
+    display: flex;
+    height: fit-content;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.info figure {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+}
+
+.info__elements{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    
+}
+
+.info__element{
+    width: calc(100% - 40px);
+    margin: 0 20px;
+}
+
+.info__element p{
+    text-align: justify;
+    margin: 10px;
+}
+
+.info__histiory-foto {
+    display: grid;
+    flex-direction: row;
+    justify-content: space-evenly;
+    height: fit-content;
+    grid-template-rows: 25px fit-content;
+    
+}
+
+.info__histiory-foto h4{
+    grid-column: 1 / span 3;
+}
+
+.info__histiory-foto .histiory-foto{
+    display: grid;
+    grid-template-rows: 1fr fit-content;
+    grid-template-columns: 100%;
+    width: 90%;
+    height: fit-content;
+    margin: 0;
+}
+
+.info__histiory-foto .histiory-foto img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.histiory-foto figcaption{
+    margin: 5px 0 0 0;
+    font-size: 12px;
+    height: fit-content;
+    text-align: center;
+}
+
+/* 
+.info-of-region p {
+    text-indent: 2%;
+}
+
+.info-of-region__histiory-foto {
+    display: flex;
+    flex-direction: row;
+    width: inherit;
+}
+
+.info-of-region__histiory-foto figure {
+    width: 30%;
+    
+}
+
+.info-of-region__histiory-foto figure img {
+    width:100%;
+    height:100%;
+}
+
+h5 {
+    text-indent: 2%;
+} */
+
+
+
+footer {
+    /* grid-column-start: 1;
+    grid-column-end: span 5; */
+    display:flex;
+    width: inherit;
+    height:50px;
+    justify-content: space-around;
+    align-items:center;
+    background-color:#0098cd;
+    color:white;
+    
+}
+
+footer a{
+    text-decoration: none;
+    color:white;
+}
+
+.footer__text {
+    order:1;
+}
+
+.tel {
+    order:1;
+}
+
+.email {
+    order:1;
+}
+
+.social-contacts {
+    order: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items:center;
+}
+
+.social-contacts a {
+    text-decoration: none;
+    width: 30px;
+    height:30px;
+    margin: 0 5px 0;
+   
+}
+
+.social-contacts a img {
+    width: inherit;
+    height: inherit;
+}
