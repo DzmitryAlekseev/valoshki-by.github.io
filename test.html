@@ -1,0 +1,344 @@
+js-test.html
+Совместный доступ
+
+Свойства системы
+Тип
+HTML
+Размер
+12 КБ
+Занимает
+12 КБ
+Расположение
+Lesson #24 (js DOM part 2)
+Владелец
+Юрий Семененко
+Изменено
+15 июн. 2022 г. (Юрий Семененко)
+Открыто
+17 июн. 2022 г. (я)
+Создано
+15 июн. 2022 г.
+Описания нет
+Читателям разрешено скачивать файл
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    body {}
+
+    .theme-dark {
+      background-color: rgba(0,0,0,.75);
+      color: white;
+    }
+
+    .theme-dark a {
+      color: lightcoral;
+    }
+
+    .title {
+      text-align: center;
+      color: blue;
+    }
+
+    .title_color-red {
+      color: red;
+    }
+
+    .alert {
+      padding: 15px;
+      margin-bottom: 15px;
+      border: 1px solid #d6e9c6;
+      border-radius: 4px;
+      color: #3c763d;
+      background-color: #dff0d8;
+    }
+
+    .faq {}
+
+    .faq__element {
+      padding: 10px;
+      border: 2px blue solid;
+    }
+
+    .faq__question {
+      margin: 0;
+      font-weight: normal;
+      text-decoration: none;
+      color: blue;
+    }
+
+    .faq__question:hover {
+      cursor: pointer;
+    }
+
+    .faq__answer {
+      color: green;
+    }
+
+    .faq__answer_hidden {
+      display: none;
+    }
+
+    .shadow {
+      display: none;
+      position: fixed;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      z-index: 101;
+      background-color: rgba(0,0,0,.75);
+    }
+
+    .shadow_open {
+      display: block;
+    }
+
+    .modal {
+      display: none;
+      background-color: #fff;
+      width: 300px;
+      border: 2px red solid;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      z-index: 102;
+      transform: translate(-50%, -50%);
+    }
+
+    .modal_open {
+      display: block;
+    }
+
+    .modal header {
+      padding: 10px;
+      text-align: center;
+      border-bottom: 1px red solid;
+      position: relative;
+    }
+
+    .modal h2 {
+      margin: 0;
+    }
+
+    .modal .close {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      display: block;
+      text-decoration: none;
+      padding: 3px 5px;
+    }
+
+    .modal section {
+      padding: 20px 10px;
+      font-size: 18px;
+    }
+
+    .modal footer {
+      padding: 10px;
+      text-align: center;
+      border-top: 1px red solid;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="info"></div>
+
+  <!-- это смысловой комментарий -->
+
+  <h1 id="title" class="title test dfasasf dfafsdfs">Привет, <span>Мир</span>!</h1>
+
+  <p><a href="javascript: changeTitle();">Поменяй title</a></p>
+  
+  <p><a href="javascript: themeSwitch();">Поменяй тему сайта</a></p>
+
+  <p class="after-title">Lorem, ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam est optio aliquam harum nobis tenetur voluptate aliquid molestias, maiores, odio?</p>
+
+  <p class="test">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis aliquam aperiam temporibus, vitae enim corrupti sequi fugiat placeat rem dignissimos, vel animi perferendis minima porro ut eligendi soluta nobis! Quam, esse rerum eaque itaque quas, adipisci nesciunt in saepe ea! Ut provident nulla soluta quae, et voluptatibus modi ipsam sed ullam quaerat nemo veritatis similique odio voluptas accusantium tempora quo.</p>
+
+  <div id="block">
+    <p><button onclick="changeP();">меняю содержимое абзаца, дешево.</button></p>
+    <p class="test">Lorem ipsum, dolor sit amet consectetur adipisicing elit. At doloremque sint distinctio sapiente accusantium, expedita.</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing, elit. Consequatur harum, ea itaque! Reprehenderit aperiam omnis minima iure porro perspiciatis, facere!</p>
+  </div>
+
+  <h2>Подзаголовок</h2>
+
+  <ul class="test" id="list">
+    <li>List node 1</li>
+    <li>List node 2</li>
+    <li>List node 3</li>
+    <li>List node 4</li>
+    <li>List node 5</li>
+  </ul>
+
+  <p><button onclick="changeList();">Изменить список</button></p>
+
+  <div>
+    <input class="text-input" id="text-input" type="text" placeholder="Введите число" value="42">
+    <button onclick="increment();">+</button>
+    <button onclick="decrement();">-</button>
+  </div>
+
+  <p><button onclick="addNewDiv();">Добавить alert</button></p>
+
+  <h2>FAQ</h2>
+
+  <div class="faq">
+    <div class="faq__element" onclick="switchAnswer(this);">
+      <h4 class="faq__question">Что такое "Сквиш"?</h4>
+      <p class="faq__answer faq__answer_hidden">Сквиш — это мягкая и приятная на ощупь игрушка. В продаже есть сквиши самых разных форм: в виде фруктов, тортиков, животных, придуманных персонажей и так далее. Сквиши приятно мять в руках, из-за чего их ещё называют игрушками-антистресс. «Жмаканье» в руках сквиша помогает снять напряжение, избавиться от стресса.</p>
+    </div>
+    <div class="faq__element" onclick="switchAnswer(this);">
+      <h4 class="faq__question">Кому интересны сквиши?</h4>
+      <p class="faq__answer faq__answer_hidden">Игрушка антистресс - универсальна. Она придется по вкусу: <br>
+— ребятам от 3 лет - они с удовольствием «жмакают» сквиш и используют его для сюжетных игр, развивая воображение и фантазию;<br>
+— подросткам - игрушки помогают им снимать стресс, размяв руки. Кроме этого, тинейджеры с удовольствием используют сквиши как украшение, например, для сумок или пеналов;<br>
+— взрослым - для них сквиш - это не обычная забава, а способ поднять настроение и получить приятные эмоции. Сквиши снимают стресс, напряженность кистей рук, способствуют расслаблению.</p>
+    </div>
+    <div class="faq__element" onclick="switchAnswer(this);">
+      <h4 class="faq__question">А что внутри?</h4>
+      <p class="faq__answer faq__answer_hidden">Антистресс игрушки могут иметь разные наполнители:<br>
+
+1) пену с эффектом памяти - это мягкий материал с низкой пористостью. Если надавить на такой сквиш, он на несколько секунд зафиксирует новую форму, после чего вернется к первоначальной;<br>
+2) губку - структура губки жестче мемори-пены, она превосходно мнется, легко возвращает свою форму за секунды;<br>
+3) гели - эта разновидность наполнителя самая приятная на ощупь. Гелевые сквиши эластичные, их можно не только мять, но и растягивать - они не рвутся. В гель могут также добавлять глиттер для блеска. Такие модели очень нравятся девочкам.<br>
+Если вы покупаете сквиш в надежном магазине, можно не сомневаться в том, что внутри будет качественный наполнитель, безопасный для детского здоровья.</p>
+    </div>
+  </div>
+
+  <p><button onclick="openModalWindow();">Открыть</button></p>
+
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea eius ad facilis architecto culpa facere nostrum quae, dolorum provident magni consectetur magnam laborum iusto in. Illum vitae placeat voluptatum, odio deleniti dolore porro officiis facere aut voluptas saepe minima eaque soluta dolorum et velit, quia accusantium inventore dicta ex totam ad distinctio. Neque quia cum, accusantium odit temporibus quasi iste ipsum doloremque sint quaerat officiis assumenda ullam aliquid unde esse, nihil excepturi placeat distinctio molestiae possimus quibusdam animi. Beatae, ab maxime quas quaerat incidunt dolorem earum libero voluptatem ratione commodi illum saepe soluta voluptates iste sed totam dignissimos doloremque vel repudiandae magni. Praesentium reiciendis sit ex asperiores harum cum beatae, reprehenderit saepe, dignissimos quisquam aliquam modi blanditiis, ullam, perspiciatis optio? Quo voluptate quas quia, animi consequuntur sequi fuga aliquid perferendis commodi pariatur optio ad. Beatae laboriosam voluptatibus excepturi ea possimus amet omnis sint pariatur quas fugit, quasi ad odit aut!</p>
+
+  <div class="shadow" id="shadow"></div>
+  <div class="modal" id="modal">
+    <header>
+      <a href="javascript:closeModalWindow();" class="close">❌</a>
+      <h2>Я модалка</h2>
+    </header>
+    <section>
+      <p>Я текст модалки</p>
+    </section>
+    <footer>
+      а я подвал
+    </footer>
+  </div>
+
+  <script>
+    /*var title = document.getElementById("title");
+    console.dir(title);
+
+    console.log(title.textContent);
+    console.log(title.innerHTML);
+    console.log(title.nodeName);
+    console.log(title.id);
+    console.log(title.className);
+
+    title.innerHTML = "И <strong>Вам</strong> привет!!!";*/
+
+    /*title.style.color = "red";
+    title.style.textAlign = "center";*/
+
+    //title.className += " title_color-red";
+
+    function changeTitle() {
+      var title = document.getElementById("title");
+      if (title.classList.contains("title")) {
+        title.classList.toggle("title_color-red");
+      }
+    }
+
+    function themeSwitch() {
+      document.body.classList.toggle("theme-dark");
+    }
+
+    function switchAnswer(ele) {
+      //console.log(ele);
+      var faqAnswer = ele.querySelector(".faq__answer");
+      faqAnswer.classList.toggle("faq__answer_hidden");
+    }
+
+    function changeP() {
+      var needP = document.querySelector("#block .test");
+      console.log(needP.innerHTML);
+      needP.innerHTML = "<img src=\"https://www.belnovosti.by/sites/default/files/blogs/2018/06/21/5.jpg\" alt=\"smile\">";
+    }
+
+    /*var testInput = document.querySelector("#text-input");
+    console.log("id =", testInput.id);
+    console.log("type =", testInput.type);
+    console.log("value =", testInput.value);*/
+    function increment() {
+      var testInput = document.querySelector("#text-input");
+      //++testInput.value;
+      var value = Number(testInput.value);
+      testInput.value = ++value;
+    }
+
+    function decrement() {
+      var testInput = document.querySelector("#text-input");
+      --testInput.value;
+    }
+
+    function addNewDiv() {
+      var div = document.createElement('div');
+      div.className = "alert";
+      div.innerHTML = "<strong>Всем привет!</strong> Вы прочитали важное сообщение. <button onclick=\"removeThis(this);\">X</button>";
+      console.log(div);
+      var infoBlock = document.querySelector("#info");
+      infoBlock.append(div);
+    }
+
+    function removeThis(ele) {
+      console.log(ele);
+      console.log(ele.parentElement);
+      ele.parentElement.remove();
+    }
+
+    function changeList() {
+      var myList = document.getElementById("list");
+
+      var pBefore = document.createElement("p");
+      pBefore.textContent = "Я перед списком";
+      myList.before(pBefore); // вставить элемент перед <ol>
+
+      var pAfter = document.createElement("p");
+      pAfter.textContent = "Я после списка";
+      myList.after(pAfter); // вставить элемент после <ol>
+
+      var liFirst = document.createElement("li");
+      liFirst.innerHTML = "<strong>Первый</strong> элемент";
+      myList.prepend(liFirst); // вставить liFirst в начало <ol>
+
+      var liLast = document.createElement("li");
+      liLast.innerHTML = "<strong>Последний</strong> элемент";
+      myList.append(liLast); // вставить liLast в конец <ol>
+    }
+
+    function openModalWindow() {
+      var shadow = document.querySelector("#shadow");
+      var modal = document.querySelector("#modal");
+
+      shadow.classList.add("shadow_open");
+      modal.classList.add("modal_open");
+    }
+
+    function closeModalWindow() {
+      var shadow = document.querySelector("#shadow");
+      var modal = document.querySelector("#modal");
+
+      shadow.classList.remove("shadow_open");
+      modal.classList.remove("modal_open");
+    }
+
+
+  </script>
+</body>
+</html>
