@@ -151,27 +151,75 @@ li.menu__submenu:hover ul {
    visibility:visible;
 }
 
-.menu__submenu ul li.menu__sub2menu ul{                        /*выпадающее меню районы*/
-    display: block;
-    width: 100%;
-    position: absolute;  
-    left:100%;
-    top:0;       
-    background-color:rgb(0, 30, 255);
-    border:1px solid black;
-    margin: 0;
-    z-index: 3;
-    visibility: collapse;
+
+
+@media (max-width:920px)
+{
+    
+    .menu ul {
+        width: 100%;
+
+    }
+
+    .menu ul li a {
+        font-size: 20px;
+    }
+    
+    .menu ul li a:hover {
+        font-size: 20px;
+    }
+
+    .menu__submenu ul {
+        width: 150px;
+    }
+
+    .menu__submenu ul li {
+        width: 150px;
+        height: fit-content;
+    }
+
+    .menu__submenu ul li a{
+        font-size: 14px;
+        height: 30px;
+        line-height: 30px;
+    }
+
+    .menu__submenu ul li a:hover{
+        font-size: 12px;
+    }
+  
 }
 
-.menu__submenu ul li.menu__sub2menu ul li{
-    width: 100%;
-    margin: 0;
+@media (max-width:720px)
+{
+    .menu{
+        grid-template-columns: 1fr;
+    }
+    .menu img{
+        display: none;
+    }
 }
 
-.menu__submenu ul li.menu__sub2menu:hover ul {     
-  visibility: visible;
+@media (max-width:600px)
+{
+    body{
+        grid-gap: 10px;
+    }
+
+    .header__logo{
+       height: 50px;
+
+    }
+
+    .header__logo img{
+        width: 300px;
+        height: 50px;
+    }
+
 }
+
+
+
 
 
 .map {
