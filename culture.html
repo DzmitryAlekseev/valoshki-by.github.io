@@ -10,29 +10,50 @@
 <style>
    body {
             display: grid;
-            grid-template-rows:100px 0.3fr 50px fit-content 400px repeat(7,fit-content);
+            grid-template-rows:100px 0.3fr 50px repeat(2,fit-content(100%)) 50px;
             margin: 0 0;
-            gap: 30px;
-            font-family: 'Old Standard TT', serif;     
+            grid-gap: 30px;
+            font-family: 'Old Standard TT', serif;    
+             
     }
 
     .slider{
-        background: url("img/culture/culture-2.jpg"); 
+        background: url("img/culture/slider/culture-2.jpg"); 
         background-size:cover;   
 } 
 
 
     .video__container {
         display:flex;
-        justify-content: space-around;
+        justify-content: center;
+        
+        
+    }
+
+    .video_element{
+        display:flex;
+        justify-content: stretch;
+        align-items: stretch;
+        width: 24vw;
+        height: 13.5vw;
+        flex-direction: row;
+        margin: 0 20px;
+        box-shadow: 0px 0px 3px 3px rgb(186, 186, 186);
+    }
+
+    .video_element iframe{
+        flex: 1 1 auto;
+        display: flex;
     }
 
     .info__element_cultura {
         display: grid;
         grid-template-columns: 300px 1fr 300px;
-        grid-template-rows: repeat(10,fit-content(100%));
+        grid-template-rows: repeat(auto,fit-content(100%));
         margin: 20px;
         height: fit-content;
+        align-items: center;
+    
        
     }
 
@@ -42,20 +63,26 @@
     }
 
     .info-element_img{
-        width:100%;
+        width:fit-content;
         grid-column: span 1;
         grid-row: 2;
-        height: 200px;
+        height: 100%;
+        align-items: center;
+        display: flex;
+
     }
 
     .info-element_img img{
-        object-fit: cover;
+        object-fit: contain;
     }
 
     .info-element_text{
        grid-column: span 2;
        grid-row: 2;
-       height: fit-content;
+       height: 100%;
+       flex-wrap: wrap;
+       align-self: center;
+       vertical-align: middle;
     }
    
 </style>
@@ -111,12 +138,15 @@
     </div> 
 
     <div class="video__container">
-       
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/z4Vdlr5TxOc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/tlK1sm6dKDc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/F4tgEk29EOQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+       <div class="video_element">
+        <iframe width="500" src="https://www.youtube.com/embed/z4Vdlr5TxOc" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <div class="video_element">
+        <iframe src="https://www.youtube.com/embed/tlK1sm6dKDc" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <div class="video_element">
+        <iframe src="https://www.youtube.com/embed/F4tgEk29EOQ" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+    </div>
     </div> 
 
     <div class="universal_container">
@@ -124,12 +154,12 @@
          <div class="info__elements">
             <div class="info__element_cultura info__element">
                 <h5>История белорусского языка</h5>
-                <img class="info-element_img" src="img/culture/mova.jpeg">
+                <div class="info-element_img"><img src="img/culture/mova.jpeg"></div>
                 
                 <p class="info-element_text">Белорусский &#8211; один из языков восточных славян. На сегодняшний день он является одним из двух официальных языков Республики Беларусь (второй - русский).
                 Во времена Великого княжества Литовского белорусский язык начал свое самостоятельное формирование с выделения из старославянского. Белорусская азбука &#8211; это, в основном, кириллица с наличием знака апострофа, а орфография базируется на принципе &#171;как слышится, так и пишется 	
-                &#187;, что значительно упрощает правила белорусского правописания. 
-                На сегодняшний день в стране два официальных языка, но больше половины населения считают своим родным языком белорусский. Гораздо меньше людей, проживающих в Беларуси,  могут сказать, что они разговаривают на нем со своими близкими или друзьями. Всего в стране около 7 миллионов людей владеют родным языком. Пройдя очень сложный и противоречивый путь, белорусский язык остается живым и в современных реалиях. В стране работают школы и другие детские учреждения, где обучение ведется на белорусском языке. Путешествуя по дорогам Беларуси, зачастую можно встретить указатели, написанные на белорусском языке. </p>
+                &#187;, что значительно упрощает правила белорусского правописания. На сегодняшний день в стране два официальных языка, но больше половины населения считают своим родным языком белорусский. Гораздо меньше людей, проживающих в Беларуси,  могут сказать, что они разговаривают на нем со своими близкими или друзьями. Всего в стране около 7 миллионов людей владеют родным языком. Пройдя очень сложный и противоречивый путь, белорусский язык остается живым и в современных реалиях. В стране работают школы и другие детские учреждения, где обучение ведется на белорусском языке. Путешествуя по дорогам Беларуси, зачастую можно встретить указатели, написанные на белорусском языке. </p>
+            
             </div>
             <div class="info__element_cultura info__element">
                 <h5>Богатство диалектов белорусского языка</h5>
@@ -148,12 +178,13 @@
                 Кроме названных диалектов, на территории страны существует и так называемая	
                 &#171;трасянка	
                 &#187; &#8211; форма белорусского разговорного языка, имеющего смешанную морфологию и словообразование. Однако единство и целостность национального языка эти диалекты не нарушают.    </p>
-                <img class="info-element_img" src="/img/culture/mova-2.jpeg">  
+                <div class="info-element_img"><img src="/img/culture/mova-2.jpeg">  </div>
+                
             </div>
 
             <div class="info__element_cultura info__element">
                 <h5>История белорусской культуры</h5>
-                <img class="info-element_img" src="/img/culture/bel-kult.jpg">
+                <div class="info-element_img"><img src="/img/culture/bel-kult.jpg"></div>
                 <p class="info-element_text">Наша культура прошла достаточно сложный путь формирования в ходе исторических событий. С X по XIII век культура Беларуси характеризовалась высоким уровнем развития и тесной связью с христианством. Одновременно с ее развитием на территории нашей республики распространялась грамотность. Этим периодом датируются и рукописные книги, к примеру, Туровское евангелие. В XIV-XVI веках происходило дальнейшее развитие национальной культуры Беларуси. </p>
             </div>
 
@@ -161,12 +192,12 @@
                 <h5>Развитие грамотности и книгопечатания в Беларуси</h5>
                 
                 <p class="info-element_text">Философ, писатель и общественный деятель Франциск Скорина стал основоположником не только белорусского, но и восточнославянского книгопечатания.Ему посвящено несколько достопримечательностей-памятников, расположенных в разных городах Беларуси. В это время наблюдался резкий расцвет белорусской культуры. Открывались художественные и архитектурные школы, создавались литературные и музыкальные творения.  </p>
-                <img class="info-element_img" src="/img/culture/skorina.jpg">
+                <div class="info-element_img"><img  src="/img/culture/skorina.jpg"></div>
             </div>
 
             <div class="info__element_cultura info__element">
                 <h5>Театральное искусство в Беларуси</h5>
-                <img class="info-element_img" src="/img/culture/theatre_kupala.jpg"> 
+                <div class="info-element_img"><img  src="/img/culture/theatre_kupala.jpg"> </div>
                 <p class="info-element_text">В стране работает 28 государственных театров. Большинство относится к ведомству Министерства культуры. Среди них 18 драматических, 7 кукольных и 2 музыкальных.</p>
                  
             </div>
@@ -192,14 +223,14 @@
                 &#171;Золотой шлягер	
                 &#187;, &#171;Белорусская музыкальная осень	
                 &#187; и другие. Символом музыкального движения нашей республики стал Международный фестиваль искусства &#171;Славянский базар в Витебске&#187;, где участвуют артисты из многих стран.</p>
-                <img class="info-element_img" src="/img/culture/navi-band.jpg">
+                <div class="info-element_img"><img src="/img/culture/navi-band.jpg"></div>
 
                 
 
             </div>
             <div class="info__element_cultura info__element">
                 <h5>Белорусская литература</h5>
-                <img class="info-element_img" src="/img/culture/vasil-bykov.jpg">  
+                <div class="info-element_img"><img src="/img/culture/vasil-bykov.jpg"> </div> 
                 <p class="info-element_text">Немаловажное место в культуре нашей республики занимает литература. Выдающиеся белорусские авторы &#8211; это Янка Купала, Якуб Колос, Максим Богданович, Василь Быков, Симеон Полоцкий. Каждый год проходит День белорусской письменности, целью которого является не только демонстрация печатных изданий и исторического пути письменности, но и развитие современной культуры и белорусской литературы. </p>
                 
             </div>
@@ -207,12 +238,12 @@
             <div class="info__element_cultura info__element">
                 <h5>Развитие кино в Беларуси</h5>
                 <p class="info-element_text">С начала прошлого века у нас начало интенсивно развиваться искусство кино. В 1924 году была создана белорусская организация по кинематографии &#8211; Белгоскино. В 1928 году прошло открытие киностудии &#171;Советская Беларусь&#187;, выпускавшей научно-популярные, художественные и хроникальные фильмы. К концу 40-х годов киностудия переехала в столицу, а с 1946-го года была переименована в &#171;Беларусьфильм&#187;. Выходцы из Беларуси оставили свой след и в развитии мирового кинематографа. Луис Барт Майер, родом из Минска, прославился в области мировой кинематографии. Он известен не только как основатель киностудии Голливуда &#171;Metro goldwyn mayer&#187;, но и один из учредителей американской Академии кинематографа. Ему принадлежит идея ежегодно вручать знаменитую премию &#171;Оскар&#187;. </p>
-                <img class="info-element_img" src="/img/culture/belarusfilm.jpg">  
+                <div class="info-element_img"><img src="/img/culture/belarusfilm.jpg">  </div>
             </div>
 
             <div class="info__element_cultura info__element">
                 <h5>Белорусская живопись</h5>
-                <img class="info-element_img" src="/img/culture/mark-shagal.jpg">  
+                <div class="info-element_img"><img src="/img/culture/mark-shagal.jpg"></div>
                 <p class="info-element_text">Наша страна богата талантливыми и знаменитыми деятелями культуры. В живописи это Марк Шагал, всем известный как мастер авангарда. Дом-музей, в котором некогда он жил, а также Арт-центр, которые можно посетить, находятся в Витебске, откуда он родом. Широко известно имя Ивана Хруцкого, выдающегося художника, который разработал собственный стиль в живописи, сочетая элементы натюрморта и портрета. Еще одним из известных художников нашей страны стал Михаил Савицкий, чьи работы получили мировое признание. Он является автором огромного множества полотен. Белорусскую культуру по праву можно считать одной из богатейших в мире, и, посетив нашу страну, вы можете сами в этом убедиться во время экскурсий в многочисленные музеи, художественные галереи, во время посещения театров и концертов.
                 </p>
                
@@ -225,7 +256,7 @@
                 Головные уборы &#8211;  важная и обязательная часть костюма. Для девушек это могли быть венки, узкие повязки-рушники. Замужним дамам вообще не разрешалось показываться с непокрытой головой, отсюда и большее разнообразие &#8211;  чепцы, капоры, но самой распространённой была так называемая намитка в виде повязки-рушника, которая искусно драпировалась множеством способов. Дополнялся костюм бусами.
                 Мужская одежда состояла из льняной рубахи навыпуск, узких брюк, пояса. Рубаха имела разрез на груди, отложной воротник. В отдельных регионах на неё надевали безрукавку (камизелька). Костюм был белого цвета, украшались орнаментом воротник, манжеты и пояс. Дополнялся костюм кожаной сумочкой (калита), которая заменяла отсутствующие карманы. Головными уборами были магерки, соломенные шляпы ( брыль, капялюш), зимой &#8211;  овчинные кучмы и аблавухи на меху. Из верхней одежды мужчины и женщины носили белые или серые свиты из сукна, белые или охристо-красные кожухи и кожушки, кожаные посталы (реже сапоги) и лыковые лапти.
                 </p>
-                <img class="info-element_img" src="/img/culture/belarusian-national-dress.jpg">  
+                <div class="info-element_img"><img src="/img/culture/belarusian-national-dress.jpg"> </div> 
             </div>
         </div>
     </div>
