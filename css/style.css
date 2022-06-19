@@ -262,9 +262,9 @@ li.menu__submenu:hover ul {
         display: flex;
         justify-content: stretch;
         align-self: stretch;
+
         height: 100%;
-       
-    }
+ }
 
     .photogallery__element img{
         width: 100%;
