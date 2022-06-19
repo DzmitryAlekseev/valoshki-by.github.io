@@ -13,7 +13,7 @@
 
 body {
     display: grid;
-    grid-template-rows:100px 0.3fr 50px 0.4fr 0.3fr 50px;
+    grid-template-rows:100px 0.3fr 50px 0.4fr 0.3fr fit-content 50px;
     background-color:rgb(255, 255, 255);
     margin: 0 0;
     gap: 20px;
@@ -63,6 +63,12 @@ body {
     } 
     
 }
+
+.video__container {
+        display:flex;
+        justify-content: space-around;
+    }
+
 
 /*стили для header в общем css файле*/
 
@@ -210,6 +216,10 @@ body {
          </svg>
          <img id="map__region" src="img/slider/belarus/bel.jpg">
     </div>
+
+    <div class="video__container">
+        <iframe width="760" height="430" src="https://www.youtube.com/embed/mEphk2CyiU0?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div> 
 
     <div class="universal_container">
         <h3>Афиша событий</h3>
