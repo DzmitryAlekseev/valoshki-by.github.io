@@ -258,7 +258,7 @@ li.menu__submenu:hover ul {
         justify-content: stretch;
         align-self: stretch;
         margin:2px;
-        object-fit: contain;
+        object-fit: cover;
         height: fit-content;
        
     }
