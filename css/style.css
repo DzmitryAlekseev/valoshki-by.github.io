@@ -268,7 +268,7 @@ li.menu__submenu:hover ul {
     .photogallery__element img{
         width: 100%;
         object-fit: cover;
-        /* height: 180px; */
+        height: 180px;
         
     }
 
