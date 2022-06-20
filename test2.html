@@ -1,0 +1,107 @@
+<html>
+  <head>
+  <title>My Now Amazing Webpage</title>
+  <link rel="stylesheet" type="text/css" href="slick-1.8.1/slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="slick-1.8.1/slick/slick-theme.css"/>
+
+    <style>
+        .my-super-puper-slider {
+      width: 100%;
+      padding: 20px 0;
+      /* position: relative;
+      z-index: 1; */
+    }
+
+    .my-slide {
+        display:flex;
+        justify-content: center;
+        align-items: stretch;
+        width: 32vw;
+        height: 18vw;
+    }
+
+    /* .my-slide iframe{
+        flex: 1 1 auto;
+        display: flex;
+    } */
+
+    .my-slide-01 {
+      background-color: red;
+    }
+    .my-slide-02 {
+      background-color: yellow;
+    }
+    .my-slide-03 {
+      background-color: cyan;
+    }
+
+    .my-super-puper-slider .slick-prev {
+      left: 50px;
+      z-index: 101;
+    }
+
+    .my-super-puper-slider .slick-next {
+      right: 50px;
+      z-index: 101;
+    }
+
+    .my-super-puper-slider .slick-next::before,
+    .my-super-puper-slider .slick-prev::before {
+      color: black;
+      font-size: 42px;
+    }
+
+    .my-super-puper-slider .slick-dots button {
+      font-size: 18px;
+      font-weight: bold;
+      padding: 5px;
+      width: 28px;
+      height: 28px;
+      color: black;
+      background: cyan;
+      border-radius: 50%;
+    }
+
+    .my-super-puper-slider .slick-dots button::before {
+      display: none;
+    }
+
+    .my-super-puper-slider .slick-dots .slick-active button {
+      background: red;
+      color: white;
+    }
+  </style>
+
+  
+  </head>
+  <body>
+    <h2>Slick slider example</h2>
+    <div class="my-super-puper-slider">
+      <div class="my-slide my-slide-01">         <img src="img/valimg.svg">      </div>
+      <div class="my-slide my-slide-02">         <img src="img/valimg.svg">      </div>
+      <div class="my-slide my-slide-03">         <img src="img/valimg.svg">      </div>
+
+    </div>
+
+    <script src="jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script>
+      console.log("browser ready for javascript");
+    
+      jQuery(function ($) {
+
+        if ($(".my-super-puper-slider").length > 0) {
+      $(".my-super-puper-slider").slick({
+        // autoplay: 5000,
+        dots: true,
+        arrows: true,
+        slidesToShow: 1,
+        /*prevArrow: "<button class='prev'>«</button>",
+        nextArrow: "<button class='next'>→</button>",*/
+      });
+    }
+  });
+</script>
+
+  </body>
+</html>

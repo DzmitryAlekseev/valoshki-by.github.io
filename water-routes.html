@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <title>Cycle path</title>
+    <title>water-routes</title>
 
 <style>
   
@@ -87,21 +87,25 @@
 
 }
 
-.container__news__cycle{
+.container__kayaks{
 display: grid;
-grid-template-columns: repeat(auto-fill, 300px);
-grid-template-rows: repeat(auto-fill, 300px);
-/* grid-auto-columns: max-content; */
-grid-auto-flow: row;
-grid-gap: 20px;
-margin: 20px;
-padding: 0;
+grid-template-rows: repeat(7,1fr);
 }
 
-.container__news__cycle .box-news_cycle{
-    display: grid;
-    grid-row: 240px fit-content;
-    box-shadow: 0 0 2px 2px lightblue;
+.container__news__kayaks .box-news_kayaks{
+   
+}
+
+.box__news {
+    flex-direction: row;
+}
+
+.box-news_kayaks .box__news div{
+    width: 100%;
+}
+
+.box-news_kayaks .box__news div img{
+    width: inherit;
 }
 
 
@@ -157,51 +161,19 @@ padding: 0;
     
     <div class="universal_container">
         
-        <h3>ТОП-15 велосипедных маршрутов</h3>
-        <div class="container__news__cycle container__news ">
-            <div class="box-news_cycle box__news ">
-                <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ae3ec927a51a94576f264b73e1ff1691b0be53053681bbeac770fb93fe24b335a&amp;source=constructor" width="320" height="240" frameborder="0"></iframe>
-                <p>ТЦ Бонус - Минское море и обратно</p>
+        <h3>Лучшие водные маршруты по рекам Беларуси</h3>
+        <div class="container__kayaks">
+            <div class="box__kayaks">
+                <p>Белорусы все чаще стали сплавляться на байдарках по родным рекам. Кто-то приезжает с семьей, чтобы необычно провести выходные, другие – берут друзей и отмечают день рождения и прочие праздники на воде. Третьи проводят на байдарках тимбилдинги и корпоративы. Где самые красивые и интересные водные маршруты и сколько стоит увидеть красоту белорусской природы с воды? </p>
+
+                <div class="photo__kayaks">
+                    <img src="/img/water-routes/kayaks-1.jpg" alt="">
+                </div>
         
             </div>
-
-            <div class="box-news_cycle box__news">
-                <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A8dd3a342b9b2423ce708e4af0f77f1e4847c83a7f7c7c650ae90cebd077d4bfa&amp;source=constructor" width="320" height="240" frameborder="0"></iframe>
-                    <p>
-                        Минск - Радошковичи - Минск</p>
-            
-            </div>
-
-            <div class="box-news_cycle box__news ">
-                <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A009adff35a053583e3832c76ee2633a2e73dc6a12c82079aa1fc30c955c9566e&amp;source=constructor" width="320" height="240" frameborder="0"></iframe>
-                    <p>
-                        Налибоки 2019 - 24км</p>
-            </div>
-
-            <div class="box-news_cycle box__news ">
-                <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A1ff0a31acd74f5a7afbe46cf97a4333047561711ccb3b5ead323dd90484f2273&amp;source=constructor" width="320" height="240" frameborder="0"></iframe>
-                    <p>
-                        Вокруг Заславского водохранилища</p>
-            
-                </a>
-            </div>
-
-            <div class="box-news_cycle box__news ">
-                <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A4c534abbcad8af30087fad51a60d71aa20106c60bb577734dcd0cab4dd9394b3&amp;source=constructor" width="320" height="240" frameborder="0"></iframe>
-                    <p>Меловые горы</p>
-            
-                </a>
-            </div>
-
-            <div class="box-news_cycle box__news ">
-                <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ae76e65d5fb681d6986f69298b32fe5e8523cc9835751827cbb1f1217b86f6604&amp;source=constructor" width="320" height="240" frameborder="0"></iframe>
-                    <p>Зорачка Чарешли</p>
-            
-                </a>
-            </div>
-            
         </div>
 
+           
     </div>
 
     

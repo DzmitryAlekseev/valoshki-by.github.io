@@ -100,8 +100,13 @@ padding: 0;
 
 .container__news__cycle .box-news_cycle{
     display: grid;
+    grid-template-columns: fit-content(100%);
     grid-row: 240px fit-content;
     box-shadow: 0 0 2px 2px lightblue;
+}
+
+.container__news__cycle .box-news_cycle iframe{
+    width: inherit;
 }
 
 
@@ -199,6 +204,22 @@ padding: 0;
             
                 </a>
             </div>
+
+            <div class="box-news_cycle box__news ">
+                <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A4080db556bc19cfad9727f5e2e1becb63d65122048ae3bf67f9192e7005bc8a5&amp;source=constructor" width="320" height="240" frameborder="0"></iframe>
+                    <p>От Макаёнка до улица Нестерова, Минск</p>
+            
+                </a>
+            </div>
+
+            <div class="box-news_cycle box__news ">
+                <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Adc32c3b9e392a7fd24b96a5788d9b321ad45254a2755a9b1dbef81ca7628ccd6&amp;source=constructor" width="320" height="240" frameborder="0"></iframe>
+                    <p>Гродно - Бя́ла-Подля́ска (польск. Biała Podlaska)</p>
+            
+                </a>
+            </div>
+            
+          
             
         </div>
 
