@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="lightbox2/src/css/lightbox.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/style.css">
     <title>Grodno region</title>
 
@@ -31,8 +32,8 @@
 
     <div class="slider" object="javascript: slider();">
         <h2 class="slider__region">Гродненская область</h2>
-        <img class="slider__image " src="img/grodno/grodno1.jpg" alt="Мирский замок">
-        <img class="slider__hidden slider__image" src="img/grodno/grodno2.jpg" alt="Церковь в Гродненской области">
+        <img class="slider__image " src="img/grodno/grodno1.jpg" alt="усадьба огинских в залесье">
+        <img class="slider__hidden slider__image" src="img/grodno/grodno2.jpg" alt="Дворец Святополк-Четвертинских">
         <img class="slider__hidden slider__image" src="img/grodno/grodno3.jpg" alt="Вид не берег реки">
         <img class="slider__hidden slider__image" src="img/grodno/grodno4.jpg" alt="Гродненский драм-театр">
     </div>
@@ -75,19 +76,30 @@
 
 
     <div class="map">
-
-        <div class="map__region"><img src="img/grodno/grodno-map.jpg"></div>
-
-        <div class="photogallery">
-            <div class="photogallery__element"><img src="img/grodno/gal1.jpg"></div>
-            <div class="photogallery__element"><img src="img/grodno/gal2.jpg"></div>
-            <div class="photogallery__element"><img src="img/grodno/gal3.jpg"></div>
-            <div class="photogallery__element"><img src="img/grodno/gal4.jpg"></div>
-
-
+        <div class="map__region">
+            <a href="img/grodno/grodno-map.jpg"  data-lightbox="map" data-title="Карта Гродненской области">
+                <img src="img/grodno/grodno-map.jpg" alt="Карта Гродненской области.">
+            </a>
         </div>
 
+        <div class="photogallery">
 
+            <a href="img/grodno/gal1.jpg" class="photogallery__element" data-lightbox="roadtrip" data-title="Троицкий костел в Гервятах">
+                <img src="img/grodno/gal1.jpg" alt="Троицкий костел в Гервятах">
+            </a>
+
+            <a href="img/grodno/gal2.jpg" class="photogallery__element" data-lightbox="roadtrip" data-title="Августовский канал">
+                <img src="img/grodno/gal2.jpg" alt="Августовский канал">
+            </a>
+
+            <a href="img/grodno/gal3.jpg" class="photogallery__element" data-lightbox="roadtrip" data-title="Церковь Рождества Пресвятой Богородицы в Мурованке ">
+                <img src="img/grodno/gal3.jpg" alt="Церковь Рождества Пресвятой Богородицы в Мурованке ">
+            </a>
+
+            <a href="img/grodno/gal4.jpg" class="photogallery__element" data-lightbox="roadtrip" data-title="Собор Святого Франциска Ксаверия ">
+                <img src="img/grodno/gal4.jpg" alt="ЧСобор Святого Франциска Ксаверия">
+            </a>
+        </div>
     </div>
 
 
@@ -98,10 +110,10 @@
             <div class="location">
                 <a href="https://poshyk.info/usadba-zheludok/">
                     <div class="location__image">
-                        <img src="img/grodno/place1.jpg" alt="">
+                        <img src="img/grodno/place1.jpg" alt="Усадьба Святополк-Четвертинских в деревне Желудок">
                     </div>
                     <div class="location__info">
-                        <h4>усадьба Святополк-Четвертинских в деревне Желудок</h4>
+                        <h4>УСАДЬБА СВЯТОПОЛК-ЧЕТВЕРТИНСКИХ В ДЕРЕВНЕ ЖЕЛУДОК</h4>
                         <p>Строительство самой усадьбы начал князь Людвиг из знатного рода Святополк-Четвертинских в 1907 году, а спустя всего лишь год, работы были окончены. Проект этого необычного дворца создал потомственный архитектор Владислав Маркони, кстати именно его отец cпроектировал неоготический костел в Рожанке. В архитектурном плане усадьбу можно отнести к стилю модерн или необарокко.</p>
                     </div>
                 </a>
@@ -110,10 +122,10 @@
             <div class="location">
                 <a href="https://s13.ru/archives/205563">
                     <div class="location__image">
-                        <img src="img/grodno/place2.jpg" alt="">
+                        <img src="img/grodno/place2.jpg" alt="Дворец Воловичей">
                     </div>
                     <div class="location__info">
-                        <h4>Дворец Воловичей</h4>
+                        <h4>ДВОРЕЦ ВОЛОВИЧЕЙ</h4>
                         <p>Дворец построен в 1779 году в д. Святск Гродненской области по проекту итальянского архитектора Джузеппе де Сакко. По легенде, Волович приказал замуровать заживо в одну из колонн дворца на втором этаже беременную дочь за то, что влюбилась в конюха. До 2000 г. в здании дворца располагался санаторий «Святск» для больных туберкулезом </p>
                     </div>
                 </a>
@@ -122,10 +134,10 @@
             <div class="location">
                 <a href="http://meridian28.com/report/zhemyslavl.html">
                     <div class="location__image">
-                        <img src="img/grodno/place3.jpg" alt="">
+                        <img src="img/grodno/place3.jpg" alt="Дворец Умястовских">
                     </div>
                     <div class="location__info">
-                        <h4>Дворец Умястовских</h4>
+                        <h4>ДВОРЕЦ УМЯСТОВСКИХ</h4>
                         <p>Строился 72 года, с 1805 г. до 1877 г. в д. Жемыславль. Был запланирован как копия королевской резиденции «Лазенки» в Варшаве.</p>
                     </div>
                 </a>
@@ -134,10 +146,10 @@
             <div class="location">
                 <a href="https://belarusmini.by/exposure/troitskiy-kostel-v-derevne-gervyaty/">
                     <div class="location__image">
-                        <img src="img/grodno/place4.jpg" alt="">
+                        <img src="img/grodno/place4.jpg" alt="Костел Святой Троицы в Гервятах">
                     </div>
                     <div class="location__info">
-                        <h4>Костел Святой Троицы в Гервятах</h4>
+                        <h4>КОСТЕЛ СВЯТОЙ ТРОИЦЫ В ГЕРВЯТАХ</h4>
                         <p>Троицкий костёл в Гервятах входит в тройку самых высоких храмов Беларуси (61 м) и, несомненно, один из самых лучших образцов неоготического стиля. </p>
                     </div>
                 </a>
@@ -146,10 +158,10 @@
             <div class="location">
                 <a href="https://s13.ru/archives/puteshestvie">
                     <div class="location__image">
-                        <img src="img/grodno/place5.jpg" alt="">
+                        <img src="img/grodno/place5.jpg" alt="Крепость-церковь в Сынковичах">
                     </div>
                     <div class="location__info">
-                        <h4>Крепость-церковь в Сынковичах</h4>
+                        <h4>КРЕПОСТЬ-ЦЕРКОВЬ В СЫНКОВИЧАХ</h4>
                         <p>Возможно, церковь-крепость в Сынковичах — старейшая среди подобных ей на территории Беларуси. По некоторым данным, она была освящена в 1407 году, другие источники наиболее вероятным временем строительства называют конец XV — начало XVI века.</p>
                     </div>
                 </a>
@@ -160,97 +172,77 @@
     <div class="universal_container ">
         <h3>История региона</h3>
         <div class="info">
-            <figure>
-                <img src="iumg/grodno/symb.png" alt="" />
-                <figcaption>Герб Гродненской области</figcaption>
-            </figure>
-            <div class="info__elements">
-                <div class="info__element">
-                    <h4>Гродненская область</h4>
-                    <p class="info-element_p">Гродненская область – одна из шести областей Беларуси. Расположена на западе страны.</p>
+            <div class="info-main__element">
+                <div class="info-main__text">
+                    <p><b>Гродненская область</b> – одна из шести областей Беларуси. Расположена на западе страны.</p>
 
                     <p>На западе Гродненская область граничит с Польшей,  на севере – с Литвой. Регион активно развивает партнерские отношения как с Европой, так и с Россией.</p>
                 </div>
 
-                <div class="info__element">
-                    <h4>Поселки и города Гродненской области</h4>
+                <figure>
+                    <img src="img/grodno/symb.png" alt="Герб Гродненской области" />
+                    <figcaption>Герб Гродненской области</figcaption>
+                </figure>
+            </div>
+
+            <div class="info__element" onclick="switchAnswer(this);">  
+                <h4 class="info-element_h4">Поселки и города Гродненской области &#8595;</h4>
+                <div class="info-element_p_hiden info-element_p">
                     <p>Гродно – областной административный центр. В состав области входят 17 районов, 12 городов, в том числе 6 – областного подчинения, 21 поселок городского типа.</p>
                 </div>
+            </div>
 
-                <div class="info__element">
-                    <h4>Транспортное сообщение Гродненской области</h4>
-                    <p>родненская область имеет развитую дорожную инфраструктуру. Через область проходят международные автомагистрали, соединяющие страны Европы и СНГ. Главные автотрассы региона идут в направлении Минска, Вильнюса, Барановичей и Бреста.</p>
+            <div class="info__element" onclick="switchAnswer(this);">  
+                <h4 class="info-element_h4">Транспортное сообщение Гродненской области &#8595;</h4>
+                <div class="info-element_p_hiden info-element_p">
+                    <p>Гродненская область имеет развитую дорожную инфраструктуру. Через область проходят международные автомагистрали, соединяющие страны Европы и СНГ. Главные автотрассы региона идут в направлении Минска, Вильнюса, Барановичей и Бреста.</p>
                     <p>Гродненская область имеет обширную железнодорожную сеть. Международные линии связывают область с Польшей и Литвой.</p>
                     <p>В Гродненской области также развита сеть водного транспорта. Судоходные реки – Неман и Щара.</p>
                 </div>
+            </div>
 
-                <div class="info__element">
-                    <h4>Культура и средства массовой информации Гродненской области</h4>
-                    <p>В культурном наследии Гродненщины ведущую роль играют старинные архитектурные ансамбли./p>
+            <div class="info__element" onclick="switchAnswer(this);">  
+                <h4 class="info-element_h4">Культура и средства массовой информации Гродненской области &#8595;</h4>
+                <div class="info-element_p_hiden info-element_p">
+                    <p>В культурном наследии Гродненщины ведущую роль играют старинные архитектурные ансамбли.</p>
                     <p>Ежегодно в Гродно и области проводится множество международных, республиканских и областных фестивалей и конкурсов. Наиболее известные из них – Республиканский фестиваль национальных культур, региональный фестиваль искусств "Мирский замок".В числе современных спортивных сооружений Гродненской области – Центральный спортивный комплекс "Неман".
                     </p>
                 </div>
+            </div>
 
-                <div class="info__element">
-                    <h4>Достопримечательности Гродненской области</h4>
+            <div class="info__element" onclick="switchAnswer(this);">  
+                <h4 class="info-element_h4">Достопримечательности Гродненской области &#8595;</h4>
+                <div class="info-element_p_hiden info-element_p">
                     <p>Гродно – один из красивейших городов Беларуси. Среди достопримечательностей города – королевские замки и архитектурные памятники.</p>
                     <p>Одно из наиболее важных мест паломничества в Беларуси – Свято-Успенский Жировичский мужской монастырь. В одном из храмов монастыря находится знаменитая Икона Божьей Матери.  </p>
-
                 </div>
+            </div>
 
-                <div class="info__histiory-foto">
-                    <h4>Исторические фотографии</h4>
-                    <figure class="histiory-foto">
-                        <img src="img/grodno/foto1.jpg" alt="" />
-                        <figcaption>
-                            Вид на Гродно. 1875-1878 гг</figcaption>
-                    </figure>
+       
+            <div class="info__histiory-foto">
+                <h4>Исторические фотографии</h4>
+                <figure class="histiory-foto">
+                    <img src="img/grodno/foto1.jpg" alt="" />
+                    <figcaption>
+                        Вид на Гродно. 1875-1878 гг</figcaption>
+                </figure>
 
-                    <figure class="histiory-foto">
-                        <img src="img/grodno/foto2.jpg" alt="" />
-                        <figcaption>
-                            Ул. К. Маркса. 1941 год</figcaption>
-                    </figure>
-                    <figure class="histiory-foto">
-                        <img src="img/grodno/foto3.jpg" alt="" />
-                        <figcaption>Бернардинский монастырь на фотографии 1861 года</figcaption>
-                    </figure>
-                </div>
+                <figure class="histiory-foto">
+                    <img src="img/grodno/foto2.jpg" alt="" />
+                    <figcaption>
+                        Ул. К. Маркса. 1941 год</figcaption>
+                </figure>
+                <figure class="histiory-foto">
+                    <img src="img/grodno/foto3.jpg" alt="" />
+                    <figcaption>Бернардинский монастырь на фотографии 1861 года</figcaption>
+                </figure>
             </div>
         </div>
     </div>
-
-
-    <div class="universal_container ">
-        <h3>Новости Минского региона</h3>
-        <div class="container__news">
-            <div class="box__news ">
-                <a href="https://sputnik.by/20220617/emotsionalnyy-performans-ustroyat-v-grodno-v-den-nachala-voyny-1063770069.html">
-                    <img src="img/grodno/news1.jpg" alt="">
-                    <p>Эмоциональный перформанс устроят в Гродно в день начала войны</p>
-                </a>
-            </div>
-
-            <div class="box__news ">
-                <a href="https://sputnik.by/20220606/karnaval-po-belorusski-samye-yarkie-momenty-festivalya-kultur-v-grodno---foto-1063336897.html">
-
-                    <div><img src="img/grodno/news2.jpg" alt=""></div>
-                    <p>Карнавал по-белорусски: самые яркие моменты фестиваля культур в Гродно - фото
-                    </p>
-
-                </a>
-            </div>
-
-            <div class="box__news ">
-                <a href="https://sputnik.by/20220604/ulitsa-zamkovaya-v-grodno-uzhe-v-sleduyuschem-godu-mozhet-stat-peshekhodnoy-1063245755.html">
-                    <div><img src="img/grodno/news3.jpg" alt=""></div>
-
-                    <p>Улица Замковая в Гродно уже в следующем году может стать пешеходной</p>
-                </a>
-
-            </div>
-        </div>
     </div>
+
+
+    
 
     </div>
     <footer>

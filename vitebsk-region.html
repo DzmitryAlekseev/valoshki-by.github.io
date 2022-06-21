@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="lightbox2/src/css/lightbox.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/style.css">
     <title>Vitebsk region</title>
 
@@ -114,12 +115,28 @@
     </div>
 
     <div class="map">
-        <img class="map__region" src="img/vitebsk/map.jpg">
+        <div class="map__region">
+            <a href="img/vitebsk/vitebsk-map.jpg"  data-lightbox="map" data-title="Карта Витебской области">
+            <img src="img/vitebsk/vitebsk-map.jpg" alt="Карта Витебской области.">
+            </a>
+        </div>
+
         <div class="photogallery">
-            <div class="photogallery__element" ><img src="img/vitebsk/gal1.jpg"></div>
-            <div class="photogallery__element" ><img src="img/vitebsk/gal2.jpg"></div>
-            <div class="photogallery__element" ><img src="img/vitebsk/gal3.jpg"></div>
-            <div class="photogallery__element" ><img src="img/vitebsk/gal4.jpg"></div>
+            <a href="img/vitebsk/gal1.jpg" class="photogallery__element" data-lightbox="roadtrip" data-title="Костел Святой троицы в Видзах">
+                <img src="img/vitebsk/gal1.jpg" alt="Костел Святой троицы в Видзах">
+            </a>
+
+            <a href="img/vitebsk/gal2.jpg" class="photogallery__element" data-lightbox="roadtrip" data-title="Браславские озера">
+                <img src="img/vitebsk/gal2.jpg" alt="Браславские озера">
+            </a>
+
+            <a href="img/vitebsk/gal3.jpg" class="photogallery__element" data-lightbox="roadtrip" data-title="Софийский собор в Полоцке">
+                <img src="img/vitebsk/gal3.jpg" alt="Софийский собор в Полоцке">
+            </a>
+
+            <a href="img/vitebsk/gal4.jpg" class="photogallery__element" data-lightbox="roadtrip" data-title="Славянский базар в Витебске">
+                <img src="img/vitebsk/gal4.jpg" alt="Славянский базар в Витебске">
+            </a>
         </div>
     </div>
 
@@ -129,7 +146,7 @@
             <div class="location">
                 <a href="http://chagall.vitebsk.museum.by/">
                     <div class="location__image">
-                        <img src="img/vitebsk/place1.jpg" alt="">
+                        <img src="img/vitebsk/place1.jpg" alt="Учреждение культуры «Музей Марка Шагала в Витебске»">
                     </div>
                     <div class="location__info">
                         <h4>Учреждение культуры «Музей Марка Шагала в Витебске»</h4>
@@ -141,7 +158,7 @@
             <div class="location">
                 <a href="https://braslavpark.by/">
                     <div class="location__image">               
-                        <img src="img/vitebsk/place2.jpg" alt="">
+                        <img src="img/vitebsk/place2.jpg" alt="Национальный парк Браславские озёра">
                     </div>
                     <div class="location__info">
                         <h4>Национальный парк Браславские озёра</h4>
@@ -153,7 +170,7 @@
             <div class="location">
                 <a href="https://culttourism.ru/belarus/vitebskaya/orsha/etnograficheskiy_muzey_melnitsa_mlyn.html">
                     <div class="location__image">
-                        <img src="img/vitebsk/place3.jpg" alt="">
+                        <img src="img/vitebsk/place3.jpg" alt="Этнографический музей «Мельница» («Млын»)">
                     </div>
                     <div class="location__info">
                         <h4>Этнографический музей «Мельница» («Млын»)</h4>
@@ -165,7 +182,7 @@
             <div class="location">
                 <a href="https://www.psu.by/ru/university/dopolnitel-noe-obrazovanie?view=article&id=13140:1773-1812&catid=2">
                     <div class="location__image">
-                        <img src="img/vitebsk/place4.jpg" alt="">
+                        <img src="img/vitebsk/place4.jpg" alt="Полоцкий иезуитский коллегиум">
                     </div>
                     <div class="location__info">
                         <h4>Полоцкий иезуитский коллегиум</h4>
@@ -177,7 +194,7 @@
             <div class="location">
                 <a href="https://posmotrim.by/article/usadba-mokrickih-vysokoe-belarus.html">
                     <div class="location__image">
-                        <img src="img/vitebsk/place5.jpg" alt="">
+                        <img src="img/vitebsk/place5.jpg" alt="Усадьба Мокрицких Высокое">
                     </div>
                     <div class="location__info">
                         <h4>Усадьба Мокрицких Высокое </h4>
@@ -192,39 +209,49 @@
     <div class="universal_container ">
         <h3>История региона</h3>
         <div class="info">
-            <figure>
-                <img src="img/vitebsk/symb.png" alt="" />
-                <figcaption>Герб Витебской области</figcaption>
-            </figure>
-            <div class="info__elements">
-                <div class="info__element">
-                    <h4>Витебская область</h4>
-                    <p class="info-element_p">Витебская область – одна из шести областей Беларуси, расположена на северо-востоке страны.</p>
+            <div class="info-main__element">
+                <div class="info-main__text">
+                    <p><b>Витебская область</b> – одна из шести областей Беларуси, расположена на северо-востоке страны.</p>
+
                     <p>Витебская область граничит с Россией, Литвой и Латвией.</p>
-                    <p>Минская область – один из наиболее экономически развитых регионов страны.</p>
-                     <p>Витебская область входит в еврорегион "Озерный край". Здесь находится свыше 2800 озер, более 500 рек. Лес занимает более трети территории области – около 60% ее приходится на вековые хвойные леса.</p>
+
+                    <p>Витебская область входит в еврорегион "Озерный край". Здесь находится свыше 2800 озер, более 500 рек. Лес занимает более трети территории области – около 60% ее приходится на вековые хвойные леса.</p>
                 </div>
 
+                <figure>
+                    <img src="img/vitebsk/symb.png" alt="Герб Витебской области" />
+                    <figcaption>Герб Витебской области</figcaption>
+                </figure>
+            </div>
+
+            <div class="info__elements">
                 <div class="info__element" onclick="switchAnswer(this);">  
-                    <h4>Поселки и города Витебской области</h4>
+                    <h4 class="info-element_h4">Поселки и города Витебской области &#8595;</h4>
+                    <div class="info-element_p_hiden info-element_p">
                     <p>Витебск – областной административный центр. В состав области входят 21 район и 2 города областного подчинения.</p>
                 </div>
+            </div>
 
-                <div class="info__element">  
-                    <h4>Транспортное сообщение Витебской области</h4>
+            <div class="info__element" onclick="switchAnswer(this);">  
+                <h4 class="info-element_h4">Транспортное сообщение Витебской области &#8595;</h4>
+                <div class="info-element_p_hiden info-element_p">
                     <p>Витебская область граничит с тремя странами и имеет развитую дорожную инфраструктуру. Через регион проходят несколько автомобильных  дорог международного значения.</p>
                     <p>Длина железных дорог в Витебской области превышает 1200 км. Основные железнодорожные узлы – Витебск, Орша и Полоцк. Международные железные дороги, соединяющие Россию с Украиной, Польшей, Литвой, проходят через территорию области.</p>
                     <p>По территории региона протекают несколько рек. Самые крупные из них – Двина и Днепр. В Витебске расположен аэропорт.</p>
                 </div>
+            </div>
 
-                <div class="info__element">  
-                    <h4>Культура и средства массовой информации в Витебской области</h4>
+            <div class="info__element" onclick="switchAnswer(this);">  
+                <h4 class="info-element_h4">Культура и средства массовой информации в Витебской области &#8595;</h4>
+                <div class="info-element_p_hiden info-element_p">
                     <p>Витебская область имеет богатое культурное наследие – более 3 тыс. памятников археологии, истории, культуры и архитектуры. В области 27 музеев, 2 театра, филармония.</p>
                     <p>Витебщина – родина знаменитого международного фестиваля искусств "Славянский базар в Витебске".</p>
                 </div>
+            </div>
 
-                <div class="info__element">  
-                    <h4>Знаменитые имена, связанные с Витебской областью</h4>
+            <div class="info__element" onclick="switchAnswer(this);">  
+                <h4 class="info-element_h4">Знаменитые имена, связанные с Витебской областью &#8595;</h4>
+                <div class="info-element_p_hiden info-element_p">
                     <p>Витебская область гордится именами знаменитых земляков, оставивших свой след в мировой культуре.</p>
                     <p>В Полоцке родились и жили:
                         <ul>
@@ -237,6 +264,23 @@
                     <p>Знаменитый исследователь Восточной Сибири, чьим именем назван горный массив Верхоянских гор, – Иван Черский родом из нынешнего Верхнедвинского района.</p>
                     <p>Марк Шагал родился в Витебске в 1887 году. В городе сохранился его дом, где сегодня находится музей художника. В Витебске творили Казимир Малевич, Эль Лисицкий.</p>
                     <p>Александр Пушкин,  Иван Лажечников, Иван Бунин,  Владимир Маяковский, Глеб Успенский также имеют исторические связи с Витебской областью.</p>
+                </div>
+            </div>
+                    
+
+
+            
+
+               
+
+                <div class="info__element">  
+                    <h4></h4>
+                    
+                </div>
+
+                <div class="info__element">  
+                    <h4></h4>
+                    
                 </div>
             
               
