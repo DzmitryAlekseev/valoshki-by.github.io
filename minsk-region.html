@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="lightbox2/src/css/lightbox.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/style.css">
     <title>Minsk region</title>
 
@@ -11,56 +12,11 @@
   
    body {
         display: grid;
-        grid-template-rows:100px 0.3fr 50px repeat(5,fit-content(100%)) 50px;
+        grid-template-rows:fit-content(100%) 0.3fr 50px repeat(3,fit-content(100%)) 50px;
         margin: 0 0;
         gap: 30px;
         font-family: 'Old Standard TT', serif;     
     }
-
-   .slider{
-    animation: slider 60s linear infinite;
-    
-} 
-
-@keyframes slider {
-     0%{
-        background: url("img/slider/minsk/minsk1.jpg"); 
-        background-size:cover;
-    }
-    20% {
-        background: url("img/slider/minsk/minsk1.jpg"); 
-        background-size:cover;
-    }
-    25% {
-        background: url("img/slider/minsk/minsk2.jpg"); 
-        background-size:cover;
-    }
-    45% {
-        background: url("img/slider/minsk/minsk2.jpg"); 
-        background-size:cover;
-    }
-    50% {
-        background: url("img/slider/minsk/minsk3.jpg");
-        background-size:cover;
-    }
-    70% {
-        background: url("img/slider/minsk/minsk3.jpg");
-        background-size:cover;
-    }
-    75% {
-        background: url("img/slider/minsk/minsk4.jpg");
-        background-size:cover;
-    }
-    95% {
-        background: url("img/slider/minsk/minsk4.jpg");
-        background-size:cover;
-    }
-    100%{
-        background: url("img/slider/minsk/minsk1.jpg"); 
-        background-size:cover;
-    } 
-    
-}
 
       
 </style>
@@ -69,14 +25,18 @@
 <body>
 
     <div class="header">
-        <div class="header__logo">
-            <img src="img/valoshka.svg" alt="vasilek">
-        </div>
+        <a href="index.html">
+        <img src="img/valoshka-logo.svg" alt="Лого сайта valoshki.by Путешествуй вместе с нами!">
+        </a>
     </div>
 
 
-    <div class="slider">
+    <div class="slider" object="javascript: slider();">
         <h2 class="slider__region">Минская область</h2>
+        <img class="slider__image " src="img/minsk/minsk1.jpg" alt="Национальная библиотека">
+        <img class="slider__hidden slider__image" src="img/minsk/minsk2.jpg" alt="Минское море">
+        <img class="slider__hidden slider__image" src="img/minsk/minsk3.jpg" alt="Слаломный канал">
+        <img class="slider__hidden slider__image" src="img/minsk/minsk4.jpg" alt="Город Минск на закате">
     </div>
 
     <div class="menu">
@@ -113,19 +73,14 @@
 
 
     <div class="map">
+        <div class="map__region"><a href="img/minsk/minsk-map.jpg"  data-lightbox="map" data-title="Карта Минской области"><img src="img/minsk/minsk-map.jpg" alt="Карта Минской области."></a></div>
 
-    <div class="map__region"><img src="img/slider/minsk/map.jpg"></div>
-    
-    <div class="photogallery">
-        <div class="photogallery__element" ><img src="img/slider/minsk/gal1.jpg"></div>
-        <div class="photogallery__element" ><img src="img/slider/minsk/gal2.jpg"></div>
-        <div class="photogallery__element" ><img src="img/slider/minsk/gal3.jpg"></div>
-        <div class="photogallery__element" ><img src="img/slider/minsk/gal4.jpg"></div>
-        
-        
-    </div>
-    
-    
+        <div class="photogallery">
+            <a href="img/minsk/gal1.jpg" class="photogallery__element" data-lightbox="roadtrip" data-title="Комплекс монастыря кармелитов в Засвири"><img src="img/minsk/gal1.jpg" alt="Комплекс монастыря кармелитов в Засвири."></a>
+            <a href="img/minsk/gal2.jpg" class="photogallery__element" data-lightbox="roadtrip" data-title="Несвижский замок"><img src="img/minsk/gal2.jpg" alt="Костёл святого Иосифа в Рубежевичах."></a>
+            <a href="img/minsk/gal3.jpg" class="photogallery__element" data-lightbox="roadtrip" data-title="НКостёл святого Иосифа в Рубежевичах"><img src="img/minsk/gal3.jpg" alt="Несвижский замок."></a>
+            <a href="img/minsk/gal4.jpg" class="photogallery__element" data-lightbox="roadtrip" data-title="Мемориальный комплекс Хатынь"><img src="img/minsk/gal4.jpg" alt="Мемориальный комплекс Хатынь."></a>
+        </div>
     </div>
 
 
@@ -133,66 +88,59 @@
         <h3>Интересные места для посещения</h3>
         <div class="locations">
             <div class="location">
-                <a href="http://chagall.vitebsk.museum.by/" target="_blank" >
+                <a href="https://dukora.by/" target="_blank" >
                     <div class="location__image">
-                        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/11/9a/b2/75/caption.jpg?w=1200&h=-1&s=1" alt="">
+                        <img src="img/minsk/place1.jpg" alt="Перевёрнутый дом в Дукоре">
                     </div>
                     <div class="location__info">
-                        <h4>Учреждение культуры «Музей Марка Шагала в Витебске»</h4>
-                        <p>В музее представлены предметы быта рубежа XIX-XX вв., а также копии архивных документов и работ художника, рассказывающие о жизни Марка Шагала и его семьи в Витебске.</p>
+                        <h4>Дукорский маёнтак</h4>
+                        <p>Усадебно-парковый комплекс «Дукорский маёнтак», расположенный недалеко от города Минска, приглашает на шикарный семейный отдых в Беларуси. Это прекрасное место для отдыха всей семьей, и более того, исторически значимый объект, так как здесь сохранились важные памятники старины. «Докорскi маёнтак» появился на месте древней панской усадьбы с использованием чертежей, рисунков и фотографий, которые хранились в архиве. Здесь также были собраны и восстановлены древние белорусские промыслы и ремесла.</p>
                         
                     </div>
                 </a>
             </div>
+
+            <div class="location">
+                <a href="https://planetabelarus.by/sights/ozero-naroch/" target="_blank">
+                    <div class="location__image">
+                        <img src="img/minsk/place2.jpg" alt="озеро Нарочь">
+                    
+                    </div>
+                    <div class="location__info">
+                        <h4>Озеро Нарочь</h4>
+                        <p>«Белорусское море» и «жемчужина Беларуси» – вот лишь немногие титулы, которыми награждают озеро Нарочь. Это неудивительно, поскольку оно является не только самым большим (79,6&nbsp;кв.км), но и одним из самых красивых среди озер страны. Благодаря небольшой глубине воды Нарочи хорошо прогреваются. Купальный сезон здесь продолжается 100 дней в году. Если прибавить к этому пологие песчаные берега, поросшие сосновыми лесами, становится понятно, почему именно это место превратилось в главную курортную зону Беларуси. Богатая история края позволяет разнообразить пляжный отдых посещением достопримечательностей. Здесь имеется вся необходимая инфраструктура для комфортного пребывания на природе: экологические тропы, туристские базы, гостиницы на любой вкус и финансовые возможности.</p>
+                        </div>
+                </a>
+            </div>
+
         
             <div class="location">
-                <a href="https://braslavpark.by/">
+                <a href="https://niasvizh.by/" target="_blank">
                     <div class="location__image">                
-                        <img src="https://trakt.by/upload/iblock/e7a/e7aa2cf18d2a0894195305ce5782d7dc.jpg" alt="">
+                        <img src="img/minsk/place3.jpg" alt="Несвижский замок">
                     </div>
                         <div class="location__info">
-                        <h4>Национальный парк Браславские озёра</h4>
-                        <p>Сотни живописных озер, первозданная природа и необычный рельеф ледникового периода сделали Браславский край одним из самых прекрасных уголков Беларуси. </p>   
+                        <h4>Несвижский замок</h4>
+                        <p>Не́свижский за́мок — дворцово-замковый комплекс, находящийся в северо-восточной части города Несвижа в Минской области Белоруссии, памятник архитектуры XVI—XVIII веков. Заложен князем Н. Х. Радзивиллом Сироткой в 1583 году, на месте деревянного замка. </p>   
                     </div>
                 </a>
             
             </div>
-            <div class="location">
-                <a href="https://culttourism.ru/belarus/vitebskaya/orsha/etnograficheskiy_muzey_melnitsa_mlyn.html">
-                    <div class="location__image">
-                        <img src="https://culttourism.ru/data/photos/6/c/6cd5d82e68456d5f8093a8e888b87b47.jpg" alt="">
-                    
-                    </div>
-                    <div class="location__info">
-                        <h4>Этнографический музей «Мельница» («Млын»)</h4>
-                        <p>В самом центре города, на территории бывшего оршанского замка, на месте, где в течение нескольких веков существовала деревянная водяная мельница в 1902 году построили новую кирпичную мельницу. Нынче в ней располагается этнографический музей. В музее представлены ремёсла Оршанщины, орудия труда, коллекция ткачества, включающая в себя в том числе и белорусский традиционный костюм, так же представлены гончарные изделия, музыкальные инструменты.</p>
-                        </div>
-                </a>
-            </div>
+
+
         <div class="location">
-            <a href="https://www.psu.by/ru/university/dopolnitel-noe-obrazovanie?view=article&id=13140:1773-1812&catid=2">
-                <div class="location__image">
-                    <img src="http://www.fotobel.by/images/polock/polock-kolleg_2.jpg" alt="">
+            <a href="https://parksula.by/">
+                <div class="location__image" target="_blank">
+                    <img src="img/minsk/place4.jpg" alt="Парк истории Сула">
                 </div>
                 <div class="location__info">
-                    <h4>Полоцкий иезуитский коллегиум</h4>
-                    <p>Полоцкий иезуитский коллегиум (белор. Полацкі езуіцкі калегіум) — среднее образовательное учреждение (коллегиум) иезуитов в Полоцке</p>
+                    <h4>Парк истории Сула</h4>
+                    <p>Первый в Беларуси парк-музей интерактивной истории «Сула» находится в 49 км от Минска, на берегу живописного сульского озера. На территории комплекса есть множество интерактивных площадок и открытых объектов: стоянка древнего человека, деревня викингов, сторожевая башня с кузницей, площадка дохристианских верований, зал-музей шляхетской славы, бровар-винокурня и многое другое.</p>
                      
                 </div>
             </a>
         </div>
-        <div class="location">
-            <a href="https://posmotrim.by/article/usadba-mokrickih-vysokoe-belarus.html">
-                <div class="location__image">
-                    <img src="https://planetabelarus.by/upload/resize_cache/iblock/f97/1330_747_18e21fe612b4afb807a26ecc22279a1d9/f9737fcfc502003e9a1d87c347ca0759.jpg" alt="">
-                </div>
-                <div class="location__info">
-                    <h4>Усадьба Мокрицких Высокое </h4>
-                    <p>Белая вежа-оборонительное сооружение 13 века.</p>
-                    
-                </div>
-            </a>
-        </div>
+       
     </div>
     </div>
 
@@ -200,73 +148,94 @@
     <div class="universal_container ">
         <h3>История региона</h3>
         <div class="info">
-            <figure>
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Coat_of_Arms_of_Minsk_province.svg/300px-Coat_of_Arms_of_Minsk_province.svg.png" alt="" />
-                <figcaption>Герб Минской области</figcaption>
-            </figure>
+            <div class="info-main__element">
+<!--                 
+                <h4>Минская область</h4> -->
+                <div class="info-main__text">
+                    <p ><b>Минская область</b> – одна из шести областей Беларуси. Расположена в центральной части страны.</p>
+
+                    <p>Регион не имеет границ с другими государствами, зато граничит со всеми другими областями республики.</p>
+                        
+                    <p>Минская область – один из наиболее экономически развитых регионов страны.</p>
+                        
+                    <p>В Минской области проживают 1 млн 472,0 тыс. человек (на 1 января 2020 г.).</p>
+                </div>
+
+                <figure>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Coat_of_Arms_of_Minsk_province.svg/300px-Coat_of_Arms_of_Minsk_province.svg.png" alt="Герб Минской области" />
+                    <!-- <figcaption>Герб Минской области</figcaption> -->
+                </figure>
+
+            </div>
+
             <div class="info__elements">
-                <div class="info__element">
-                <h4>Минская область</h4>
-                <p class="info-element_p">Минская область – одна из шести областей Беларуси. Расположена в центральной части страны.</p>
+                <div class="info__element" onclick="switchAnswer(this);">  
+                    <h4 class="info-element_h4">Города и поселки Минской области &plus;</h4>
+                    <div class="info-element_p_hiden info-element_p">
+                    <p >Областные органы местного управления находятся в Минске, хотя административно и территориально столица не входит в ее состав. На территории области расположено 24 города, 19 поселков городского типа, 5212 сельских населенных пунктов.</p>
+                </div>
+                </div>
 
-                <p>Регион не имеет границ с другими государствами, зато граничит со всеми другими областями республики.</p>
-                    
-                <p>Минская область – один из наиболее экономически развитых регионов страны.</p>
-                    
-                <p>В Минской области проживают 1 млн 472,0 тыс. человек (на 1 января 2020 г.).</p>
-            </div>
+                <div class="info__element" onclick="switchAnswer(this);">  
+                    <h4 class="info-element_h4">Транспортное сообщение Минской области &plus;</h4>
+                    <div class="info-element_p_hiden info-element_p">
+                    <p >Минская область расположена на пересечении основных транспортных маршрутов, связывающих Западную Европу и Восток, регионы Черноморского побережья и страны Балтии.</p>
+                    <p >В области создана разветвленная сеть автомобильных дорог.</p>
+                    <p >Железнодорожная сеть области соединяет Россию и Европу, страны Балтии и южные государства СНГ.</p>
+                </div>
+                </div>
 
-            <div class="info__element" onclick="switchAnswer(this);">  
-                <h4>Города и поселки Минской области</h4>
-                <p>Областные органы местного управления находятся в Минске, хотя административно и территориально столица не входит в ее состав. На территории области расположено 24 города, 19 поселков городского типа, 5212 сельских населенных пунктов.</p>
-            </div>
+                <div class="info__element" onclick="switchAnswer(this);">  
+                    <h4 class="info-element_h4">Культура и спорт в Минской области &plus;</h4>
+                    <div class="info-element_p_hiden info-element_p">
+                    <p >В Минской области расположены 2638 спортивных сооружений и несколько специализированных спортивных школ. Издаются 35 газет, работают 23 редакции местного радио и областная FM-радиостанция, а также 6 местных телеканала.</p>
+                </div>
+                </div>
 
-            <div class="info__element">  
-                <h4>Транспортное сообщение Минской области</h4>
-                <p>Минская область расположена на пересечении основных транспортных маршрутов, связывающих Западную Европу и Восток, регионы Черноморского побережья и страны Балтии.</p>
-                <p>В области создана разветвленная сеть автомобильных дорог.</p>
-                <p>Железнодорожная сеть области соединяет Россию и Европу, страны Балтии и южные государства СНГ.</p>
-            </div>
-
-            <div class="info__element">  
-                <h4>Культура и спорт в Минской области</h4>
-                <p>В Минской области расположены 2638 спортивных сооружений и несколько специализированных спортивных школ. Издаются 35 газет, работают 23 редакции местного радио и областная FM-радиостанция, а также 6 местных телеканала.</p>
-            </div>
-
-            <div class="info__element">  
-                <h4>Достопримечательности Минской области</h4>
-                <p>В список историко-культурных ценностей Республики Беларусь включено свыше 650 объектов, расположенных на территории Минской области, в т.ч.:
-                <ul>
-                    <li>Церкви в Борисове (XVIII в.) </li>
-                    <li>Несвижский дворцово-парковый комплекс </li>
-                    <li>Археологические и архитектурные памятники в Логойске (XIX в.) </li>
-                    <li>Заславльский замок (XVI–XVII вв.) </li>
-                    <li>Музей быта XIX века "Дудутки" </li>
-                </ul>
-
-            </div>
+                <div class="info__element" onclick="switchAnswer(this)">  
+                    <h4 class="info-element_h4">Достопримечательности Минской области &plus;</h4>
+                    <div class="info-element_p_hiden info-element_p">
+                    <p >В список историко-культурных ценностей Республики Беларусь включено свыше 650 объектов, расположенных на территории Минской области, в т.ч.:</p>
+                    <ul >
+                        <li>Церкви в Борисове (XVIII в.) </li>
+                        <li>Несвижский дворцово-парковый комплекс </li>
+                        <li>Археологические и архитектурные памятники в Логойске (XIX в.) </li>
+                        <li>Заславльский замок (XVI–XVII вв.) </li>
+                        <li>Музей быта XIX века "Дудутки" </li>
+                    </ul>
+                    </div>
+                </div>
         
             <div class="info__histiory-foto">
                 <h4>Исторические фотографии</h4>
-                <figure class="histiory-foto">
-                    <img src="https://www.etoretro.ru/data/media/3742/152577572932e.jpg" alt="" />
-                    <figcaption>Ярмарка.Минская область. Старые дороги.19в.</figcaption>
-                </figure>
-            
-                <figure class="histiory-foto">
-                    <img src="https://orda.of.by/.ga/v/vilejka/index/sf/1295766391-0.jpg" alt="" />
-                    <figcaption>Площадь Свободы. Вилейка.1950-е гг., на заднем плане – школа (сейчас - Центр внешкольной работы)</figcaption>
-                </figure>
-                <figure class="histiory-foto">
-                    <img src="https://dzerginsk.by/uploads/0b/7a/0b7ad1321577e59d030d7c6f82bcb37c.jpg" alt="" />
-                    <figcaption>Железнодорожная станция Койданово. Койданово (г.Дзержинск). Начало 19в.</figcaption>
-                </figure>
+
+                <a href="img/minsk/foto1.jpg" class="histiory-foto" data-lightbox="foto" data-title="Ярмарка.Минская область. Старые дороги.19в.">
+                    <figure >
+                        <img src="img/minsk/foto1.jpg" alt="Ярмарка.Минская область. Старые дороги.19в." />
+                        <figcaption>Ярмарка.Минская область. Старые дороги.19в.</figcaption>
+                    </figure>
+                </a>
+
+                <a href="img/minsk/foto2.jpg" class="histiory-foto" data-lightbox="foto" data-title="Площадь Свободы. Вилейка.1950-е гг., на заднем плане – школа (сейчас - Центр внешкольной работы)">
+                    <figure >
+                        <img src="img/minsk/foto2.jpg" alt="Площадь Свободы. Вилейка.1950-е гг., на заднем плане – школа (сейчас - Центр внешкольной работы)" />
+                        <figcaption>Площадь Свободы. Вилейка.1950-е гг.</figcaption>
+                    </figure>
+                </a>
+
+                <a href="img/minsk/foto3.jpg" class="histiory-foto" data-lightbox="foto" data-title="Железнодорожная станция Койданово. Койданово (г.Дзержинск). Начало 19в.">
+                    <figure >
+                        <img src="img/minsk/foto3.jpg" alt="Железнодорожная станция Койданово. Койданово (г.Дзержинск). Начало 19в." />
+                        <figcaption>Железнодорожная станция Койданово. Койданово (г.Дзержинск). Начало 19в.</figcaption>
+                    </figure>
+                </a>
+               
             </div>
         </div>
     </div>
 </div>
 
-    <div class="universal_container ">
+    <!-- <div class="universal_container ">
         <h3>Новости Минского региона</h3>
         <div class="container__news">
             <div class="box__news ">
@@ -296,7 +265,7 @@
                
             </div> 
         </div>   
-    </div>
+    </div> -->
 
     </div>
     <footer>
@@ -313,7 +282,9 @@
         
     </footer>
 
-
+<script src="jquery-3.6.0.min.js"></script>
+<script src="lightbox2/src/js/lightbox.js"></script>
+<script src="js/script.js"></script>
 
 </body>
 </html>

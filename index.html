@@ -19,50 +19,7 @@ body {
     grid-gap: 20px;
 }
 
-.slider{
-    animation: slider 60s linear infinite;
-    
-} 
 
-@keyframes slider {
-     0%{
-        background: url("img/slider/belarus/belarus1.jpg"); 
-        background-size:cover;
-    }
-    20% {
-        background: url("img/slider/belarus/belarus1.jpg"); 
-        background-size:cover;
-    }
-    25% {
-        background: url("img/slider/belarus/belarus2.jpg"); 
-        background-size:cover;
-    }
-    45% {
-        background: url("img/slider/belarus/belarus2.jpg"); 
-        background-size:cover;
-    }
-    50% {
-        background: url("img/slider/belarus/belarus3.jpg");
-        background-size:cover;
-    }
-    70% {
-        background: url("img/slider/belarus/belarus3.jpg");
-        background-size:cover;
-    }
-    75% {
-        background: url("img/slider/belarus/belarus4.jpg");
-        background-size:cover;
-    }
-    95% {
-        background: url("img/slider/belarus/belarus4.jpg");
-        background-size:cover;
-    }
-    100%{
-        background: url("img/slider/belarus/belarus1.jpg"); 
-        background-size:cover;
-    } 
-    
-}
 
 .video__container {
         display:flex;
@@ -162,12 +119,18 @@ body {
 <body>
 
     <div class="header">
-        <div class="header__logo">
-            <img src="img/valoshka.svg" alt="vasilek">
-        </div>
+        <a href="index.html">
+        <img src="img/valoshka-logo.svg" alt="Лого сайта valoshki.by Путешествуй вместе с нами!">
+        </a>
     </div>
 
-    <div class="slider"></div>
+    <div class="slider" object="javascript: slider();">
+        <img class="slider__image " src="img/belarus/belarus1.jpg" alt="Васильки">
+        <img class="slider__hidden slider__image" src="img/belarus/belarus2.jpg" alt="Поле васильков">
+        <img class="slider__hidden slider__image" src="img/belarus/belarus3.jpg" alt="Браславские озёра">
+        <img class="slider__hidden slider__image" src="img/belarus/belarus4.jpg" alt="Незабудки">
+    </div>
+    
 
     <div class="menu">
         <img src="img/valimg.svg">
@@ -311,6 +274,10 @@ body {
         </div>
         
     </footer>
+
+    <script src="jquery-3.6.0.min.js"></script>
+    <script src="lightbox2/src/js/lightbox.js"></script>
+    <script src="js/script.js"></script>
 
     <script>
 

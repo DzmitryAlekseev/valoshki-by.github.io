@@ -17,69 +17,24 @@
             font-family: 'Old Standard TT', serif;
         }
 
-        .slider {
-            animation: slider 60s linear infinite;
-        }
-
-        @keyframes slider {
-            0% {
-                background: url("img/grodno/grodno1.jpg");
-                background-size: cover;
-            }
-
-            20% {
-                background: url("img/grodno/grodno1.jpg");
-                background-size: cover;
-            }
-
-            25% {
-                background: url("img/grodno/grodno2.jpg");
-                background-size: cover;
-            }
-
-            45% {
-                background: url("img/grodno/grodno2.jpg");
-                background-size: cover;
-            }
-
-            50% {
-                background: url("img/grodno/grodno3.jpg");
-                background-size: cover;
-            }
-
-            70% {
-                background: url("img/grodno/grodno3.jpg");
-                background-size: cover;
-            }
-
-            75% {
-                background: url("img/grodno/grodno4.jpg");
-                background-size: cover;
-            }
-
-            95% {
-                background: url("img/grodno/grodno4.jpg");
-                background-size: cover;
-            }
-
-            100% {
-                background: url("img/grodno/grodno1.jpg");
-                background-size: cover;
-            }
-        }
+    
     </style>
 
 </head>
 <body>
 
     <div class="header">
-        <div class="header__logo">
-            <img src="img/valoshka.svg" alt="vasilek">
-        </div>
+        <a href="index.html">
+        <img src="img/valoshka-logo.svg" alt="Лого сайта valoshki.by Путешествуй вместе с нами!">
+        </a>
     </div>
 
-    <div class="slider">
+    <div class="slider" object="javascript: slider();">
         <h2 class="slider__region">Гродненская область</h2>
+        <img class="slider__image " src="img/grodno/grodno1.jpg" alt="Мирский замок">
+        <img class="slider__hidden slider__image" src="img/grodno/grodno2.jpg" alt="Церковь в Гродненской области">
+        <img class="slider__hidden slider__image" src="img/grodno/grodno3.jpg" alt="Вид не берег реки">
+        <img class="slider__hidden slider__image" src="img/grodno/grodno4.jpg" alt="Гродненский драм-театр">
     </div>
 
     <div class="menu">
@@ -312,6 +267,10 @@
 
     </footer>
 
+
+    <script src="jquery-3.6.0.min.js"></script>
+    <script src="lightbox2/src/js/lightbox.js"></script>
+    <script src="js/script.js"></script>
 
 
 </body>

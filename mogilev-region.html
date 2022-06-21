@@ -17,50 +17,6 @@
         font-family: 'Old Standard TT', serif;     
     }
 
-   .slider{
-    animation: slider 60s linear infinite;
-    
-} 
-
-@keyframes slider {
-     0%{
-        background: url("img/mogilev/mogilev1.jpg"); 
-        background-size:cover;
-    }
-    20% {
-        background: url("img/mogilev/mogilev1.jpg"); 
-        background-size:cover;
-    }
-    25% {
-        background: url("img/mogilev/mogilev2.jpg"); 
-        background-size:cover;
-    }
-    45% {
-        background: url("img/mogilev/mogilev2.jpg"); 
-        background-size:cover;
-    }
-    50% {
-        background: url("img/mogilev/mogilev3.jpg");
-        background-size:cover;
-    }
-    70% {
-        background: url("img/mogilev/mogilev3.jpg");
-        background-size:cover;
-    }
-    75% {
-        background: url("img/mogilev/mogilev4.jpg");
-        background-size:cover;
-    }
-    95% {
-        background: url("img/mogilev/mogilev4.jpg");
-        background-size:cover;
-    }
-    100%{
-        background: url("img/mogilev/mogilev1.jpg"); 
-        background-size:cover;
-    } 
-    
-}
 
       
 </style>
@@ -69,13 +25,17 @@
 <body>
 
     <div class="header">
-        <div class="header__logo">
-            <img src="img/valoshka.svg" alt="vasilek">
-        </div>
+        <a href="index.html">
+        <img src="img/valoshka-logo.svg" alt="Лого сайта valoshki.by Путешествуй вместе с нами!">
+        </a>
     </div>
 
-    <div class="slider">
+    <div class="slider" object="javascript: slider();">
         <h2 class="slider__region">Могилёвская область</h2>
+        <img class="slider__image " src="img/mogilev/mogilev1.jpg" alt="Вид на Могилёв">
+        <img class="slider__hidden slider__image" src="img/mogilev/mogilev2.jpg" alt="Буйничское поле">
+        <img class="slider__hidden slider__image" src="img/mogilev/mogilev3.jpg" alt="Виды Могилевской области">
+        <img class="slider__hidden slider__image" src="img/mogilev/mogilev4.jpg" alt="Природа Могилёвщины">
     </div>
 
     <div class="menu">
@@ -306,7 +266,9 @@
         
     </footer>
 
-
+    <script src="jquery-3.6.0.min.js"></script>
+    <script src="lightbox2/src/js/lightbox.js"></script>
+    <script src="js/script.js"></script>
 
 </body>
 </html>
