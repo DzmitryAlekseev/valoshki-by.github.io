@@ -70,7 +70,7 @@ body{
     display: grid;
     background-color: white;
     height: 50px;
-    width: inherit;
+    width: 100%;
     font-family: 'Neucha', cursive;
     font-size: 24px;
     border-bottom:thick double #003bcd;
@@ -440,10 +440,11 @@ li.menu__submenu:hover ul {
   }
 
 
-.info-element_p{
+.info__element p{
     width: 100%;
     text-align: justify;
-    margin: 10px;
+    margin: 5px;
+    text-indent: 15px;
 }
 
 .info-element_p_hiden{
@@ -594,7 +595,7 @@ footer {
   }
 
 
-  @media (max-width:920px)
+  @media (max-width:920px) and (min-width:720px)
 {
     
     .menu ul {
@@ -640,17 +641,22 @@ footer {
     
 }
 
-@media (max-width:720px)
+@media (max-width:720px) and (min-width:600px)
 {
     .menu{
         grid-template-columns: 1fr;
+        width: 100%;
     }
+    .menu ul {
+        width: 100%;
+    }
+
     .menu img{
         display: none;
     }
 }
 
-@media (max-width:600px)
+@media (max-width:600px) 
 {
     body{
         grid-gap: 10px;
@@ -668,8 +674,68 @@ footer {
 
     .header a{
         width: 98%;
-        margin: 0 auto;
     }
+
+    .menu{
+        grid-template-columns: 1fr;
+        width: 100%;
+        height: fit-content;
+    }
+    .menu ul {
+        
+        width: 100%;
+        height: 30px;
+    }
+
+    .menu img{
+        display: none;
+    }
+
+    /* .menu ul li {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        text-align: center;;
+    } */
+
+
+        
+    .menu ul li a{
+        position: relative;
+        top:-2px;
+            font-size: 12px;
+            line-height: 28px;
+            height: 100%;
+        }
+       
+        .menu ul li a:hover {
+            font-size: 12px;
+        }
+    
+        .menu__submenu ul {
+            width:  100%;
+        }
+    
+       
+    
+        .menu__submenu ul li a{
+            font-size: 10px;
+            height: 20px;
+            line-height: 20px;
+        }
+    
+        .menu__submenu ul li a:hover{
+            font-size: 10px;
+        } 
+
+        body h3{
+            font-size: 16px;
+        }
+
+        body p{
+            font-size: 12px;
+        }
+
 }
 
 
