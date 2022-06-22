@@ -17,6 +17,37 @@ function slider() {
 }
 setInterval(()=>slider(),5000)
 
+
+//карта на индексе
+
+
+function changeMinsk(){
+    setTimeout(() => document.getElementById("map__region").src="img/slider/belarus/minsk.jpg",0);
+    }
+
+    function changeBrest(){
+    setTimeout(() => document.getElementById("map__region").src="img/slider/belarus/brest.jpg",0);
+    }
+    function changeGrodno(){
+    setTimeout(() => document.getElementById("map__region").src="img/slider/belarus/grodno.jpg",0);
+    }
+    function changeVitebsk(){
+    setTimeout(() => document.getElementById("map__region").src="img/slider/belarus/vitebsk.jpg",0);
+    }
+
+    function changeHomel(){
+    setTimeout(() => document.getElementById("map__region").src="img/slider/belarus/homel.jpg",0);
+    }
+
+    function changeMohilev(){
+    setTimeout(() => document.getElementById("map__region").src="img/slider/belarus/mohilev.jpg",0);
+    }
+
+    function changeBel(){
+        setTimeout(() =>document.getElementById("map__region").src="img/slider/belarus/bel.jpg",0);
+    }
+        
+
 //для текста в разделе информации
 
 var p = document.querySelectorAll('.info-element_h4 ~ .info-element_p');
@@ -34,43 +65,39 @@ function switchAnswer(ele) {
 
     //menu
     jQuery(function ($) {
-        if ($) {
-          console.log("jQuery start");
-        }
-        
-        
-        var navMenu = $(".menu"); // выбираем меню
-        console.log(navMenu.offset().top)
-        
+   
+        var navMenu = $(".menu"); // выбираем меню      
         var navMenuTop = navMenu.offset().top; //получение знaчения св-ва top
         var toTop = $(".to-top"); // выбираем кнопку to-top
         var body = $("html, body");
+
     
         $(window).on("resize", function () {
-          console.log("окно изменило размер");
-          // получаем св-во top каждый раз при изменения размеров окна браузера
           navMenuTop = navMenu.offset().top;
-          console.log("navMenuTop: ", navMenuTop);
-    
-          console.log("height:", $(window).innerHeight()); // высота viewport
-          console.log("width:", $(window).innerWidth());   // ширина viewport
         });
     
         $(window).on("scroll", function () {
           var winScrollTopValue = $(window).scrollTop(); // насколько проскроллили страницу
-    
-          console.log(winScrollTopValue);
-    
+
           if (winScrollTopValue > navMenuTop) {
-            console.log("Ятут")
             navMenu.addClass("menu_fixed");
+            toTop.removeClass("to-top_hiden")
           } else {
-            console.log("Ятут а")
+            toTop.addClass("to-top_hiden")
             navMenu.removeClass("menu_fixed");
           }
-    
-      
+
         });
 
-   
+       
+        toTop.on("click", toTopClicked); //обрабатываем клик по ссылке
+
+        function toTopClicked(event) {
+          event.preventDefault(); //отменить действие по умолчанию т.е. переход по ссылке
+       
+    
+          body.animate({
+            scrollTop: 0
+          }, 1200);
+        }
     })

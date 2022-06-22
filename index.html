@@ -13,7 +13,7 @@
 
 body {
     display: grid;
-    grid-template-rows:100px 0.3fr 50px repeat(3,fit-content(100%)) 50px;
+    grid-template-rows:repeat(6,fit-content(100%));
     background-color:rgb(255, 255, 255);
     margin: 0 0;
     grid-gap: 20px;
@@ -36,6 +36,12 @@ body {
    
 }
 
+.container {
+    margin: 10px 0;
+    width: fit-content;
+    height: fit-content;
+}
+
 
 .map {
     display: flex;
@@ -43,20 +49,19 @@ body {
     justify-content: space-evenly;
     grid-row:5;
     align-items: center;
-    width: 100%;
-    grid-column: 1/span 3;
+    
     }
 
     .map svg{
-        width:35%;
+        width:35vw;
         /* height: 500px; */
         object-fit: contain;
     }
 
     .map img{
-        width:35%;
-        /* height: 400px; */
-        object-fit: cover;
+        width:35vw;
+        height: 40vh;
+        object-fit: contain;
     }
 
     .map .voblasts {
@@ -155,7 +160,6 @@ body {
 
     <div class="universal_container">
         <h3>Карта Беларуси</h3>
-        <div class="container__news">
             <div class="map">
                 <!-- <img src="https://www.svetilka.by/image/data/belarus.jpg" alt=""> -->
                 <svg id="Belarus" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -188,7 +192,7 @@ body {
                 </svg>
             <img id="map__region" src="img/slider/belarus/bel.jpg">
         </div>
-    </div>
+   
     </div>
 
 
@@ -250,6 +254,13 @@ body {
         </div>
     </div>
 
+    <a href="#" class="to-top">
+        <svg width="50" height="50" viewBox="0 0 100 100">
+           <circle cx="50" cy="50" r="45"></circle>
+           <text x="36" y="62">&xwedge;</text>
+          </svg>
+    </a>
+
     <footer>
         <div class="footer__text">
             <p>Путешествуй вместе с нами!</p>
@@ -268,36 +279,5 @@ body {
     <script src="lightbox2/src/js/lightbox.js"></script>
     <script src="js/script.js"></script>
 
-    <script>
-
-    console.log(document.getElementById("map__region").src)
-
-       function changeMinsk(){
-        setTimeout(() => document.getElementById("map__region").src="img/slider/belarus/minsk.jpg",0);
-        }
-
-        function changeBrest(){
-        setTimeout(() => document.getElementById("map__region").src="img/slider/belarus/brest.jpg",0);
-        }
-        function changeGrodno(){
-        setTimeout(() => document.getElementById("map__region").src="img/slider/belarus/grodno.jpg",0);
-        }
-        function changeVitebsk(){
-        setTimeout(() => document.getElementById("map__region").src="img/slider/belarus/vitebsk.jpg",0);
-        }
-
-        function changeHomel(){
-        setTimeout(() => document.getElementById("map__region").src="img/slider/belarus/homel.jpg",0);
-        }
-
-        function changeMohilev(){
-        setTimeout(() => document.getElementById("map__region").src="img/slider/belarus/mohilev.jpg",0);
-        }
-
-        function changeBel(){
-            setTimeout(() =>document.getElementById("map__region").src="img/slider/belarus/bel.jpg",0);
-        }
-            
-    </script>
 </body>
 </html>

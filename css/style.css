@@ -8,16 +8,19 @@
         justify-content: center;
         align-items: center; 
         border-bottom:thick double #003bcd;
-         height: fit-content;
+        height: fit-content;
+        
 }
 
 .header a{
+   
     width: 100%;
     display:flex;
     justify-content: center;
 }
 
 .header a img {
+    margin: 10px 0;
     width:30%;
     min-height: 50px;
     min-width: 300px;
@@ -576,7 +579,7 @@ footer {
     background-color:#0098cd;
     color:white;
     font-size: 12px;
-    
+    margin-top: 10px;
 }
 
 footer a{
@@ -616,6 +619,40 @@ footer a{
     height: inherit;
 }
 
+.to-top {
+
+    position: fixed;
+    right: 1%;
+    width: fit-content;
+    height: fit-content;
+    bottom: 0px;
+    color: #000;
+    text-decoration: none;
+    text-align: center;
+    opacity: 0.7;
+  }
+
+  .to-top_hiden {
+    display: none;
+  }
+
+
+  .to-top svg circle{
+    stroke:#003bcd;
+    fill:aliceblue;
+  }
+
+  .to-top svg text{
+    font-size: xxx-large;
+    stroke:#001c64;
+    stroke-width: 3px;
+    
+  }
+
+  .to-top:hover {
+    opacity: 1;
+    cursor:pointer;
+  }
 
 
 
