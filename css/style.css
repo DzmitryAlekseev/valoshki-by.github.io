@@ -237,8 +237,8 @@ li.menu__submenu:hover ul {
     }
 
     .map__region img{
-        width: fit-content;
-        height: 400px; 
+        width: 40vw;
+        height: fit-content; 
         object-fit: contain;
     }
 
