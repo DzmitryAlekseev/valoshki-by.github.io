@@ -166,7 +166,7 @@ li.menu__submenu:hover ul {
 /* map - используется на всех страницах регионов */
 .map {
     display: grid;
-    grid-template-columns: repeat(2,40%);
+    grid-template-columns: repeat(2,40vw);
     flex-direction: row;
     justify-content: center;
     align-items: center;
@@ -177,7 +177,7 @@ li.menu__submenu:hover ul {
 }
 
 .map__region{
-        width:100%;
+        width:fit-content;
         height: fit-content ;
         display: flex;
         justify-content: center
@@ -194,8 +194,10 @@ li.menu__submenu:hover ul {
         grid-template-rows: repeat(2,fit-content(100%));
         grid-template-columns: repeat(2,fit-content(100%));
         grid-gap: 20px;
-        width: 100%;
-        height: 100%;  
+        width: 40vw;
+        height: fit-content;  
+        align-items: center;
+ 
     }
     
     .photogallery__element {
@@ -369,17 +371,17 @@ li.menu__submenu:hover ul {
 
 .info-main__element {
     display: grid;
-    grid-template-columns: 70% 30%;
+    grid-template-columns: 5fr 3fr;
     grid-template-rows: fit-content(100%);
     height: fit-content;
-    margin: 0 20px;
+    margin: 20px 0;
     justify-content: center;
     align-items: center;
     width: 100%;
 }
 
 .info-main__element figure {
-    grid-row: 1/span 2;
+    grid-row: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -456,7 +458,8 @@ li.menu__submenu:hover ul {
     flex-direction: row;
     justify-content: space-between;
     height: fit-content;
-    grid-template-rows: 25px fit-content;
+    grid-template-rows: repeat(2,fit-content(100%));
+    grid-template-columns: repeat(3, 1fr);
     width: calc(100% - 40px);
     margin: 0 20px;
     grid-column-gap: 10px;
@@ -467,10 +470,12 @@ li.menu__submenu:hover ul {
     text-align: center;
     font-size: 20px;
     grid-column: 1 / span 3;
+    grid-row: 1;
 }
 
 .info__histiory-foto .histiory-foto{
     display: grid;
+    grid-row:2;
     grid-template-rows: 1fr fit-content(100%);
     grid-template-columns: 100%;
     text-decoration: none;
@@ -654,6 +659,45 @@ footer {
     .menu img{
         display: none;
     }
+
+    .map {
+        grid-template-rows: repeat(2,fit-content(100%));
+        grid-template-columns: repeat(1,fit-content(100%));
+        width: 100vw;
+        justify-items: center;
+    }
+
+    .photogallery {
+        width: 80vw;
+    }
+
+    .location__info p {
+        display: none;
+    }
+
+    .location a {
+        display: grid;
+        grid-gap: 0;
+        grid-template-columns: 1fr;
+        grid-template-rows: fit-content(100%) 1fr;
+    }
+
+    .location__info{
+        grid-row:1;
+    }
+
+    .location__info h4{
+        text-align: center;
+        margin:0;
+    }
+
+    .info-element_h4 {
+        font-size: 20px;
+    }
+
+    .info__histiory-foto {
+        grid-template-rows: 25px fit-content(100%);
+    }
 }
 
 @media (max-width:600px) 
@@ -691,15 +735,7 @@ footer {
         display: none;
     }
 
-    /* .menu ul li {
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        text-align: center;;
-    } */
-
-
-        
+     
     .menu ul li a{
         position: relative;
         top:-2px;
@@ -732,8 +768,59 @@ footer {
             font-size: 16px;
         }
 
-        body p{
+        body p, li{
             font-size: 12px;
+        }
+
+        .map {
+            grid-template-rows: repeat(2,fit-content(100%));
+            grid-template-columns: repeat(1,fit-content(100%));
+            width: 100vw;
+            justify-items: center;
+        }
+    
+        .photogallery {
+            width: 80vw;
+        }
+    
+        .location__info p {
+            display: none;
+        }
+    
+        .location a {
+            display: grid;
+            grid-gap: 0;
+            grid-template-columns: 1fr;
+            grid-template-rows: fit-content(100%) 1fr;
+        }
+    
+        .location__info{
+            grid-row:1;
+        }
+    
+        .location__info h4{
+            text-align: center;
+            margin:0;
+        }
+
+        .info-main__element {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr;
+        }
+
+        .info-main__text {
+            grid-row:2;
+            grid-column: 1;
+        }
+
+        .info-main__element figure{
+            grid-row: 1;
+            grid-column: 1;
+        }
+
+        .info-element_h4 {
+            font-size: 18px;
         }
 
 }
