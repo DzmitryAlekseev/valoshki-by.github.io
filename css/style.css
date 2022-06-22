@@ -68,7 +68,9 @@
     border-bottom:thick double #003bcd;
     border-top:thick double #003bcd;
     grid-template-columns: 10% 1fr 10%;
-    
+    /* position: absolute; */
+    /* top: 70px;
+    width: 100%; */
 }
 
 .menu img{
@@ -185,6 +187,15 @@ li.menu__submenu:hover ul {
         font-size: 12px;
     }
   
+}
+
+.menu_fixed {
+    position: fixed;
+    top: 0;
+    bottom: auto;
+    z-index: 1000;
+    width:100%;
+    
 }
 
 @media (max-width:720px)
