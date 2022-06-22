@@ -81,9 +81,6 @@ body{
     border-bottom:thick double #003bcd;
     border-top:thick double #003bcd;
     grid-template-columns: 10% 1fr 10%;
-    /* position: absolute; */
-    /* top: 70px;
-    width: 100%; */
 }
 
 .menu img{
@@ -782,10 +779,9 @@ footer {
      
     .menu ul li a{
         position: relative;
-        top:-2px;
-            font-size: 12px;
-            line-height: 28px;
-            height: 100%;
+        font-size: 12px;
+        line-height: 28px;
+        height: 100%;
         }
        
         .menu ul li a:hover {
@@ -794,14 +790,20 @@ footer {
     
         .menu__submenu ul {
             width:  100%;
+            height: fit-content;
+        }
+
+        .menu__submenu ul li{
+            border:0px;
         }
     
        
     
         .menu__submenu ul li a{
             font-size: 10px;
-            height: 20px;
+            height: fit-content;
             line-height: 20px;
+            top: 0px
         }
     
         .menu__submenu ul li a:hover{
