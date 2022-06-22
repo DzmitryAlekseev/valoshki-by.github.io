@@ -30,9 +30,26 @@
     
     .info figure img{
        margin:0 auto;
-        width: 300px;
+        width: 50vw;
     }
 
+    @media (max-width:600px) {
+
+        .info {
+    
+    width: 100%;
+    
+    margin: 0;
+}
+    
+    .info__elements {
+        margin:0;
+    }
+
+    .info__element p{
+        width: 100%;
+    }
+    }
 </style>
 
 </head>
@@ -151,5 +168,8 @@
             <a class="icon-vk" href="#"></a>
         </div>
     </footer>
+    
+    <script src="jquery-3.6.0.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
