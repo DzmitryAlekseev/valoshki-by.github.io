@@ -8,62 +8,8 @@
     <title>water-routes</title>
 
 <style>
-  
-   body {
-        display: grid;
-        grid-template-rows:100px 0.3fr 50px 400px repeat(7,fit-content);
-        margin: 0 0;
-        gap: 30px;
-        font-family: 'Old Standard TT', serif;     
-    }
 
-
-
-    .slider{
-    animation: slider 60s linear infinite;
     
-} 
-
-@keyframes slider {
-     0%{
-        background: url("/img/water-routes/slider/kayaks-slider-1.jpg"); 
-        background-size:cover;
-    }
-    20% {
-        background: url("/img/water-routes/slider/kayaks-slider-1.jpg"); 
-        background-size:cover;
-    }
-    25% {
-        background: url("/img/water-routes/slider/kayaks-slider-2.jpg"); 
-        background-size:cover;
-    }
-    45% {
-        background: url("/img/water-routes/slider/kayaks-slider-2.jpg"); 
-        background-size:cover;
-    }
-    50% {
-        background: url("/img/water-routes/slider/kayaks-slider-3.jpg");
-        background-size:cover;
-    }
-    70% {
-        background: url("/img/water-routes/slider/kayaks-slider-3.jpg");
-        background-size:cover;
-    }
-    75% {
-        background: url("img/slider/minsk/minsk4.jpg");
-        background-size:cover;
-    }
-    95% {
-        background: url("img/slider/minsk/minsk4.jpg");
-        background-size:cover;
-    }
-    100%{
-        background: url("/img/water-routes/slider/kayaks-slider-1.jpg"); 
-        background-size:cover;
-    } 
-    
-}
-
 .container__grid {
     display: grid;
     grid-template-columns: 300px 1200px;
@@ -73,23 +19,9 @@
 
 }
 
-
-.container__content__grid{
-    display:flex;
-    grid-column: 2;
-    
-
-}
-.content__grid{
-    
-    width: 200px;
-    border:2px solid black;
-
-}
-
 .container__kayaks{
 display: grid;
-grid-template-columns:0.5fr 1fr 0.5fr;
+
 grid-template-rows: repeat(7 fit-content(100%));
 margin:0 auto;
 }
@@ -97,20 +29,17 @@ margin:0 auto;
 .box__kayaks {
     grid-column: 2;
     text-align: center;
+    margin: 0 20px;
 }
 
 .box__kayaks p {
     text-align:justify;
 }
 
-.photo__kayaks {
-   
+.photo__kayaks img{
+    width: 70vw;
 }
-
-
-
-
-      
+     
 </style>
 
 </head>
@@ -122,8 +51,12 @@ margin:0 auto;
         </a>
     </div>
 
-    <div class="slider">
+    <div class="slider" object="javascript: slider();">
         <h2 class="slider__region">Водные маршруты</h2>
+        <img class="slider__image" src="/img/water-routes/slider/kayaks-slider-1.jpg" alt="Девушка на байдарке">
+        <img class="slider__hidden slider__image" src="/img/water-routes/slider/kayaks-slider-2.jpg" alt="Водный поход">
+        <img class="slider__hidden slider__image" src="/img/water-routes/slider/kayaks-slider-3.jpg" alt="Байдарки, вид с квадрокоптера">
+        <img class="slider__hidden slider__image" src="/img/water-routes/slider/kayaks-slider-4.jpg" alt="Под гитару у костра">
     </div>
 
     <div class="menu">

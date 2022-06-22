@@ -9,19 +9,11 @@
 
 <style>
   
-   body {
-        display: grid;
-        grid-template-rows:100px 0.3fr 50px 400px repeat(4,fit-content) 50px;
-        margin: 0 0;
-        gap: 30px;
-        font-family: 'Old Standard TT', serif;     
-    }
 
-   .slider{
-    background: url("img/slider/minsk/minsk1.jpg"); 
-    background-size: cover;
-    height:50vh;
-    }
+    .slider__image-about {
+    width: 100%;
+    object-fit: contain;
+}
 
     .info figure{
         width: fit-content;
@@ -62,6 +54,7 @@
     </div>
 
     <div class="slider">
+        <img class="slider__image-about" src="img/slider/minsk/minsk1.jpg" alt="Картинка">
         <h2 class="slider__region">О нас</h2>
     </div>
 
@@ -168,7 +161,7 @@
             <a class="icon-vk" href="#"></a>
         </div>
     </footer>
-    
+
     <script src="jquery-3.6.0.min.js"></script>
     <script src="js/script.js"></script>
 </body>

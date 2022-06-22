@@ -77,7 +77,7 @@ function switchAnswer(ele) {
         var navMenuTop = navMenu.offset().top; //получение знaчения св-ва top
         var toTop = $(".to-top"); // выбираем кнопку to-top
         var body = $("html, body");
-
+        var numdiv=document.querySelectorAll('body > div').length
     
         $(window).on("resize", function () {
           navMenuTop = navMenu.offset().top;
@@ -88,14 +88,15 @@ function switchAnswer(ele) {
 
           if (winScrollTopValue > navMenuTop) {
             navMenu.addClass("menu_fixed");
-            toTop.removeClass("to-top_hiden")
+            toTop.removeClass("to-top_hiden");
+            //document.querySelector('body').style.grid-template-rows='repeat(numdiv,fit-content(100%))';
           } else {
             toTop.addClass("to-top_hiden")
             navMenu.removeClass("menu_fixed");
           }
 
         });
-
+        
        
         toTop.on("click", toTopClicked); //обрабатываем клик по ссылке
 
