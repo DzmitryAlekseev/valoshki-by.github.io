@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="lightbox2/src/css/lightbox.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/style.css">
     <title>Brest region</title>
 
@@ -11,62 +12,13 @@
 
         body {
             display: grid;
-            grid-template-rows: 100px 0.3fr 50px repeat(4,fit-content(100%)) 50px;
+            grid-template-rows: 100px 0.3fr 50px repeat(3,fit-content(100%)) 50px;
             margin: 0 0;
             gap: 30px;
             font-family: 'Old Standard TT', serif;
         }
 
-        .slider {
-            animation: slider 60s linear infinite;
-        }
-
-        @keyframes slider {
-            0% {
-                background: url("img/brest/brest1.jpg");
-                background-size: cover;
-            }
-
-            20% {
-                background: url("img/brest/brest1.jpg");
-                background-size: cover;
-            }
-
-            25% {
-                background: url("img/brest/brest2.jpg");
-                background-size: cover;
-            }
-
-            45% {
-                background: url("img/brest/brest2.jpg");
-                background-size: cover;
-            }
-
-            50% {
-                background: url("img/brest/brest3.jpg");
-                background-size: cover;
-            }
-
-            70% {
-                background: url("img/brest/brest3.jpg");
-                background-size: cover;
-            }
-
-            75% {
-                background: url("img/brest/brest4.jpg");
-                background-size: cover;
-            }
-
-            95% {
-                background: url("img/brest/brest4.jpg");
-                background-size: cover;
-            }
-
-            100% {
-                background: url("img/brest/brest1.jpg");
-                background-size: cover;
-            }
-        }
+       
     </style>
 
 </head>
@@ -74,12 +26,16 @@
 
     <div class="header">
         <div class="header__logo">
-            <img src="img/valoshka.svg" alt="vasilek">
+            <img src="img/valoshka-logo.svg" alt="vasilek">
         </div>
     </div>
 
-    <div class="slider">
-        <h2 class="slider__region">Гродненская область</h2>
+    <div class="slider" object="javascript: slider();">
+        <h2 class="slider__region">Брестская область</h2>
+        <img class="slider__image " src="img/brest/brest1.jpg" alt="Беловежская пуща">
+        <img class="slider__hidden slider__image" src="img/brest/brest2.jpg" alt="Косовскийзамок">
+        <img class="slider__hidden slider__image" src="img/brest/brest3.jpg" alt="Белая вежа">
+        <img class="slider__hidden slider__image" src="img/brest/brest4.jpg" alt="Река в брестской области">
     </div>
 
     <div class="menu">
@@ -119,20 +75,33 @@
 
 
 
+ 
+
     <div class="map">
-
-        <div class="map__region"><img src="img/brest/brest-map.jpg"></div>
-
-        <div class="photogallery">
-            <div class="photogallery__element"><img src="img/brest/gal1.jpg"></div>
-            <div class="photogallery__element"><img src="img/brest/gal2.jpg"></div>
-            <div class="photogallery__element"><img src="img/brest/gal3.jpg"></div>
-            <div class="photogallery__element"><img src="img/brest/gal4.jpg"></div>
-
-
+        <div class="map__region">
+            <a href="img/brest/brest-map.jpg"  data-lightbox="map" data-title="Карта Гомельской области">
+                <img src="img/brest/brest-map.jpg" alt="Карта Гомельской области.">
+            </a>
         </div>
 
+        <div class="photogallery">
 
+            <a href="img/brest/gal1.jpg" class="photogallery__element" data-lightbox="roadtrip" data-title="Усадебный дом Пусловских">
+                <img src="img/brest/gal1.jpg" alt="Усадебный дом Пусловских">
+            </a>
+
+            <a href="img/brest/gal2.jpg" class="photogallery__element" data-lightbox="roadtrip" data-title="Ружанский дворец">
+                <img src="img/brest/gal2.jpg" alt="Ружанский дворец">
+            </a>
+
+            <a href="img/brest/gal3.jpg" class="photogallery__element" data-lightbox="roadtrip" data-title="Брестская крепость">
+                <img src="img/brest/gal3.jpg" alt="Брестская крепость">
+            </a>
+
+            <a href="img/brest/gal4.jpg" class="photogallery__element" data-lightbox="roadtrip" data-title="Зубры">
+                <img src="img/brest/gal4.jpg" alt="Зубры">
+            </a>
+        </div>
     </div>
 
 
@@ -143,7 +112,7 @@
             <div class="location">
                 <a href="https://npbp.by/">
                     <div class="location__image">
-                        <img src="https://ekskursii.by/images/obj1/204/12_clear_resize1.jpg" alt="">
+                        <img src="img/brest/place1.jpg" alt="Указатель Беловежская пуща">
                     </div>
                     <div class="location__info">
                         <h4>Беловежская пуща</h4>
@@ -155,7 +124,7 @@
             <div class="location">
                 <a href="http://nemtsevichi.museum.by/">
                     <div class="location__image">              
-                        <img src="https://planetabelarus.by/upload/resize_cache/iblock/765/1330_747_18e21fe612b4afb807a26ecc22279a1d9/765f6a77d56da89379c47d7c93183552.jpg" alt="">
+                        <img src="img/brest/place2.jpg" alt="Усадьба Немцевичей в деревне Скоки">
                     </div>
                     <div class="location__info">
                         <h4>Усадьба Немцевичей в деревне Скоки</h4>
@@ -166,7 +135,7 @@
             <div class="location">
                 <a href="https://zamok-kossovo.by/">
                     <div class="location__image">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/%D0%94%D0%B2%D0%BE%D1%80%D0%B5%D1%86_%D0%9F%D1%83%D1%81%D0%BB%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D1%85_2_2020.jpg/1280px-%D0%94%D0%B2%D0%BE%D1%80%D0%B5%D1%86_%D0%9F%D1%83%D1%81%D0%BB%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D1%85_2_2020.jpg" alt="">
+                        <img src="img/brest/place3.jpg" alt="Дворец Пусловских">
                     </div>
                     <div class="location__info">
                         <h4>Дворец Пусловских</h4>
@@ -177,7 +146,7 @@
             <div class="location">
                 <a href="https://museumkossovo.by/be/">
                     <div class="location__image">
-                        <img src="https://marshruting.files.wordpress.com/2021/04/20191013_131653.jpg?w=1800&h=1200&crop=1" alt="">
+                        <img src="img/brest/place4.jpg" alt="Музей-усадьба Тадеуша Костюшко">
                     </div>
                     <div class="location__info">
                         <h4>Музей-усадьба Тадеуша Костюшко</h4>
@@ -188,7 +157,7 @@
             <div class="location">
                 <a href="https://www.belarus.by/ru/travel/belarus-life/kamenets-tower">
                     <div class="location__image">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoFzecrmTW7kZgIeTmNyncLkifOJbt5owlvQ&usqp=CAU" alt="">
+                        <img src="img/brest/place5.jpg" alt="Каменецкая вежа">
                     </div>
                     <div class="location__info">
                         <h4>Каменецкая вежа</h4>
@@ -202,99 +171,66 @@
     <div class="universal_container ">
         <h3>История региона</h3>
         <div class="info">
-            <figure>
-                <img src="iumg/brest/symb.png" alt="" />
-                <figcaption>Герб Гродненской области</figcaption>
-            </figure>
-            <div class="info__elements">
-                <div class="info__element">
-                    <h4>Гродненская область</h4>
-                    <p class="info-element_p">Гродненская область – одна из шести областей Беларуси. Расположена на западе страны.</p>
+            <div class="info-main__element">
+                <div class="info-main__text">
+                    <p><b>Гомельская область</b> – одна из шести областей Беларуси. Расположена в юго-восточной части страны.</p>
 
-                    <p>На западе Гродненская область граничит с Польшей,  на севере – с Литвой. Регион активно развивает партнерские отношения как с Европой, так и с Россией.</p>
+                    <p>Гомельская область – крупнейшая по территории область Беларуси (40,4 тыс. кв. км). На востоке область граничит с Россией, на юге – с Украиной. Сельскохозяйственные угодья занимают около 30% территории региона.</p>
                 </div>
 
-                <div class="info__element">
-                    <h4>Поселки и города Гродненской области</h4>
-                    <p>Гродно – областной административный центр. В состав области входят 17 районов, 12 городов, в том числе 6 – областного подчинения, 21 поселок городского типа.</p>
+                <figure>
+                    <img src="img/brest/gomel-embl.svg" alt="Герб Гомельской области" />
+                    <figcaption>Герб Гомельской области</figcaption>
+                </figure>
+            </div>
+
+            <div class="info__element" onclick="switchAnswer(this);">  
+                <h4 class="info-element_h4">Поселки и города Гомельской области &#8595;</h4>
+                <div class="info-element_p_hiden info-element_p">
+                    <p>Гомель – областной административный центр. Территория области разделена на 21 район. В  состав области входят 17 городов, 18 поселков городского типа и 2608 сельских населенных пунктов.</p>
                 </div>
+            </div>
 
-                <div class="info__element">
-                    <h4>Транспортное сообщение Гродненской области</h4>
-                    <p>родненская область имеет развитую дорожную инфраструктуру. Через область проходят международные автомагистрали, соединяющие страны Европы и СНГ. Главные автотрассы региона идут в направлении Минска, Вильнюса, Барановичей и Бреста.</p>
-                    <p>Гродненская область имеет обширную железнодорожную сеть. Международные линии связывают область с Польшей и Литвой.</p>
-                    <p>В Гродненской области также развита сеть водного транспорта. Судоходные реки – Неман и Щара.</p>
+            <div class="info__element" onclick="switchAnswer(this);">  
+                <h4 class="info-element_h4">Транспортное сообщение Гомельской области &#8595;</h4>
+                <div class="info-element_p_hiden info-element_p">
+                    <p>Гомельская область имеет развитую дорожную инфраструктуру. Через область проходят крупные международные автомагистрали, соединяющие страны Европы с Россией и Украиной.</p>
+                    <p>Гомельская область имеет обширную сеть железных дорог. 90% железнодорожных грузов страны и около половины пассажирских поездов проходят через регион.</p>
+                    <p>Главная река области – Днепр. Его протяженность – 420 км. Днепр пересекает территорию региона с севера на юг. Притоки Днепра и реки Припяти имеют судоходное и сплавное значение, а также служат водоприемниками для мелиоративных каналов, осушающих заболоченные земли.</p>
                 </div>
+            </div>
 
-                <div class="info__element">
-                    <h4>Культура и средства массовой информации Гродненской области</h4>
-                    <p>В культурном наследии Гродненщины ведущую роль играют старинные архитектурные ансамбли./p>
-                    <p>Ежегодно в Гродно и области проводится множество международных, республиканских и областных фестивалей и конкурсов. Наиболее известные из них – Республиканский фестиваль национальных культур, региональный фестиваль искусств "Мирский замок".В числе современных спортивных сооружений Гродненской области – Центральный спортивный комплекс "Неман".
-                    </p>
+            <div class="info__element" onclick="switchAnswer(this);">  
+                <h4 class="info-element_h4">Культура и средства массовой информации Гомельской области &#8595;</h4>
+                <div class="info-element_p_hiden info-element_p">
+                    <p>В Гомельской области находится множество памятников археологии, истории, культуры и архитектуры. В области 26 музеев, 4 театра и 2 художественные галереи.</p>
+                    <p>Один из старейших и наиболее авторитетных музеев – Гомельский дворцово-парковый ансамбль, центром которого является дворец Румянцевых и Паскевичей (памятник архитектуры конца XVIII – середины XIX вв).</p>
+                    <p>В регионе проходят различные фестивали искусств – регионального, республиканского и международного уровней. Присвоение Гомелю статуса культурной столицы Беларуси и СНГ 2011 года является свидетельством высоких достижений Гомеля в сфере культуры.В Гомельской области издается более 70 газет и журналов, работают региональные теле- и радиостанции.</p>
                 </div>
+            </div>
 
-                <div class="info__element">
-                    <h4>Достопримечательности Гродненской области</h4>
-                    <p>Гродно – один из красивейших городов Беларуси. Среди достопримечательностей города – королевские замки и архитектурные памятники.</p>
-                    <p>Одно из наиболее важных мест паломничества в Беларуси – Свято-Успенский Жировичский мужской монастырь. В одном из храмов монастыря находится знаменитая Икона Божьей Матери.  </p>
+            <div class="info__histiory-foto">
+                <h4>Исторические фотографии</h4>
 
-                </div>
-
-                <div class="info__histiory-foto">
-                    <h4>Исторические фотографии</h4>
-                    <figure class="histiory-foto">
-                        <img src="img/brest/foto1.jpg" alt="" />
-                        <figcaption>
-                            Вид на Гродно. 1875-1878 гг</figcaption>
-                    </figure>
-
-                    <figure class="histiory-foto">
-                        <img src="img/brest/foto2.jpg" alt="" />
-                        <figcaption>
-                            Ул. К. Маркса. 1941 год</figcaption>
-                    </figure>
-                    <figure class="histiory-foto">
-                        <img src="img/brest/foto3.jpg" alt="" />
-                        <figcaption>Бернардинский монастырь на фотографии 1861 года</figcaption>
-                    </figure>
-                </div>
+                <figure class="histiory-foto">
+                    <img src="img/brest/foto1.jpg" alt="" />
+                    <figcaption>Старый Мозырь.</figcaption>
+                </figure>
+                
+                <figure class="histiory-foto">
+                    <img src="img/brest/foto2.jpg" alt="" />
+                    <figcaption>Гомель,ул.Советская,фото:Лунёв С.А.</figcaption>
+                </figure>
+                                
+                <figure class="histiory-foto">
+                    <img src="img/brest/foto3.jpg" alt="" />
+                    <figcaption>Замок князя Паскевича Изд. Лозинский Д. книжный письчебумажн. магазин 1905-1910 г.</figcaption>
+                </figure>
             </div>
         </div>
     </div>
+</div>
 
-
-    <div class="universal_container ">
-        <h3>Новости Минского региона</h3>
-        <div class="container__news">
-            <div class="box__news ">
-                <a href="https://sputnik.by/20220617/emotsionalnyy-performans-ustroyat-v-grodno-v-den-nachala-voyny-1063770069.html">
-                    <img src="img/brest/news1.jpg" alt="">
-                    <p>Эмоциональный перформанс устроят в Гродно в день начала войны</p>
-                </a>
-            </div>
-
-            <div class="box__news ">
-                <a href="https://sputnik.by/20220606/karnaval-po-belorusski-samye-yarkie-momenty-festivalya-kultur-v-grodno---foto-1063336897.html">
-
-                    <div><img src="img/brest/news2.jpg" alt=""></div>
-                    <p>Карнавал по-белорусски: самые яркие моменты фестиваля культур в Гродно - фото
-                    </p>
-
-                </a>
-            </div>
-
-            <div class="box__news ">
-                <a href="https://sputnik.by/20220604/ulitsa-zamkovaya-v-grodno-uzhe-v-sleduyuschem-godu-mozhet-stat-peshekhodnoy-1063245755.html">
-                    <div><img src="img/brest/news3.jpg" alt=""></div>
-
-                    <p>Улица Замковая в Гродно уже в следующем году может стать пешеходной</p>
-                </a>
-
-            </div>
-        </div>
-    </div>
-
-    </div>
     <footer>
         <div class="footer__text">
             <p>Путешествуй вместе с нами!</p>
@@ -309,6 +245,9 @@
 
     </footer>
 
+    <script src="jquery-3.6.0.min.js"></script>
+    <script src="lightbox2/src/js/lightbox.js"></script>
+    <script src="js/script.js"></script>
 
 
 </body>
