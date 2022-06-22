@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Neucha&family=Old+Standard+TT&display=swap');
-
+@font-face {
+    font-family: 'icomoon';
+    src: url('/fonts/iconmoon/fonts/icomoon.woff') format('woff');           
+    font-weight: normal;
+    font-style: normal;
+    }
 body{
     min-width: 320px;
 }
@@ -394,7 +399,6 @@ li.menu__submenu:hover ul {
 }
 
 .info-main__element figure img {
-    
     height: 100%;
     object-fit:contain;
 }
@@ -510,7 +514,6 @@ object-fit: cover;
 
 
 footer {
-
     display:grid;
     grid-template-columns: repeat(3,fit-content(100%));
     width: inherit;
@@ -519,29 +522,33 @@ footer {
     align-items:center;
     background-color:#0098cd;
     color:white;
-    font-size: 12px;
     margin-top: 10px;
     text-align: center;
+    /* line-height: 15px; */
+    font-family: 'icomoon'; 
 }
 
 .footer__text {
     grid-column: 1;
+    font-size: 20px;
 }
 
+.footer__text p{
+    margin: 0 0;
+}
+
+
 .footer__contacts{
+    display: flex;
     grid-column: 2;
 }
 
 .footer__contacts a{
     text-decoration: none;
     color:white;
-    line-height: 10px;
+    font-size: 20px;
+    margin: 0 5px;
 }
-
-.footer__contacts p{
-    margin: 0;
-}
-
 
 
 .footer__social-contacts {
@@ -556,47 +563,70 @@ footer {
     width: 30px;
     height:30px;
     margin: 0 5px 0;
+    font-size: 30px;
    
 }
 
-.footer__social-contacts a img {
-    width: inherit;
-    height: inherit;
-}
 
 .to-top {
-
     position: fixed;
-    right: 1%;
-    width: fit-content;
-    height: fit-content;
-    bottom: 0px;
-    color: #000;
+    bottom: 6%;
+    right: calc(50% - 50px);
+    width: 50px;
+    height: 50px;
+    background-color:white;
+    color: #0098cd;
     text-decoration: none;
     text-align: center;
-    opacity: 0.7;
+    opacity: 0.8;
+    border-radius:50px;
+    font-family: 'icomoon' !important;
+    font-size: 50px;
+    box-shadow: 0px 2px 2px 2px rgb(204, 202, 202);
+  }
+
+
+
+  .icon-circle-up:before {
+    content: "\ea41";
+    
   }
 
   .to-top_hiden {
     display: none;
   }
 
-
-  .to-top svg circle{
-    stroke:#003bcd;
-    fill:aliceblue;
-  }
-
-  .to-top svg text{
-    font-size: xxx-large;
-    stroke:#001c64;
-    stroke-width: 3px;
-    
-  }
+  
 
   .to-top:hover {
     opacity: 1;
     cursor:pointer;
+  }
+
+  .icon-phone:before {
+    content: "\e942";
+    color: white;
+  }
+
+  .icon-mail:before {
+    content: "\ea83";
+  }
+
+  .icon-instagram:before {
+    content: "\ea92";
+    color: white;
+  }
+
+  .icon-facebook2:before {
+    content: "\ea91";
+    color:white;
+  }
+
+
+
+  .icon-vk:before {
+    content: "\ea98";
+    color: white;
   }
 
 
@@ -703,6 +733,14 @@ footer {
 
     .info__histiory-foto {
         grid-template-rows: 25px fit-content(100%);
+    }
+
+    .footer__text {
+        font-size: 18px;
+    }
+
+    .footer__social-contacts{
+        font-size: 24px;
     }
 }
 
@@ -833,6 +871,19 @@ footer {
 
         .info-element_h4 {
             font-size: 18px;
+        }
+
+        .footer__text {
+        
+            font-size: 16px;
+        }
+
+        .footer__contacts{
+            font-size: 14px;
+        }
+
+        .footer__social-contacts{
+            font-size: 16px;
         }
 
 }
