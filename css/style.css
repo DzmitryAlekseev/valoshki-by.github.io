@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Neucha&family=Old+Standard+TT&display=swap');
 
+body{
+    min-width: 320px;
+}
 
 /*header используется на всех страницах*/
 
@@ -9,6 +12,7 @@
         align-items: center; 
         border-bottom:thick double #003bcd;
         height: fit-content;
+        width: 100%;
         
 }
 
@@ -20,8 +24,8 @@
 }
 
 .header a img {
-    margin: 10px 0;
-    width:30%;
+    margin: 0;
+    width:30vw;
     min-height: 50px;
     min-width: 300px;
 } 
@@ -34,6 +38,7 @@
     display: flex;
     justify-content: center;
     align-items: stretch;
+    margin: 0;
 }
 
 .slider__image {
@@ -155,79 +160,7 @@ li.menu__submenu:hover ul {
 
 
 
-@media (max-width:920px)
-{
-    
-    .menu ul {
-        width: 100%;
 
-    }
-
-    .menu ul li a {
-        font-size: 20px;
-    }
-    
-    .menu ul li a:hover {
-        font-size: 20px;
-    }
-
-    .menu__submenu ul {
-        width: 150px;
-    }
-
-    .menu__submenu ul li {
-        width: 150px;
-        height: fit-content;
-    }
-
-    .menu__submenu ul li a{
-        font-size: 14px;
-        height: 30px;
-        line-height: 30px;
-    }
-
-    .menu__submenu ul li a:hover{
-        font-size: 12px;
-    }
-  
-}
-
-.menu_fixed {
-    position: fixed;
-    top: 0;
-    bottom: auto;
-    z-index: 1000;
-    width:100%;
-    
-}
-
-@media (max-width:720px)
-{
-    .menu{
-        grid-template-columns: 1fr;
-    }
-    .menu img{
-        display: none;
-    }
-}
-
-@media (max-width:600px)
-{
-    body{
-        grid-gap: 10px;
-    }
-
-    .header__logo{
-       height: 50px;
-
-    }
-
-    .header__logo img{
-        width: 300px;
-        height: 50px;
-    }
-
-}
 
 
 /* map - используется на всех страницах регионов */
@@ -252,7 +185,7 @@ li.menu__submenu:hover ul {
 
     .map__region img{
         width: 40vw;
-        height: fit-content; 
+        height: 40vh; 
         object-fit: contain;
     }
 
@@ -308,7 +241,7 @@ li.menu__submenu:hover ul {
 
 
 /*news используется на index.html*/
-
+/* 
 .container__news {
    display: grid;
    grid-template-columns: repeat(3, 30%);
@@ -318,6 +251,7 @@ li.menu__submenu:hover ul {
    justify-content: space-evenly;
    height: fit-content;
    padding: 20px 0 20px 0;
+   width: calc(100% - 40px);
    
 }
 
@@ -363,7 +297,7 @@ li.menu__submenu:hover ul {
     text-decoration: none;
     height: fit-content; 
     
-}
+} */
 
 
 
@@ -430,7 +364,7 @@ li.menu__submenu:hover ul {
     height: fit-content;
     justify-content: center;
     flex-direction: column;
-    margin: 20px 0;
+    margin: 20px auto;
 }
 
 .info-main__element {
@@ -571,42 +505,47 @@ object-fit: cover;
 
 footer {
 
-    display:flex;
+    display:grid;
+    grid-template-columns: repeat(3,fit-content(100%));
     width: inherit;
     height:50px;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items:center;
     background-color:#0098cd;
     color:white;
     font-size: 12px;
     margin-top: 10px;
-}
-
-footer a{
-    text-decoration: none;
-    color:white;
+    text-align: center;
 }
 
 .footer__text {
-    order:1;
+    grid-column: 1;
 }
 
-.tel {
-    order:1;
+.footer__contacts{
+    grid-column: 2;
 }
 
-.email {
-    order:1;
+.footer__contacts a{
+    text-decoration: none;
+    color:white;
+    line-height: 10px;
 }
 
-.social-contacts {
+.footer__contacts p{
+    margin: 0;
+}
+
+
+
+.footer__social-contacts {
     order: 1;
     display: flex;
     justify-content: flex-end;
     align-items:center;
 }
 
-.social-contacts a {
+.footer__social-contacts a {
     text-decoration: none;
     width: 30px;
     height:30px;
@@ -614,7 +553,7 @@ footer a{
    
 }
 
-.social-contacts a img {
+.footer__social-contacts a img {
     width: inherit;
     height: inherit;
 }
@@ -653,6 +592,85 @@ footer a{
     opacity: 1;
     cursor:pointer;
   }
+
+
+  @media (max-width:920px)
+{
+    
+    .menu ul {
+        width: 100%;
+
+    }
+
+    .menu ul li a {
+        font-size: 20px;
+    }
+    
+    .menu ul li a:hover {
+        font-size: 20px;
+    }
+
+    .menu__submenu ul {
+        width: 150px;
+    }
+
+    .menu__submenu ul li {
+        width: 150px;
+        height: fit-content;
+    }
+
+    .menu__submenu ul li a{
+        font-size: 14px;
+        height: 30px;
+        line-height: 30px;
+    }
+
+    .menu__submenu ul li a:hover{
+        font-size: 12px;
+    }
+  
+}
+
+.menu_fixed {
+    position: fixed;
+    top: 0;
+    bottom: auto;
+    z-index: 1000;
+    width:100%;
+    
+}
+
+@media (max-width:720px)
+{
+    .menu{
+        grid-template-columns: 1fr;
+    }
+    .menu img{
+        display: none;
+    }
+}
+
+@media (max-width:600px)
+{
+    body{
+        grid-gap: 10px;
+    }
+
+    .header__logo{
+       height: 50px;
+
+    }
+
+    .header__logo img{
+        width: 300px;
+        height: 50px;
+    }
+
+    .header a{
+        width: 98%;
+        margin: 0 auto;
+    }
+}
 
 
 

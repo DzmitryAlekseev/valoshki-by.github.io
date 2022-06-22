@@ -17,6 +17,8 @@ body {
     background-color:rgb(255, 255, 255);
     margin: 0 0;
     grid-gap: 20px;
+    min-width: 320px;
+    
 }
 
 
@@ -24,23 +26,20 @@ body {
 .video__container {
         display:flex;
         justify-content: center;
-        width: 80vw;
-        height: 45vw;
-        margin: 20px 10vw;
+        align-self:center;
+        width: 70vw;
+        height: 35vw;
+        margin: 20px auto; 
         box-shadow: 0px 0px 5px 5px lightgrey;
     }
 
 .video__container iframe{
+    width: 90vw;
     display: flex;
     flex: 1 1 auto;
    
 }
 
-.container {
-    margin: 10px 0;
-    width: fit-content;
-    height: fit-content;
-}
 
 
 .map {
@@ -49,6 +48,7 @@ body {
     justify-content: space-evenly;
     grid-row:5;
     align-items: center;
+    width: 100%;
     
     }
 
@@ -60,7 +60,7 @@ body {
 
     .map img{
         width:35vw;
-        height: 40vh;
+        /* height: 40vh; */
         object-fit: contain;
     }
 
@@ -265,9 +265,11 @@ body {
         <div class="footer__text">
             <p>Путешествуй вместе с нами!</p>
         </div>
+        <div class="footer__contacts">
         <a class="tel" href="tel:+375445435311">+375 (44) 543-53-11</a>
-        <p class="email"><a href="mailto:dmitry.alekseev.s@gmail.com">Задавайте вопросы по электронной почте</a></p>
-       <div class="social-contacts">
+        <p class="email"><a href="mailto:dmitry.alekseev.s@gmail.com">E-Mail</a></p>
+        </div>
+       <div class="footer__social-contacts">
             <a href="#"><img src="img/icons8-instagram.svg" alt=""></a>
             <a href="#"><img src="img/icons8-facebook.svg" alt=""></a>
             <a href="#"><img src="img/icons8-vk-в-круге.svg" alt=""></a>
