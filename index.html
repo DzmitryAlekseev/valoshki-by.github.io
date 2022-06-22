@@ -18,91 +18,85 @@ body {
     margin: 0 0;
     grid-gap: 20px;
     min-width: 320px;
-    
 }
 
-
-
 .video__container {
-        display:flex;
-        justify-content: center;
-        align-self:center;
-        width: 70vw;
-        height: 35vw;
-        margin: 20px auto; 
-        box-shadow: 0px 0px 5px 5px lightgrey;
-    }
+    display:flex;
+    justify-content: center;
+    align-self:center;
+    width: 70vw;
+    height: 35vw;
+    margin: 20px auto; 
+    box-shadow: 0px 0px 5px 5px lightgrey;
+}
 
 .video__container iframe{
     width: 90vw;
     display: flex;
     flex: 1 1 auto;
-   
 }
 
 
 
-.map {
+.map-index {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     grid-row:5;
     align-items: center;
     width: 100%;
-    
-    }
+}
 
-    .map svg{
-        width:35vw;
-        /* height: 500px; */
-        object-fit: contain;
-    }
-
-    .map img{
-        width:35vw;
-        /* height: 40vh; */
-        object-fit: contain;
-    }
-
-    .map .voblasts {
-        fill: #0098cd;
-        stroke: #003bcd;
-        stroke-width: 5;
-    }
-
-    .map .voblasts:hover{
-        fill: #619df8;
-        
-    }
-
-    .minskaia-voblasts:hover~.map {
-        background:(url("img/slider/belarus/belarus1.jpg"))
-        
-    }
-
-    .map .horad{
-        fill: rgb(129, 129, 129);
-        stroke: white;
-    }
-
-    .map .horad-minsk{
-        fill: red;
-    }
-
-    .map .label{
-        stroke-width: 0;
-        fill: rgb(255, 255, 255);
-    }
-
-    .box__news a {
-        width: fit-content;
-    }
-
-
-    .box__news a img{
-    
+.map-index svg{
+    width:35vw;
+    /* height: 500px; */
     object-fit: contain;
-   
+}
+
+.map-index img{
+    width:35vw;
+    /* height: 40vh; */
+    object-fit: contain;
+}
+
+.map-index .voblasts {
+    fill: #0098cd;
+    stroke: #003bcd;
+    stroke-width: 5;
+}
+
+.map-index .voblasts:hover{
+    fill: #619df8;
+    
+}
+
+.minskaia-voblasts:hover~.map-index {
+    background:(url("img/slider/belarus/belarus1.jpg"))
+    
+}
+
+.map-index .horad{
+    fill: rgb(129, 129, 129);
+    stroke: white;
+}
+
+.map-index .horad-minsk{
+    fill: red;
+}
+
+.map-index .label{
+    stroke-width: 0;
+    fill: rgb(255, 255, 255);
+}
+
+.box__news a {
+    width: fit-content;
+}
+
+
+.box__news a img{
+    object-fit: contain;
+
 }
 
 @media (max-width:600px) and (min-width:320px)
@@ -111,8 +105,6 @@ body {
         grid-gap: 10px;
     }
 }
-
-
 
 </style>
 
@@ -136,43 +128,65 @@ body {
     <div class="menu">
         <img src="img/valimg.svg">
         <ul>
-                <li class="menu__submenu" ><a href="#">Регионы</a>
-                    <ul>
-                        <li><a href="brest-region.html">Брестская область</a></li>
-                        <li><a href="vitebsk-region.html">Витебская область</a></li>
-                        <li><a href="gomel-region.html">Гомельская область</a></li>
-                        <li><a href="grodno-region.html">Гродненская область</a></li>
-                        <li><a href="minsk-region.html">Минская область</a></li>
-                        <li><a href="mogilev-region.html">Могливская область</a></li>
-                    </ul>
-                </li>
-                <li class="menu__submenu"><a href="#">Путеводители</a>
-                    <ul>
-                        <li><a href="farmsteads.html">Агроусадьбы</a></li>
-                        <li><a href="hostels.html">Гостиницы и хостелы</a></li>
-                    </ul>
-                </li>
-                <li class="menu__submenu"><a href="#">Маршруты</a>
-                    <ul>
-                        <li><a href="cycle-path.html">Веломаршруты</a></li>
-                        <li><a href="water-routes.html">Водные маршруты</a></li>
-                       
-                    </ul>
-                </li>
-                <li><a href="culture.html">Культура</a></li>
-                <li><a href="about-us.html">О проекте</a></li>
+            <li class="menu__submenu" ><a href="#">Регионы</a>
+                <ul>
+                    <li>
+                        <a href="brest-region.html">Брестская область</a>
+                    </li>
+                    <li>
+                        <a href="vitebsk-region.html">Витебская область</a>
+                    </li>
+                    <li>
+                        <a href="gomel-region.html">Гомельская область</a>
+                    </li>
+                    <li>
+                        <a href="grodno-region.html">Гродненская область</a>
+                    </li>
+                    <li>
+                        <a href="minsk-region.html">Минская область</a>
+                    </li>
+                    <li>
+                        <a href="mogilev-region.html">Могливская область</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="menu__submenu"><a href="#">Путеводители</a>
+                <ul>
+                    <li>
+                        <a href="farmsteads.html">Агроусадьбы</a>
+                    </li>
+                    <li>
+                        <a href="hostels.html">Гостиницы и хостелы</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="menu__submenu"><a href="#">Маршруты</a>
+                <ul>
+                    <li>
+                        <a href="cycle-path.html">Веломаршруты</a>
+                    </li>
+                    <li>
+                        <a href="water-routes.html">Водные маршруты</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="culture.html">Культура</a>
+            </li>
+            <li>
+                <a href="about-us.html">О проекте</a>
+            </li>
         </ul>
         <img src="img/valimg.svg">
     </div>
 
     <div class="universal_container">
         <h3>Карта Беларуси</h3>
-            <div class="map">
-                <!-- <img src="https://www.svetilka.by/image/data/belarus.jpg" alt=""> -->
+            <div class="map-index">
                 <svg id="Belarus" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                 viewBox="0 0 550 490" style="enable-background:new 0 0 550 490;">
                     
-                    <polygon class="voblasts hrodnenskaia-voblasts" onmouseover="changeGrodno()" onmouseout="changeGrodno()" points="200,160 195,155 195,150 190,145 185,145 185,135 175,125 170,130 160,130 155,135 155,140 150,145 150,165 145,170 145,180 140,185 145,190 150,190 155,195 155,200 155,205 150,205 145,210 140,210 134.7,205 140,200 140,195 135,190 130,195 125,195 115,205 105,205 100,210 100,220 95,225 90,220 85,225 80,225 75,230 65,230 60,225 50,225 45,230 35,230 30,225 25,225 25,235 30,240 30,260 35,265 35,275 40,280 40,285 40,290 45,295 45,310 50,315 50,340 55,340 60,335 65,340 75,340 80,345 85,340 85,330 90,325 95,320 105,320 105,325 110,330 125,330 125,325 130,320 135,320 140,315 140,295 145,290 145,285 150,280 160,280 175,280 180,285 185,285 190,280 195,280 195,260 190,255 185,255 185,250 180,245 180,240 180,235 190,225 190,220 185,220 185,215 175,215 175,210 170,210 170,205 175,200 185,200 195,190 195,185 200,180 200,175 205,170 205,160"/>
+                    <polygon class="voblasts hrodnenskaia-voblasts" onmouseover="changeGrodno()" onmouseout="changeBel()" points="200,160 195,155 195,150 190,145 185,145 185,135 175,125 170,130 160,130 155,135 155,140 150,145 150,165 145,170 145,180 140,185 145,190 150,190 155,195 155,200 155,205 150,205 145,210 140,210 134.7,205 140,200 140,195 135,190 130,195 125,195 115,205 105,205 100,210 100,220 95,225 90,220 85,225 80,225 75,230 65,230 60,225 50,225 45,230 35,230 30,225 25,225 25,235 30,240 30,260 35,265 35,275 40,280 40,285 40,290 45,295 45,310 50,315 50,340 55,340 60,335 65,340 75,340 80,345 85,340 85,330 90,325 95,320 105,320 105,325 110,330 125,330 125,325 130,320 135,320 140,315 140,295 145,290 145,285 150,280 160,280 175,280 180,285 185,285 190,280 195,280 195,260 190,255 185,255 185,250 180,245 180,240 180,235 190,225 190,220 185,220 185,215 175,215 175,210 170,210 170,205 175,200 185,200 195,190 195,185 200,180 200,175 205,170 205,160"/>
                     
                     <polygon  class="voblasts vitsebskaia-voblasts" onmouseover="changeVitebsk()" onmouseout="changeBel()" points="460,165 460,155 450,155 445,150 440,150 435,145 435,140 440,135 440,130 445,130 445,125 450,120 450,110 445,105 440,100 440,90 445,85 445,65 440,65 435,70 430,65 430,60 420,50 415,50 410,45 385,45 380,50 370,50 365,55 360,55 355,50 355,45 360,40 360,35 355,30 345,30 340,25 335,25 325,35 320,35 320,30 315,25 315,20 305,20 300,20 295,25 290,20 290,15 280,15 270,25 270,30 265,35 260,35 255,40 255,50 250,50 240,50 235,45 225,45 210,60 200,60 200,70 195,75 195,85 190,90 195,95 210,95 215,100 210,100 205,105 205,110 185,110 180,115 180,120 175,125 185,135 190,130 225,130 230,125 235,125 235,130 240,135 245,135 250,140 250,145 255,145 260,150 260,155 265,160 290,160 300,170 305,165 305,160 315,160 315,165 320,170 325,170 330,165 360,165 360,185 355,190 355,200 360,200 370,190 385,190 390,195 395,195 395,190 405,190 410,195 420,195 425,190 425,185 430,180 435,185 440,185 445,180 455,180 460,175 455,175 455,170"/>
                     
@@ -195,35 +209,24 @@ body {
                     <text class="label horad-hrodna" x="50" y="250">Гродна</text>
                     <circle class="horad horad-minsk" cx="253" cy="231" r="8"/>
                     <text class="label horad-minsk" x="265" y="231">Минск</text>
-            
                 </svg>
-            <img id="map__region" src="img/slider/belarus/bel.jpg">
+            <img id="map-index__region" src="img/slider/belarus/bel.jpg" alt="Иллюстрация Беларуси">
         </div>
-   
     </div>
-
 
     <div class="video__container">
         <iframe  src="https://www.youtube.com/embed/mEphk2CyiU0?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div> 
 
-  
-
-
     <div class="universal_container">
         <h3>5 причин посетить Беларусь</h3>
-
-        <div class="info">
-            
+        <div class="info"> 
             <div class="info__elements">
                 <div class="info__element">
                 <h4>Радушные жители </h4>
                 <p>В Беларуси дружелюбные и добродушные люди. Терпение и миролюбие белорусов во многом определены историей, омраченной бесчисленными войнами. Причем сами белорусы никогда их не начинали. Беларусь всегда рада гостям и заинтересована, чтобы они поближе познакомились с культурой, традициями страны.</p>
-
-                <p>Белорусский и русский являются государственными языками Беларуси. Другие языки, такие как польский, украинский и иврит, используются на уровне местных общин.</p>
-                    
-                <p>У Беларуси давняя богатая история традиционных искусств и ремесел, многие из которых существуют и сейчас. Среди основных ремесел&colon; ткачество, деревообработка, гончарное дело, соломоплетение.</p>
-                    
+                <p>Белорусский и русский являются государственными языками Беларуси. Другие языки, такие как польский, украинский и иврит, используются на уровне местных общин.</p>    
+                <p>У Беларуси давняя богатая история традиционных искусств и ремесел, многие из которых существуют и сейчас. Среди основных ремесел&colon; ткачество, деревообработка, гончарное дело, соломоплетение.</p> 
                 <p>Популярны традиционные народные танцы, существуют народные театры.</p>
             </div>
 
@@ -255,7 +258,6 @@ body {
                 <p>Леса, болота, сельскохозяйственные земли занимают 70&percnt; территории Беларуси.</p>
                 <p>Хотя перепады высот в Беларуси относительно незначительные &mdash; высшая точка находится на высоте всего 345 метров над уровнем моря &mdash; в стране активно развивается горнолыжный спорт. Визитной карточкой Беларуси стали современные горнолыжные комплексы, построенные в живописных холмистых местностях. Здесь есть все необходимое для активного отдыха&colon; сложные трассы для профессионалов и учебные склоны для новичков, развитая инфраструктура.</p>
                 <p>Красота белорусской природы с ее многочисленными озерами, реками и лесами всегда привлекала любителей пешего туризма. Туристы из&#8209;за рубежа также начинают открывать для себя Беларусь &mdash; их ожидают увлекательные маршруты и развлечения.</p>
-
             </div>
             </div>
         </div>
@@ -274,14 +276,21 @@ body {
         </div>
         <div class="footer__contacts">
         <a class="tel" href="tel:+375445435311">+375 (44) 543-53-11</a>
-        <p class="email"><a href="mailto:dmitry.alekseev.s@gmail.com">E-Mail</a></p>
+        <p class="email">
+            <a href="mailto:dmitry.alekseev.s@gmail.com">E-Mail</a>
+        </p>
         </div>
-       <div class="footer__social-contacts">
-            <a href="#"><img src="img/icons8-instagram.svg" alt=""></a>
-            <a href="#"><img src="img/icons8-facebook.svg" alt=""></a>
-            <a href="#"><img src="img/icons8-vk-в-круге.svg" alt=""></a>
+        <div class="footer__social-contacts">
+            <a href="#">
+                <img src="img/icons8-instagram.svg" alt="">
+            </a>
+            <a href="#">
+                <img src="img/icons8-facebook.svg" alt="">
+            </a>
+            <a href="#">
+                <img src="img/icons8-vk-в-круге.svg" alt="">
+            </a>
         </div>
-        
     </footer>
 
     <script src="jquery-3.6.0.min.js"></script>

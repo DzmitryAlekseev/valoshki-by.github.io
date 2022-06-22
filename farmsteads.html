@@ -10,13 +10,13 @@
 
 <style>
   
-   body {
-            display: grid;
-            grid-template-rows:100px 0.3fr 50px 400px repeat(7,fit-content);
-            margin: 0 0;
-            gap: 30px;
-            font-family: 'Old Standard TT', serif;      
-    }
+body {
+    display: grid;
+    grid-template-rows:100px 0.3fr 50px 400px repeat(7,fit-content);
+    margin: 0 0;
+    gap: 30px;
+    font-family: 'Old Standard TT', serif;      
+}
 
 
 .location__info button{
@@ -28,10 +28,8 @@
 }
 
 .location__info button:hover iframe{
-    display: block;
-       
+    display: block;      
 }
-
 
 </style>
 
@@ -46,55 +44,77 @@
 
 
     <div class="slider"  object="javascript: slider();">
-        <img class="slider__image " src="img/farmsteads/slider/farm-1.jpg" alt="1">
-        <img class="slider__hidden slider__image" src="img/farmsteads/slider/farm-2.jpg" alt="1">
-        <img class="slider__hidden slider__image" src="img/farmsteads/slider/farm-3.jpg" alt="1">
-        <img class="slider__hidden slider__image" src="img/farmsteads/slider/farm-4.jpg" alt="1">
+        <h2 class="slider__region">Сердечно приглашаем!</h2>
+        <img class="slider__image " src="img/farmsteads/slider/farm-1.jpg" alt="агроусадьба-1">
+        <img class="slider__hidden slider__image" src="img/farmsteads/slider/farm-2.jpg" alt="агроусадьба-2">
+        <img class="slider__hidden slider__image" src="img/farmsteads/slider/farm-3.jpg" alt="агроусадьба-3">
+        <img class="slider__hidden slider__image" src="img/farmsteads/slider/farm-4.jpg" alt="агроусадьба-4">
     </div>
         
-        <h2 class="slider__region">Сердечно приглашаем!</h2>
-    </div>
     <div class="menu">
-        <img src="img/valimg.svg">
+        <img src="img/valimg.svg" alt="Логотип">
         <ul>
-                <li class="menu__submenu" ><a href="#">Регионы</a>
-                    <ul>
-                        <li><a href="brest-region.html">Брестская область</a></li>
-                        <li><a href="vitebsk-region.html">Витебская область</a></li>
-                        <li><a href="gomel-region.html">Гомельская область</a></li>
-                        <li><a href="grodno-region.html">Гродненская область</a></li>
-                        <li><a href="minsk-region.html">Минская область</a></li>
-                        <li><a href="mogilev-region.html">Могливская область</a></li>
-                    </ul>
-                </li>
-                <li class="menu__submenu"><a href="#">Путеводители</a>
-                    <ul>
-                        <li><a href="farmsteads.html">Агроусадьбы</a></li>
-                        <li><a href="hostels.html">Гостиницы и хостелы</a></li>
-                    </ul>
-                </li>
-                <li class="menu__submenu"><a href="#">Маршруты</a>
-                    <ul>
-                        <li><a href="cycle-path.html">Веломаршруты</a></li>
-                        <li><a href="water-routes.html">Водные маршруты</a></li>
-                       
-                    </ul>
-                </li>
-                <li><a href="culture.html">Культура</a></li>
-                <li><a href="about-us.html">О проекте</a></li>
+            <li class="menu__submenu" >
+                <a href="#">Регионы</a>
+                <ul>
+                    <li>
+                        <a href="brest-region.html">Брестская область</a>
+                    </li>
+                    <li>
+                        <a href="vitebsk-region.html">Витебская область</a>
+                    </li>
+                    <li>
+                        <a href="gomel-region.html">Гомельская область</a>
+                    </li>
+                    <li>
+                        <a href="grodno-region.html">Гродненская область</a>
+                    </li>
+                    <li>
+                        <a href="minsk-region.html">Минская область</a>
+                    </li>
+                    <li>
+                        <a href="mogilev-region.html">Могливская область</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="menu__submenu">
+                <a href="#">Путеводители</a>
+                <ul>
+                    <li>
+                        <a href="farmsteads.html">Агроусадьбы</a>
+                    </li>
+                    <li>
+                        <a href="hostels.html">Гостиницы и хостелы</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="menu__submenu">
+                <a href="#">Маршруты</a>
+                <ul>
+                    <li>
+                        <a href="cycle-path.html">Веломаршруты</a>
+                    </li>
+                    <li>
+                        <a href="water-routes.html">Водные маршруты</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="culture.html">Культура</a>
+            </li>
+            <li>
+                <a href="about-us.html">О проекте</a>
+            </li>
         </ul>
-        <img src="img/valimg.svg">
+        <img src="img/valimg.svg" alt="Логотип">
     </div>
-
 
     <div class="map"></div>
-
 
     <div class="universal_container">
         <h3>Агроусадьбы</h3>
         <div class="locations">
         <div class="location">
-            
             <a href="#" target="_blank" >
                 <div class="location__image">
                     <img src="img/farmsteads/usadba-barnhaus.jpg" alt="usadba-barnhaus">

@@ -22,29 +22,36 @@ setInterval(()=>slider(),5000)
 
 
 function changeMinsk(){
-    setTimeout(() => document.getElementById("map__region").src="img/slider/belarus/minsk.jpg",0);
+    document.getElementById("map-index__region").src="img/slider/belarus/minsk.jpg";
+    document.getElementById("map-index__region").alt="Иллюстрация Минск";
     }
 
     function changeBrest(){
-    setTimeout(() => document.getElementById("map__region").src="img/slider/belarus/brest.jpg",0);
+    document.getElementById("map-index__region").src="img/slider/belarus/brest.jpg";
+    document.getElementById("map-index__region").alt="Иллюстрация Брест";
     }
     function changeGrodno(){
-    setTimeout(() => document.getElementById("map__region").src="img/slider/belarus/grodno.jpg",0);
+    document.getElementById("map-index__region").src="img/slider/belarus/grodno.jpg";
+    document.getElementById("map-index__region").alt="Иллюстрация Гродно";
     }
     function changeVitebsk(){
-    setTimeout(() => document.getElementById("map__region").src="img/slider/belarus/vitebsk.jpg",0);
+    document.getElementById("map-index__region").src="img/slider/belarus/vitebsk.jpg";
+    document.getElementById("map-index__region").alt="Иллюстрация Витебск";
     }
 
     function changeHomel(){
-    setTimeout(() => document.getElementById("map__region").src="img/slider/belarus/homel.jpg",0);
+    document.getElementById("map-index__region").src="img/slider/belarus/homel.jpg";
+    document.getElementById("map-index__region").alt="Иллюстрация Гомель";
     }
 
     function changeMohilev(){
-    setTimeout(() => document.getElementById("map__region").src="img/slider/belarus/mohilev.jpg",0);
+    setTimeout(() => document.getElementById("map-index__region").src="img/slider/belarus/mohilev.jpg",0);
+    document.getElementById("map-index__region").alt="Иллюстрация Могилев";
     }
 
     function changeBel(){
-        setTimeout(() =>document.getElementById("map__region").src="img/slider/belarus/bel.jpg",0);
+       document.getElementById("map-index__region").src="img/slider/belarus/bel.jpg";
+       document.getElementById("map-index__region").alt="Иллюстрация Беларуси";
     }
         
 
