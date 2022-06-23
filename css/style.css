@@ -724,7 +724,7 @@ footer {
     }
 
     .info-element_h4 {
-        font-size: 20px;
+        font-size: 16px;
     }
 
     .info__history-foto {
@@ -732,6 +732,7 @@ footer {
     }
 
     .info__history-foto h4{
+    font-size: 16px;
       margin: 0;        
     }
 
