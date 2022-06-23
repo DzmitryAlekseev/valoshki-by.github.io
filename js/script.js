@@ -18,7 +18,7 @@ function slider() {
 setInterval(()=>slider(),5000)
 
 
-//карта на индексе
+//карта на индекс странице, функции для замены картинки после наведения и клика.
 
 
 function changeMinsk(){
@@ -82,14 +82,10 @@ function changeMinsk(){
     }
         
 
-//для текста в разделе информации
+//для текста в разделе информации ("FAQ")
 
 var p = document.querySelectorAll('.info-element_h4 ~ .info-element_p');
 console.log(p)
-
-function ph(){
-
-}
 
 function switchAnswer(ele) {
       //console.log(ele);
@@ -97,7 +93,8 @@ function switchAnswer(ele) {
       faqAnswer.classList.toggle("info-element_p_hiden");
     }
 
-    //menu
+ //фиксация меню и кнопка to top
+
     jQuery(function ($) {
    
         var navMenu = $(".menu"); // выбираем меню      
