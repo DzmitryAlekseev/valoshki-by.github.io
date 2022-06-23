@@ -26,28 +26,55 @@ function changeMinsk(){
     document.getElementById("map-index__region").alt="Иллюстрация Минск";
     }
 
+  function minsk() {
+      location.replace("minsk-region.html")
+  };
+
     function changeBrest(){
     document.getElementById("map-index__region").src="img/belarus/brest.jpg";
     document.getElementById("map-index__region").alt="Иллюстрация Брест";
     }
+
+    function brest() {
+      location.replace("brest-region.html")
+  };
+    
     function changeGrodno(){
     document.getElementById("map-index__region").src="img/belarus/grodno.jpg";
     document.getElementById("map-index__region").alt="Иллюстрация Гродно";
     }
+
+    function grodno() {
+      location.replace("grodno-region.html")
+  };
+    
     function changeVitebsk(){
     document.getElementById("map-index__region").src="img/belarus/vitebsk.jpg";
     document.getElementById("map-index__region").alt="Иллюстрация Витебск";
     }
+
+    function vitebsk() {
+      location.replace("vitebsk-region.html")
+  };
 
     function changeHomel(){
     document.getElementById("map-index__region").src="img/belarus/gomel.jpg";
     document.getElementById("map-index__region").alt="Иллюстрация Гомель";
     }
 
+    function gomel() {
+      location.replace("gomel-region.html")
+  };
+
     function changeMohilev(){
     document.getElementById("map-index__region").src="img/belarus/mogilev.jpg";
     document.getElementById("map-index__region").alt="Иллюстрация Могилев";
     }
+
+    function mogilev() {
+      location.replace("mogilev-region.html")
+  };
+
 
     function changeBel(){
        document.getElementById("map-index__region").src="img/belarus/belarus.jpg";
