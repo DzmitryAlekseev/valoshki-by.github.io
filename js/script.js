@@ -27,7 +27,7 @@ function changeMinsk(){
     }
 
   function minsk() {
-      location.replace("minsk-region.html")
+      location.assign("minsk-region.html")
   };
 
     function changeBrest(){
@@ -36,7 +36,7 @@ function changeMinsk(){
     }
 
     function brest() {
-      location.replace("brest-region.html")
+      location.assign("brest-region.html")
   };
     
     function changeGrodno(){
@@ -45,7 +45,7 @@ function changeMinsk(){
     }
 
     function grodno() {
-      location.replace("grodno-region.html")
+      location.assign("grodno-region.html")
   };
     
     function changeVitebsk(){
@@ -54,7 +54,7 @@ function changeMinsk(){
     }
 
     function vitebsk() {
-      location.replace("vitebsk-region.html")
+      location.assign("vitebsk-region.html")
   };
 
     function changeHomel(){
@@ -63,7 +63,7 @@ function changeMinsk(){
     }
 
     function gomel() {
-      location.replace("gomel-region.html")
+      location.assign("gomel-region.html")
   };
 
     function changeMohilev(){
@@ -72,7 +72,7 @@ function changeMinsk(){
     }
 
     function mogilev() {
-      location.replace("mogilev-region.html")
+      location.assign("mogilev-region.html")
   };
 
 
