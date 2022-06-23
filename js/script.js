@@ -22,36 +22,36 @@ setInterval(()=>slider(),5000)
 
 
 function changeMinsk(){
-    document.getElementById("map-index__region").src="img/slider/belarus/minsk.jpg";
+    document.getElementById("map-index__region").src="img/belarus/minsk.jpg";
     document.getElementById("map-index__region").alt="Иллюстрация Минск";
     }
 
     function changeBrest(){
-    document.getElementById("map-index__region").src="img/slider/belarus/brest.jpg";
+    document.getElementById("map-index__region").src="img/belarus/brest.jpg";
     document.getElementById("map-index__region").alt="Иллюстрация Брест";
     }
     function changeGrodno(){
-    document.getElementById("map-index__region").src="img/slider/belarus/grodno.jpg";
+    document.getElementById("map-index__region").src="img/belarus/grodno.jpg";
     document.getElementById("map-index__region").alt="Иллюстрация Гродно";
     }
     function changeVitebsk(){
-    document.getElementById("map-index__region").src="img/slider/belarus/vitebsk.jpg";
+    document.getElementById("map-index__region").src="img/belarus/vitebsk.jpg";
     document.getElementById("map-index__region").alt="Иллюстрация Витебск";
     }
 
     function changeHomel(){
-    document.getElementById("map-index__region").src="img/slider/belarus/homel.jpg";
+    document.getElementById("map-index__region").src="img/belarus/gomel.jpg";
     document.getElementById("map-index__region").alt="Иллюстрация Гомель";
     }
 
     function changeMohilev(){
-    setTimeout(() => document.getElementById("map-index__region").src="img/slider/belarus/mohilev.jpg",0);
+    document.getElementById("map-index__region").src="img/belarus/mogilev.jpg";
     document.getElementById("map-index__region").alt="Иллюстрация Могилев";
     }
 
     function changeBel(){
-       document.getElementById("map-index__region").src="img/slider/belarus/bel.jpg";
-       document.getElementById("map-index__region").alt="Иллюстрация Беларуси";
+       document.getElementById("map-index__region").src="img/belarus/belarus.jpg";
+       document.getElementById("map-index__region").alt="Васильки";
     }
         
 
