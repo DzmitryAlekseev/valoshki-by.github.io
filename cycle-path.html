@@ -15,12 +15,11 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, 280px);
     grid-template-rows: repeat(auto-fill, 280px);
-    /* grid-auto-columns: max-content; */
     grid-auto-flow: row;
-    grid-gap: 10px;
+    grid-gap: 20px;
     margin: 20px 0;
     padding: 0;
-    justify-content: center;
+    justify-content: space-evenly;
     width: 100%;
     height: fit-content;
 }
@@ -31,14 +30,26 @@
     width: 100%;
     height: 100%;
     flex-direction: column;
-    
+    box-shadow: 0px 0px 1px 1px lightgray;
 }
+
+.box-cycle:hover{
+    box-shadow: 0px 0px 2px 2px gray;
+}
+
+.box-cycle p{
+    text-align: center;
+    margin: 5px;
+    font-size: 14px;
+}
+
 
 .box-cycle iframe{
     display: flex;
     flex:  1 1 auto;
     width: inherit;
-    height: inherit;
+    height: 280px;
+    box-shadow: 0px 0px 1px 1px lightgray;
 }
 
 @media (max-width: 600px){
@@ -67,10 +78,10 @@
     </div>
 
 
-    <!-- <div class="slider">
-        <h2 class="slider__region">Велосипедные маршруты</h2>
-        <img src="img/cycle.jpg" alt="Велосипедные прогулки">
-    </div> -->
+    <div class="slider">
+        <img class="slider__single" src="img/cycle/cycle.jpg" alt="Велосипед в лесу">
+        <h2 class="slider__region">Велосипедные прогулки</h2>
+    </div>
 
     <div class="menu">
         <img src="img/valimg.svg">
@@ -130,6 +141,12 @@
         <img src="img/valimg.svg">
     </div>
 
+    <div class="video__container">
+        <iframe src="https://www.youtube.com/embed/8ONl5_JnUUE?controls=0" title="YouTube video player" frameborder="0"  allowfullscreen></iframe>
+        
+    </div> 
+
+
     <div class="universal_container">
         <h3>ТОП велосипедных маршрутов Беларуси</h3>
         <div class="container__news__cycle ">
@@ -188,5 +205,9 @@
             <a class="icon-vk" href="#"></a>
         </div>
     </footer>
+
+    <script src="jquery-3.6.0.min.js"></script>
+    <script src="js/script.js"></script>
+
 </body>
 </html>

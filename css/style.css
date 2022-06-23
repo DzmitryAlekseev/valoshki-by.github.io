@@ -29,14 +29,13 @@
 }
 
 .header a{
-   
     width: 100%;
     display:flex;
     justify-content: center;
 }
 
 .header a img {
-    margin: 0;
+    margin: 10px 0;
     width:30vw;
     min-height: 50px;
     min-width: 300px;
@@ -58,6 +57,11 @@
     object-fit: contain;
 }
 
+.slider__single {
+    width: 100%;
+    object-fit: contain;
+}
+
 .slider__hidden {
     display: none;
 }
@@ -72,7 +76,7 @@
     font-size: 40px;
     font-family: 'Neucha', cursive;
     text-align: center;
-    width:30%;
+    width:50%;
 }
 
 
@@ -238,6 +242,27 @@ li.menu__submenu:hover ul {
     grid-template-rows: repeat(2,fit-content(100%));
       
 }
+
+/* видео контейнер */
+
+.video__container {
+    display:flex;
+    justify-content: center;
+    align-self:center;
+    width: 64vw;
+    height: 36vw;
+    margin: 20px auto; 
+    box-shadow: 0px 0px 5px 5px lightgrey;
+}
+
+.video__container iframe{
+    width: inherit;
+    height: inherit;
+    display: flex;
+    flex: 1 1 auto;
+}
+
+
 
 .universal_container h3 {
     background-color:#0098cd;
@@ -576,6 +601,15 @@ footer {
 
   @media (max-width:920px) and (min-width:720px)
 {
+    body {
+        grid-gap: 20px;
+    }
+
+    .slider h2{
+        width: 65%;
+        font-size: 36px;
+        margin: 20px auto;
+    }
     
     .menu ul {
         width: 100%;
@@ -622,6 +656,15 @@ footer {
 
 @media (max-width:720px) and (min-width:600px)
 {
+    body{
+        grid-gap: 15px;
+    }
+
+    .slider h2{
+        width: 70%;
+        font-size: 28px;
+        margin: 15px auto;
+    }
     .menu{
         grid-template-columns: 1fr;
         width: 100%;
@@ -690,9 +733,16 @@ footer {
 
 @media (max-width:600px) 
 {
-    body{
+    body {
         grid-gap: 10px;
     }
+
+    .slider h2{
+        width: 80%;
+        font-size: 26px;
+        margin: 10px auto;
+    }
+    
 
     .header__logo{
        height: 50px;
