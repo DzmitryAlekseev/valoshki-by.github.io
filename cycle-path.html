@@ -10,61 +10,59 @@
 
 <style>
   
-
-.container__news__cycle {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, 280px);
-    grid-template-rows: repeat(auto-fill, 280px);
-    grid-auto-flow: row;
-    grid-gap: 20px;
-    margin: 20px 0;
-    padding: 0;
-    justify-content: space-evenly;
-    width: 100%;
-    height: fit-content;
-}
-
-.box-cycle {
-    flex: 1 1 auto;
-    display: flex;
-    width: 100%;
-    height: 100%;
-    flex-direction: column;
-    box-shadow: 0px 0px 1px 1px lightgray;
-}
-
-.box-cycle:hover{
-    box-shadow: 0px 0px 2px 2px gray;
-}
-
-.box-cycle p{
-    text-align: center;
-    margin: 5px;
-    font-size: 14px;
-}
-
-
-.box-cycle iframe{
-    display: flex;
-    flex:  1 1 auto;
-    width: inherit;
-    height: 280px;
-    box-shadow: 0px 0px 1px 1px lightgray;
-}
-
-@media (max-width: 600px){
     .container__news__cycle {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, 80%);
-    grid-template-rows: repeat(auto-fill, 280px);
-    justify-content: space-around;
-}
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 280px);
+        grid-template-rows: repeat(auto-fill, 280px);
+        grid-auto-flow: row;
+        grid-gap: 20px;
+        justify-content: space-evenly;
+        width: 100%;
+        height: fit-content;
+        margin: 20px 0;
+        padding: 0;
+    }
 
-.box-cycle {
-    margin: 0 auto;
-    width: 100%;
-}
-}
+    .box-cycle {
+        display: flex;
+        flex-direction: column;
+        flex: 1 1 auto;
+        width: 100%;
+        height: 100%;
+        box-shadow: 0px 0px 1px 1px lightgray;
+    }
+
+    .box-cycle:hover {
+        box-shadow: 0px 0px 2px 2px gray;
+    }
+
+    .box-cycle p {
+        text-align: center;
+        font-size: 14px;
+        margin: 5px;   
+    }
+
+    .box-cycle iframe {
+        display: flex;
+        flex:  1 1 auto;
+        width: inherit;
+        height: 280px;
+        box-shadow: 0px 0px 1px 1px lightgray;
+    }
+
+    @media (max-width: 600px){
+        .container__news__cycle {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, 80%);
+            grid-template-rows: repeat(auto-fill, 280px);
+            justify-content: space-around;
+        }
+
+        .box-cycle {
+            width: 100%;
+            margin: 0 auto;
+        }
+    }
       
 </style>
 
@@ -84,9 +82,10 @@
     </div>
 
     <div class="menu">
-        <img src="img/valimg.svg">
+        <img src="img/valimg.svg" alt="Лого-васильки">
         <ul>
-            <li class="menu__submenu" ><a href="#">Регионы</a>
+            <li class="menu__submenu" >
+                <a href="#">Регионы</a>
                 <ul>
                     <li>
                         <a href="brest-region.html">Брестская область</a>
@@ -122,7 +121,6 @@
                     </li>
                 </ul>
             </li>
-
             <li>
                 <a href="culture.html">Культура</a>
             </li>
@@ -130,25 +128,23 @@
                 <a href="about-us.html">О проекте</a>
             </li>
         </ul>
-        <img src="img/valimg.svg" alt="">
+        <img src="img/valimg.svg" alt="Лого-васильки">
     </div>
 
     <div class="video__container">
-        <iframe src="https://www.youtube.com/embed/8ONl5_JnUUE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        
+        <iframe src="https://www.youtube.com/embed/8ONl5_JnUUE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  
     </div> 
-
 
     <div class="universal_container">
         <h3>ТОП велосипедных маршрутов Беларуси</h3>
         <div class="container__news__cycle ">
             <div class="box-cycle">
                 <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ae3ec927a51a94576f264b73e1ff1691b0be53053681bbeac770fb93fe24b335a&amp;source=constructor"  frameborder="0"></iframe>
-                <p>ТЦ Бонус  &ndash; Минское море и обратно</p>
+                <p>ТЦ Бонус &ndash; Минское море и обратно</p>
             </div>
             <div class="box-cycle">
                 <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A8dd3a342b9b2423ce708e4af0f77f1e4847c83a7f7c7c650ae90cebd077d4bfa&amp;source=constructor"  frameborder="0"></iframe>
-                <p>Минск  &ndash; Радошковичи  &ndash; Минск</p>
+                <p>Минск  &ndash; Радошковичи &ndash; Минск</p>
             </div>
             <div class="box-cycle">
                 <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A009adff35a053583e3832c76ee2633a2e73dc6a12c82079aa1fc30c955c9566e&amp;source=constructor"  frameborder="0"></iframe>
@@ -172,24 +168,20 @@
             </div>
             <div class="box-cycle">
                 <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Adc32c3b9e392a7fd24b96a5788d9b321ad45254a2755a9b1dbef81ca7628ccd6&amp;source=constructor"  frameborder="0"></iframe>
-                <p>Гродно  &ndash; Бяла &ndash;Подляска</p>
+                <p>Гродно &ndash; Бяла &ndash;Подляска</p>
             </div>  
         </div>
     </div>
 
-    <a href="#" class="to-top icon-circle-up">
-    </a>
-
+    <a href="#" class="to-top icon-circle-up">    </a>
 
     <footer>
         <div class="footer__text">
             <p>Путешествуй вместе с нами!</p>
         </div>
         <div class="footer__contacts">
-        <a class="icon-phone" href="tel:+375445435311"></a>
-        
-        <a class="icon-mail" href="mailto:dmitry.alekseev.s@gmail.com"></a>
-
+            <a class="icon-phone" href="tel:+375445435311"></a>
+            <a class="icon-mail" href="mailto:dmitry.alekseev.s@gmail.com"></a>
         </div>
         <div class="footer__social-contacts">
             <a class="icon-instagram" href="#"></a>

@@ -10,7 +10,6 @@
 
 <style>
   
-
     .video__container {
         display: grid;
         grid-auto-flow: row;
@@ -18,26 +17,26 @@
          grid-template-rows: fit-content(100%);
         justify-content: space-evenly;  
         align-items: space-evenly;  
-        height: fit-content;
-        box-shadow: none;
         width: 90vw;
+        height: fit-content;
         margin: 0 auto;
+        box-shadow: none;
     }
 
-    .video_element{
+    .video_element {
         display:flex;
+        flex-direction: row;
         justify-content: stretch;
         align-items: stretch;
         width: 28vw;
         height: 15.75vw;
-        flex-direction: row;
         margin: 10px 0;
         box-shadow: 0px 0px 3px 3px rgb(186, 186, 186);
     }
 
-    .video_element iframe{
-        flex: 1 1 auto;
+    .video_element iframe {
         display: flex;
+        flex: 1 1 auto;       
         width: inherit;
         height: inherit;
     }
@@ -52,39 +51,35 @@
         display: grid;
         grid-template-columns:300px fit-content(100%) 300px;
         grid-template-rows: repeat(auto-fill,fit-content(100%));
-        width: calc(100% - 40px);
-        padding: 20px;
-        height: fit-content;
-        align-items: center; 
         grid-gap: 10px;  
-    }
-
-    .info__element_cultura h5{
-        grid-column: 1 / span 3;
-        text-align: center;
-        margin: 10px 0;
-        font-size: 20px;
+        align-items: center; 
+        width: calc(100% - 40px);
         height: fit-content;
-
-       
-        
+        padding: 20px;
     }
 
-    .info-element_img{
-        width: 300px;
+    .info__element_cultura h5 {
+        grid-column: 1 / span 3;
+        font-size: 20px;
+        text-align: center;
+        height: fit-content;
+        margin: 10px 0;    
+    }
+
+    .info-element_img {
+        display: flex;
         grid-column: span 1;
         grid-row: 2;
+        width: 300px;
         height: 100%;
-        align-items: center;
-        display: flex;
-        
+        align-items: center;    
     }
 
-    .info-element_img img{
+    .info-element_img img {
         object-fit: contain;
     }
 
-    .info-element_text{
+    .info-element_text {
        grid-column: span 2;
        grid-row: 2;
        width: 100%;
@@ -93,30 +88,28 @@
        margin: auto 0;       
     }
 
-    .info-element_img:nth-of-type(2*n){
-            grid-column: 1;
-        }
+    .info-element_img:nth-of-type(2*n) {
+         grid-column: 1;
+    }
 
-    .info-element_img:nth-of-type(2*n+1){
-            grid-column: 3;
-        }
+    .info-element_img:nth-of-type(2*n+1) {
+        grid-column: 3;
+    }
 
-
-
-    @media (max-width:920px){
+    @media (max-width:920px) {
 
         .video__container {
             grid-template-rows: repeat(3,fit-content(100%));
             grid-template-columns: fit-content(100%);
             grid-gap: 4vw;
             flex-direction:column;
+            width: fit-content;
             height: calc(39.5vw * 3 + 8vw);
             align-self: center;
-            width: fit-content;
             margin: 0 auto;
         }
 
-        .video_element{
+        .video_element {
             width: 70vw;
             height: 39.5vw;
             margin: 0;
@@ -126,58 +119,52 @@
             width: calc(100% - 30px);
             padding: 15px;
         }
-
-
     }
 
-    @media (max-width:720px){
+    @media (max-width:720px) {
 
         .info__element_cultura {
             display: grid;
             grid-template-columns: fit-content(100%);
             grid-template-rows: repeat(3,fit-content(100%));
-            align-items: stretch;
             width: calc(100% - 20px);
+            align-items: stretch;
             padding: 10px;
         }
         
-        .info__element_cultura h5{
+        .info__element_cultura h5 {
             grid-column: 1;
             grid-row: 1;
             font-size: 16px;
             margin: 0;
         }
 
-        .info-element_img{
+        .info-element_img {
             grid-column: 1;
             grid-row: 2;
-            margin: 0 auto;
-           
-            align-items: stretch;
             width: fit-content;
             height: fit-content;
+            align-items: stretch;
+            margin: 0 auto;   
         }
 
-        .info-element_img img{
+        .info-element_img img {
             width: 60vw;
             height: 40vw;
             object-fit: contain;
         }
 
-        .info-element_img-vertical img{
+        .info-element_img-vertical img {
             width: 60vw;
             height: 86vw;
         }
 
-
-        .info-element_text{
+        .info-element_text {
             grid-column: 1;
             grid-row: 3;
         }
-
     }
-
-   
+  
 </style>
 
 </head>
@@ -196,9 +183,10 @@
 
 
     <div class="menu">
-        <img src="img/valimg.svg">
+        <img src="img/valimg.svg" alt="Лого-васильки">
         <ul>
-            <li class="menu__submenu" ><a href="#">Регионы</a>
+            <li class="menu__submenu" >
+                <a href="#">Регионы</a>
                 <ul>
                     <li>
                         <a href="brest-region.html">Брестская область</a>
@@ -242,7 +230,7 @@
                 <a href="about-us.html">О проекте</a>
             </li>
         </ul>
-        <img src="img/valimg.svg" alt="">
+        <img src="img/valimg.svg" alt="Лого-васильки">
     </div>
 
     <div class="video__container">
@@ -270,8 +258,7 @@
             </div>
             <div class="info__element_cultura">
                 <h5>Богатство диалектов белорусского языка</h5>
-                <p class="info-element_text">Возможно, для кого&ndash;то будет открытием, что белорусский язык действительно очень богат. Если в литературном языке насчитывается около 250 &ndash; 500 тысяч слов, то в диалектном  &ndash; около двух миллионов. Важной составляющей белорусского языка являются диалекты и локальные говоры. Интересен тот факт, что иногда ученые фиксируют диалектные различия не только соседних деревень, но и даже говоры разных концов одной деревни. Считается, что основные диалекты белорусского языка  &ndash; это северо&ndash;восточный, юго&ndash;западный и среднебелорусский переходный. Белорусские диалекты отличаются произношением определенных типов букв. Например, буквы &#171;а&#187; или &#171;д&#187;, 	
-                &#171;т&#187;. Лингвисты называют эти особенности произношением &#171;аканьем&#187;, &#171;дзеканьем&#187; и &#171;цеканьем&#187;. Кроме названных диалектов, на территории страны существует и так называемая &#171;трасянка&#187; &ndash; форма белорусского разговорного языка, имеющего смешанную морфологию и словообразование. Однако единство и целостность национального языка эти диалекты не нарушают.</p>
+                <p class="info-element_text">Возможно, для кого&ndash;то будет открытием, что белорусский язык действительно очень богат. Если в литературном языке насчитывается около 250 &ndash; 500 тысяч слов, то в диалектном  &ndash; около двух миллионов. Важной составляющей белорусского языка являются диалекты и локальные говоры. Интересен тот факт, что иногда ученые фиксируют диалектные различия не только соседних деревень, но и даже говоры разных концов одной деревни. Считается, что основные диалекты белорусского языка  &ndash; это северо&ndash;восточный, юго&ndash;западный и среднебелорусский переходный. Белорусские диалекты отличаются произношением определенных типов букв. Например, буквы &#171;а&#187; или &#171;д&#187;, &#171;т&#187;. Лингвисты называют эти особенности произношением &#171;аканьем&#187;, &#171;дзеканьем&#187; и &#171;цеканьем&#187;. Кроме названных диалектов, на территории страны существует и так называемая &#171;трасянка&#187; &ndash; форма белорусского разговорного языка, имеющего смешанную морфологию и словообразование. Однако единство и целостность национального языка эти диалекты не нарушают.</p>
                 <div class="info-element_img">
                     <img src="img/culture/mova-2.jpeg" alt="Картинка мова-2">
                 </div>  
@@ -307,20 +294,22 @@
                 <h5>Белорусская литература</h5>
                 <div class="info-element_img"><img src="img/culture/vasil-bykov.jpg" alt="Василий Быков"> </div> 
                 <p class="info-element_text">Немаловажное место в культуре нашей республики занимает литература. Выдающиеся белорусские авторы &ndash; это Янка Купала, Якуб Колос, Максим Богданович, Василь Быков, Симеон Полоцкий. Каждый год проходит День белорусской письменности, целью которого является не только демонстрация печатных изданий и исторического пути письменности, но и развитие современной культуры и белорусской литературы. </p>
-                
             </div>
 
             <div class="info__element_cultura">
                 <h5>Развитие кино в Беларуси</h5>
                 <p class="info-element_text">С начала прошлого века у нас начало интенсивно развиваться искусство кино. В 1924 году была создана белорусская организация по кинематографии &ndash; Белгоскино. В 1928 году прошло открытие киностудии &#171;Советская Беларусь&#187;, выпускавшей научно-популярные, художественные и хроникальные фильмы. К концу 40-х годов киностудия переехала в столицу, а с 1946-го года была переименована в &#171;Беларусьфильм&#187;. Выходцы из Беларуси оставили свой след и в развитии мирового кинематографа. Луис Барт Майер, родом из Минска, прославился в области мировой кинематографии. Он известен не только как основатель киностудии Голливуда &#171;Metro goldwyn mayer&#187;, но и один из учредителей американской Академии кинематографа. Ему принадлежит идея ежегодно вручать знаменитую премию &#171;Оскар&#187;. </p>
-                <div class="info-element_img"><img src="img/culture/belarusfilm.jpg">  </div>
+                <div class="info-element_img">
+                    <img src="img/culture/belarusfilm.jpg" alt="Логотип-Беларусьфильм">
+                </div>
             </div>
 
             <div class="info__element_cultura">
                 <h5>Белорусская живопись</h5>
-                <div class="info-element_img"><img src="img/culture/mark-shagal.jpg"></div>
-                <p class="info-element_text">Наша страна богата талантливыми и знаменитыми деятелями культуры. В живописи это Марк Шагал, всем известный как мастер авангарда. Дом&ndash;&музей, в котором некогда он жил, а также Арт&ndash;&центр, которые можно посетить, находятся в Витебске, откуда он родом. Широко известно имя Ивана Хруцкого, выдающегося художника, который разработал собственный стиль в живописи, сочетая элементы натюрморта и портрета. Еще одним из известных художников нашей страны стал Михаил Савицкий, чьи работы получили мировое признание. Он является автором огромного множества полотен. Белорусскую культуру по праву можно считать одной из богатейших в мире, и, посетив нашу страну, вы можете сами в этом убедиться во время экскурсий в многочисленные музеи, художественные галереи, во время посещения театров и концертов.
-                </p> 
+                <div class="info-element_img">
+                    <img src="img/culture/mark-shagal.jpg" alt="Марк-Шагал">
+                </div>
+                <p class="info-element_text">Наша страна богата талантливыми и знаменитыми деятелями культуры. В живописи это Марк Шагал, всем известный как мастер авангарда. Дом&ndash;&музей, в котором некогда он жил, а также Арт&ndash;&центр, которые можно посетить, находятся в Витебске, откуда он родом. Широко известно имя Ивана Хруцкого, выдающегося художника, который разработал собственный стиль в живописи, сочетая элементы натюрморта и портрета. Еще одним из известных художников нашей страны стал Михаил Савицкий, чьи работы получили мировое признание. Он является автором огромного множества полотен. Белорусскую культуру по праву можно считать одной из богатейших в мире, и, посетив нашу страну, вы можете сами в этом убедиться во время экскурсий в многочисленные музеи, художественные галереи, во время посещения театров и концертов.</p> 
             </div>
             <div class="info__element_cultura">
                 <h5>Белорусский народный костюм</h5>
@@ -329,27 +318,23 @@
                 Головные уборы &ndash;  важная и обязательная часть костюма. Для девушек это могли быть венки, узкие повязки-рушники. Замужним дамам не разрешалось показываться с непокрытой головой.<br>
                 Мужская одежда состояла из льняной рубахи навыпуск, узких брюк, пояса. Рубаха имела разрез на груди, отложной воротник. Костюм был белого цвета, украшались орнаментом воротник, манжеты и пояс.<br>
                 Головными уборами были магерки, соломенные шляпы ( брыль, капялюш), зимой &ndash;  овчинные кучмы и аблавухи на меху. <br>
-                Из верхней одежды мужчины и женщины носили белые или серые свиты из сукна, белые или охристо&ndash;красные кожухи и кожушки, кожаные посталы (реже сапоги) и лыковые лапти.
-                </p>
+                Из верхней одежды мужчины и женщины носили белые или серые свиты из сукна, белые или охристо&ndash;красные кожухи и кожушки, кожаные посталы (реже сапоги) и лыковые лапти.</p>
                 <div class="info-element_img-vertical info-element_img">
                     <img src="img/culture/belarusian-national-dress.jpg" alt="Нациоанльная одежда">
                 </div> 
             </div>
         </div>
     </div>
-    <a href="#" class="to-top icon-circle-up">
-    </a>
 
+    <a href="#" class="to-top icon-circle-up"></a>
 
     <footer>
         <div class="footer__text">
             <p>Путешествуй вместе с нами!</p>
         </div>
         <div class="footer__contacts">
-        <a class="icon-phone" href="tel:+375445435311"></a>
-        
-        <a class="icon-mail" href="mailto:dmitry.alekseev.s@gmail.com"></a>
-
+            <a class="icon-phone" href="tel:+375445435311"></a>
+            <a class="icon-mail" href="mailto:dmitry.alekseev.s@gmail.com"></a>
         </div>
         <div class="footer__social-contacts">
             <a class="icon-instagram" href="#"></a>

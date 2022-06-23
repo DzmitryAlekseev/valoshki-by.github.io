@@ -11,45 +11,43 @@
 
 <style>
   
-.location {
-    box-shadow: 0px 0px 2px 2px gray;
-}
+    .location {
+        box-shadow: 0px 0px 2px 2px gray;
+    }
 
+    .location__info button {
+        width:150px;
+    }
 
-.location__info button{
-    width:150px
-}
+    .location__info iframe {
+        display: none;
+    }
 
-.location__info iframe{
-    display: none;
-}
+    .location__info button:hover iframe {
+        display: block;      
+    }
 
-.location__info button:hover iframe{
-    display: block;      
-}
-
-@media (max-width: 600px) {
-    .location__info p {
+    @media (max-width: 600px) {
+        .location__info p {
             display: inline-block;
-           
         }
-    
+        
         .location a {
             display: grid;
-            grid-gap: 0;
             grid-template-columns: 1fr;
             grid-template-rows: repeat(3,fit-content(100%));
+            grid-gap: 0;
         }
-    
+        
         .location__info{
             grid-row:2;
         }
-    
+        
         .location__info h4{
             text-align: center;
             margin:0;
         }
-}
+    }
 
 </style>
 
@@ -62,7 +60,6 @@
         </a>
     </div>
 
-
     <div class="slider"  object="javascript: slider();">
         <h2 class="slider__region">Сердечно приглашаем!</h2>
         <img class="slider__image " src="img/farmsteads/slider/farm-1.jpg" alt="агроусадьба-1">
@@ -72,7 +69,7 @@
     </div>
         
     <div class="menu">
-        <img src="img/valimg.svg">
+        <img src="img/valimg.svg" alt="Лого-васильки">
         <ul class="menu_main">
             <li class="menu__submenu" ><a href="#">Регионы</a>
                 <ul>
@@ -110,7 +107,6 @@
                     </li>
                 </ul>
             </li>
-
             <li>
                 <a href="culture.html">Культура</a>
             </li>
@@ -118,91 +114,79 @@
                 <a href="about-us.html">О проекте</a>
             </li>
         </ul>
-        <img src="img/valimg.svg" alt="">
+        <img src="img/valimg.svg" alt="Лого-васильки">
     </div>
-
 
     <div class="universal_container">
         <h3>Агроусадьбы</h3>
         <div class="locations">
-        <div class="location">
-            <a href="#" target="_blank" >
-                <div class="location__image">
-                    <img src="img/farmsteads/usadba-barnhaus.jpg" alt="usadba-barnhaus">
-                </div>
-                <div class="location__info">
-                    <h4>Коттедж «Барнхаус»</h4>
-                    <p>Коттедж «Барнхаус» расположен в 20 километрах от города Минска в городе Смолевичи (всего в 15 минутах езды от кольцевой). К услугам посетителей просторный коттедж с внутренним открытым пространством и большим панорамным окном, который включает в себя оборудованную кухню, ванную комнату с горячей водой, спальню, печь камин (отопление – теплый пол), настольные игры, телевизор, игровую приставку Play Station 4, интернет Wi-Fi. На территории коттеджа есть мангал для приготовления барбекю и шашлыка. Имеется парковочное место для личного авто. На ночлег с комфортом может расположиться до 4-х человек. Ухоженная территория.</p>
-                   
-                    
-                </div>
-            </a>
-        </div>
-        
-        <div class="location">
-            <a href="https://braslavpark.by/">
-                <div class="location__image">                
-                    <img src="img/farmsteads/usadba-hutor-edishki.jpg" alt="usadba-hutor-edishki">
-                </div>
-                    <div class="location__info">
-                    <h4>Агроусадьба «Хутор Ёдишки»</h4>
-                    <p>Уникальная природа Браславских озер, чистый воздух и никакого выхода в интернет! Хотя бы раз посетив агроусадьбу «Хутор Ёдишки», отдыхать по такому сценарию вам захочется снова и снова. Наша усадьба расположена у устья реки Дрысвятка, которая впадает в озеро Долгое. Гостям предлагается несколько вариантов размещения. </p>   
-                </div>
-            </a>
-           
-        </div>
-        <div class="location">
-            <a href="https://culttourism.ru/belarus/vitebskaya/orsha/etnograficheskiy_muzey_melnitsa_mlyn.html">
-                <div class="location__image">
-                    <img src="img/farmsteads/usadba-volshebnoe-mesto.jpg" alt="">
-                
-                  </div>
-                  <div class="location__info">
-                    <h4>Усадьба «Волшебное место»</h4>
-                    <p>Усадьба «Волшебное место» на живописном озере Селява — это достойный вариант для душевного семейного отдыха или проведения небольшого торжества на фоне природы. В нашем доме создан дизайнерский интерьер с художественной росписью фасадов. Вам будет в нем комфортно гостить и радостно проводить семейное время. Мы позаботились о городском уюте на все сто процентов! Вам останется взять лишь необходимый минимум в чемодан и все. Мы продумали за вас весь список повседневных вещей: банные принадлежности, халаты, тапочки, посуда на кухне и многое другое.</p>
+            <div class="location">
+                <a href="#" target="_blank" >
+                    <div class="location__image">
+                        <img src="img/farmsteads/usadba-barnhaus.jpg" alt="usadba-barnhaus">
                     </div>
-            </a>
-        </div>
-        <div class="location">
-            <a href="https://www.psu.by/ru/university/dopolnitel-noe-obrazovanie?view=article&id=13140:1773-1812&catid=2">
-                <div class="location__image">
-                    <img src="img/farmsteads/usadba-golubye-ozyora.jpg" alt="">
-                </div>
-                <div class="location__info">
-                    <h4>Усадьба «Голубые озёра»</h4>
-                    <p>Усадьба «Голубые озёра» расположена в Мядельском районе, Минской области, в двух километрах от экологической тропы «Голубые озёра» на территории Национального Нарочанского парка нашей Республики. К вашим услугам один дом с террасой, вместительностью до 5 человек, другой дом в три этаж – на 12 спальных мест. Дома отделаны экологичным материалом – деревом. Есть полноценная кухня, оборудованная всем необходимым, а также горячая вода, душ, санузел, Wi-Fi.</p>
-                     
-                </div>
-            </a>
-        </div>
-        <div class="location">
-            <a href="https://posmotrim.by/article/usadba-mokrickih-vysokoe-belarus.html">
-                <div class="location__image">
-                    <img src="img/farmsteads/usadba-lukomorie.jpg" alt="">
-                </div>
-                <div class="location__info">
-                    <h4>Усадьба «Лукоморье» </h4>
-                    <p>Усадьба «Лукоморье» расположена на живописном берегу одного из самых больших озер страны, недалеко от города Новолукомль. Для вашего комфортного размещения мы предлагаем коттеджи на сутки или длительный срок. Мы предложим целый комплекс других развлечений на воде, среди которых катание на моторной лодке, водных лыжах, вейк-борде, ватрушки. А также баня, настольный теннис, дартс, велопрогулки, волейбол, баскетбол, детская площадка, открытый бассейн с горкой.</p>
-                    
-                </div>
-            </a>
+                    <div class="location__info">
+                        <h4>Коттедж  &#171;Барнхаус&#187;</h4>
+                        <p>Коттедж  &#171;Барнхаус&#187; расположен в 20 километрах от города Минска в городе Смолевичи (всего в 15 минутах езды от кольцевой). К услугам посетителей просторный коттедж с внутренним открытым пространством и большим панорамным окном, который включает в себя оборудованную кухню, ванную комнату с горячей водой, спальню, печь камин (отопление &ndash; теплый пол), настольные игры, телевизор, игровую приставку Play Station 4, интернет Wi&ndash;Fi. На территории коттеджа есть мангал для приготовления барбекю и шашлыка. Имеется парковочное место для личного авто. На ночлег с комфортом может расположиться до 4&ndash;х человек. Ухоженная территория.</p>
+                    </div>
+                </a>
+            </div>        
+            <div class="location">
+                <a href="https://braslavpark.by/">
+                    <div class="location__image">                
+                        <img src="img/farmsteads/usadba-hutor-edishki.jpg" alt="usadba-hutor-edishki">
+                    </div>
+                        <div class="location__info">
+                        <h4>Агроусадьба  &#171;Хутор Ёдишки&#187;</h4>
+                        <p>Уникальная природа Браславских озер, чистый воздух и никакого выхода в интернет! Хотя бы раз посетив агроусадьбу  &#171;Хутор Ёдишки&#187;, отдыхать по такому сценарию вам захочется снова и снова. Наша усадьба расположена у устья реки Дрысвятка, которая впадает в озеро Долгое. Гостям предлагается несколько вариантов размещения.</p>   
+                    </div>
+                </a>
+            </div>
+            <div class="location">
+                <a href="https://culttourism.ru/belarus/vitebskaya/orsha/etnograficheskiy_muzey_melnitsa_mlyn.html">
+                    <div class="location__image">
+                        <img src="img/farmsteads/usadba-volshebnoe-mesto.jpg" alt="usadba-volshebnoe-mesto">
+                    </div>
+                    <div class="location__info">
+                        <h4>Усадьба  &#171;Волшебное место&#187;</h4>
+                        <p>Усадьба  &#171;Волшебное место&#187; на живописном озере Селява &ndash; это достойный вариант для душевного семейного отдыха или проведения небольшого торжества на фоне природы. В нашем доме создан дизайнерский интерьер с художественной росписью фасадов. Вам будет в нем комфортно гостить и радостно проводить семейное время. Мы позаботились о городском уюте на все сто процентов! Вам останется взять лишь необходимый минимум в чемодан и все. Мы продумали за вас весь список повседневных вещей: банные принадлежности, халаты, тапочки, посуда на кухне и многое другое.</p>
+                    </div>
+                </a>
+            </div>
+            <div class="location">
+                <a href="https://www.psu.by/ru/university/dopolnitel-noe-obrazovanie?view=article&id=13140:1773-1812&catid=2">
+                    <div class="location__image">
+                        <img src="img/farmsteads/usadba-golubye-ozyora.jpg" alt="usadba-golubye-ozyora">
+                    </div>
+                    <div class="location__info">
+                        <h4>Усадьба &#171;Голубые озёра&#187;</h4>
+                        <p>Усадьба &#171;Голубые озёра&#187; расположена в Мядельском районе, Минской области, в двух километрах от экологической тропы &#171;Голубые озёра&#187; на территории Национального Нарочанского парка нашей Республики. К вашим услугам один дом с террасой, вместительностью до 5 человек, другой дом в три этаж &ndash; на 12 спальных мест. Дома отделаны экологичным материалом &ndash; деревом. Есть полноценная кухня, оборудованная всем необходимым, а также горячая вода, душ, санузел, Wi&ndash;Fi.</p>  
+                    </div>
+                </a>
+            </div>
+            <div class="location">
+                <a href="https://posmotrim.by/article/usadba-mokrickih-vysokoe-belarus.html">
+                    <div class="location__image">
+                        <img src="img/farmsteads/usadba-lukomorie.jpg" alt="usadba-lukomorie">
+                    </div>
+                    <div class="location__info">
+                        <h4>Усадьба &#171;Лукоморье&#187;</h4>
+                        <p>Усадьба &#171;Лукоморье&#187; расположена на живописном берегу одного из самых больших озер страны, недалеко от города Новолукомль. Для вашего комфортного размещения мы предлагаем коттеджи на сутки или длительный срок. Мы предложим целый комплекс других развлечений на воде, среди которых катание на моторной лодке, водных лыжах, вейк-борде, ватрушки. А также баня, настольный теннис, дартс, велопрогулки, волейбол, баскетбол, детская площадка, открытый бассейн с горкой.</p>
+                    </div>
+                </a>
+            </div>
         </div>
     </div>
-    </div>
 
-    <a href="#" class="to-top icon-circle-up">
-    </a>
-
+    <a href="#" class="to-top icon-circle-up"></a>
 
     <footer>
         <div class="footer__text">
             <p>Путешествуй вместе с нами!</p>
         </div>
         <div class="footer__contacts">
-        <a class="icon-phone" href="tel:+375445435311"></a>
-        
-        <a class="icon-mail" href="mailto:dmitry.alekseev.s@gmail.com"></a>
-
+            <a class="icon-phone" href="tel:+375445435311"></a>
+            <a class="icon-mail" href="mailto:dmitry.alekseev.s@gmail.com"></a>
         </div>
         <div class="footer__social-contacts">
             <a class="icon-instagram" href="#"></a>
@@ -210,6 +194,7 @@
             <a class="icon-vk" href="#"></a>
         </div>
     </footer>
+    
     <script src="jquery-3.6.0.min.js"></script>
     <script src="js/script.js"></script>
    
