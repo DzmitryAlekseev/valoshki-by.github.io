@@ -2,8 +2,7 @@
 
 @font-face {
     font-family: 'icomoon';
-    src: url('/fonts/iconmoon/fonts/icomoon.woff') format('woff'); 
-    src: url('/fonts/iconmoon/fonts/icomoon.ttf') format('ttf');      
+    src: url('/fonts/iconmoon/fonts/icomoon.woff') format('woff'), url('/fonts/iconmoon/fonts/icomoon.ttf') format('ttf');      
     font-weight: normal;
     font-style: normal;
     }
@@ -15,7 +14,7 @@
         margin: 0 0;
         grid-gap: 30px;
         font-family: 'Old Standard TT', serif; 
-        min-width: 320px !important;          
+        min-width: 320px ;          
     }
 
 /*header используется на всех страницах*/
@@ -145,7 +144,7 @@
     box-shadow:0px -2px 5px rgb(216, 216, 216);    
 }
    
-.menu__submenu ul{                        /*выпадающее меню Регионы,Путеводители,Маршруты*/
+.menu__submenu ul{                        /*выпадающее меню Регионы,Путеводители*/
     display: block;  
     width: 100%;
     height: fit-content;               
@@ -166,26 +165,11 @@
 .menu__submenu ul li:hover {
     border-top: 1px solid rgb(188, 188, 188);
     border-bottom: 1px solid rgb(188, 188, 188);
-    /* animation: AnimSubButton 0.3s;
-    animation-iteration-count:1;
-    animation-fill-mode: forwards; */
 }
-
-/* @keyframes AnimSubButton {
-    to{
-        box-shadow:inset 0.5px 0.5px  7px gray;
-        font-size: 20px;
-    }
-} */
 
 li.menu__submenu:hover ul {  
    visibility:visible;
 }
-
-
-
-
-
 
 /* map - используется на всех страницах регионов */
 .map {
@@ -197,7 +181,6 @@ li.menu__submenu:hover ul {
     width: 100%;
     height: fit-content;
     grid-gap: 20px;
-  
 }
 
 .map__region{
@@ -230,20 +213,15 @@ li.menu__submenu:hover ul {
         justify-content: center;
         width:100%;
         height:fit-content;
-    
- }
+    }
 
     .photogallery__element img{
         width: 100%;
         object-fit: cover;
         height: fit-content;
-        
     }
 
-
-
-
-/*universal_container используется для блоков с новостями и событиями*/
+/*universal_container */
 
 .universal_container {
     width: 90%;
@@ -251,8 +229,7 @@ li.menu__submenu:hover ul {
     margin: 0 5%;
     border: 1px solid #0098cd;
     display: grid;
-    grid-template-rows: repeat(2,fit-content(100%));
-      
+    grid-template-rows: repeat(2,fit-content(100%));     
 }
 
 /* видео контейнер */
@@ -278,8 +255,6 @@ li.menu__submenu:hover ul {
     min-height: 158px;
 }
 
-
-
 .universal_container h3 {
     background-color:#0098cd;
     font-family: 'Neucha', cursive;
@@ -291,14 +266,11 @@ li.menu__submenu:hover ul {
     margin: 0 0 5px 0;
 }
 
-
-
 /*interesting_locations используется на regions */
 
 .locations {
     display:flex;
     flex-direction: column;
-
 }
 
 .location {
@@ -336,8 +308,7 @@ li.menu__submenu:hover ul {
     
     width: 90%;
     height: 90%;
-    object-fit: cover;
-    
+    object-fit: cover;   
 }
 
 .location__info {
@@ -497,8 +468,6 @@ object-fit: cover;
     
 
 }
-
-
 
 footer {
     display:grid;
