@@ -1,11 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Neucha&family=Old+Standard+TT&display=swap');
 
 @font-face {
     font-family: 'icomoon';
-    src: url('fonts/fonts/icomoon.woff') format('woff'), url('fonts/fonts/icomoon.ttf') format('ttf');      
+    src: url('fonts/fonts/icomoon.woff') format('woff');      
     font-weight: normal;
     font-style: normal;
     }
+
+    @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Neucha&family=Old+Standard+TT&display=swap');
+
 
 
  body {
