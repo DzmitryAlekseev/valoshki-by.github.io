@@ -389,6 +389,7 @@ li.menu__submenu:hover ul {
     flex-direction: column;
     width: 100%;
     justify-content: start;
+    text-align: justify;
 }
 
 
@@ -396,7 +397,7 @@ li.menu__submenu:hover ul {
     display: flex;
     justify-content: start;
     flex-direction: column;
-    width: calc(100% - 40px);
+    width: 100%;
     margin: 0 20px;
 }
 
