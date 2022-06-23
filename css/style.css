@@ -344,6 +344,7 @@ li.menu__submenu:hover ul {
     flex-direction: column;
     height: fit-content;
     justify-content: space-evenly;
+    text-align: left;
 }
 
 /*.info-of-region */
