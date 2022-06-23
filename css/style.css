@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Neucha&family=Old+Standard+TT&display=swap');
 @font-face {
     font-family: 'icomoon';
-    src: url('/fonts/iconmoon/fonts/icomoon.woff') format('woff');           
+    src: url('fonts/iconmoon/fonts/icomoon.woff') format('woff');           
     font-weight: normal;
     font-style: normal;
     }
