@@ -2,7 +2,7 @@
 
 @font-face {
     font-family: 'icomoon';
-    src: url('fonts/iconmoon/fonts/icomoon.woff') format('woff'),url('fonts/iconmoon/fonts/icomoon.woff2') format('woff2'),url('fonts/iconmoon/fonts/icomoon.ttf') format('truetype');           
+    src: url('/fonts/iconmoon/fonts/icomoon.woff') format('woff');        
     font-weight: normal;
     font-style: normal;
     }
@@ -929,11 +929,16 @@ footer {
         }
 
         .footer__contacts{
-            font-size: 14px;
+            font-size: 12px;
+        }
+
+        .footer__social-contacts a{
+            width: fit-content;
+            height: fit-content;
         }
 
         .footer__social-contacts{
-            font-size: 16px;
+            font-size: 14px;
         }
 
 }

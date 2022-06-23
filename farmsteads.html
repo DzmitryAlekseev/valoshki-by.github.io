@@ -11,7 +11,9 @@
 
 <style>
   
-
+.location {
+    box-shadow: 0px 0px 2px 2px gray;
+}
 
 
 .location__info button{
@@ -24,6 +26,29 @@
 
 .location__info button:hover iframe{
     display: block;      
+}
+
+@media (max-width: 600px) {
+    .location__info p {
+            display: inline-block;
+           
+        }
+    
+        .location a {
+            display: grid;
+            grid-gap: 0;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(3,fit-content(100%));
+        }
+    
+        .location__info{
+            grid-row:2;
+        }
+    
+        .location__info h4{
+            text-align: center;
+            margin:0;
+        }
 }
 
 </style>
@@ -104,7 +129,6 @@
         <img src="img/valimg.svg" alt="Логотип">
     </div>
 
-    <div class="map"></div>
 
     <div class="universal_container">
         <h3>Агроусадьбы</h3>
