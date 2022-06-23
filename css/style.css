@@ -197,6 +197,7 @@ li.menu__submenu:hover ul {
         height: fit-content; 
         object-fit: contain;
         min-width: 300px;
+        max-height: 400px;
     }
 
     .photogallery {
@@ -791,8 +792,14 @@ footer {
     }
 
     .menu__submenu > ul li a{
-        font-size: 12px;
+        font-size: 10px;
         height: 22px;
+        line-height: 20px;
+        
+    }
+    .menu__submenu > ul li a:hover{
+        font-size: 10px;
+        height: fit-content;
         line-height: 20px;
         
     }
